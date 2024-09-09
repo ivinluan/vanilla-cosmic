@@ -1,8 +1,7 @@
 name: Cosmic Drill
-description: Also known as Cosmic I Drill. The 1st version of drill from the COSMOS. Durable. Mines at a faster pace than a pneumatic drill.
+description: Also known as Cosmic I Drill. The 1st version of drill from the COSMOS. Enhanced using titanium, it is better than pneumatic drill.
 type: Drill
 category: production
-research: pneumatic-drill
 size: 2
 tier: 4
 drillTime: 200
@@ -18,8 +17,8 @@ liquidCapacity: 25
 requirements: [
     copper/100
     graphite/50
-    titanium/75
     silicon/25
+    titanium/75
 ]
 
 consumes: {
@@ -31,3 +30,11 @@ consumes: {
     }
 }
 liquidBoostIntensity: 1.5
+
+research: pneumatic-drill
+researchCost: [
+    copper/1000
+    graphite/500
+    silicon/250
+    titanium/750
+]
