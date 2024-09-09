@@ -1,0 +1,35 @@
+name: mini Cosmic Drill
+description: Also known as mini Cosmic I Drill. The mini version of Cosmic I Drill.
+type: Drill
+category: production
+research: pneumatic-drill
+size: 1
+tier: 4
+drillTime: 100
+
+health: 160
+armor: 37.5
+
+hasItems: true
+itemCapacity: 25
+hasLiquids: true
+liquidCapacity: 12.5
+
+requirements: [
+    copper/50
+    graphite/25
+    titanium/38
+    silicon/13
+]
+
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 0.5
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 1.5
+
+drawMineItem: false # to prevent the oh no image in single tiled
