@@ -1,40 +1,44 @@
-name: Cosmic Drill
-description: Also known as Cosmic I Drill. The 1st version of drill from the COSMOS. Enhanced using titanium, it is better than pneumatic drill.
+name: mini Cosmic II Drill
+description: The smaller version of Cosmic II Drill.
 type: Drill
 category: production
-size: 2
+size: 1
 tier: 4
-drillTime: 200
+drillTime: 50
 
 health: 320
-armor: 75
+armor: 150
 
 hasItems: true
-itemCapacity: 50
+itemCapacity: 25
 hasLiquids: true
-liquidCapacity: 25
+liquidCapacity: 12.5
 
 requirements: [
     copper/100
     graphite/50
     silicon/25
     titanium/75
+    plastanium/88
 ]
 
 consumes: {
     liquid: {
         liquid: water
-        amount: 1
+        amount: 0.5
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 1.5
+liquidBoostIntensity: 1.75
 
-research: pneumatic-drill
+research: cosmic-i-drill-mini
 researchCost: [
     copper/1000
     graphite/500
     silicon/250
     titanium/750
+    plastanium/880
 ]
+
+drawMineItem: false # to prevent the oh no image in single tiled
