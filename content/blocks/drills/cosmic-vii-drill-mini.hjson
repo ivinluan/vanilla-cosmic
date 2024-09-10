@@ -1,0 +1,48 @@
+name: mini Cosmic VII Drill
+description: The smaller version of Cosmic VII Drill.
+type: Drill
+category: production
+size: 1
+tier: 5
+drillTime: 4 # 15 items/sec
+
+health: 1120
+armor: 225
+
+hasItems: true
+itemCapacity: 140
+hasLiquids: true
+liquidCapacity: 27.5
+
+requirements: [
+    copper/140
+    graphite/280
+    silicon/420
+    titanium/420
+    thorium/560
+    beryllium/420
+    tungsten/700
+]
+
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 1.25
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 3
+
+research: cosmic-vi-drill-mini
+researchCost: [
+    copper/1400
+    graphite/1400
+    silicon/2100
+    titanium/4200
+    thorium/5600
+    beryllium/4200
+    tungsten/7000
+]
+
+drawMineItem: false # to prevent the oh no image in single tiled

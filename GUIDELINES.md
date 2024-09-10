@@ -40,3 +40,5 @@ This is a guideline for putting values in the block properties.
     phase-fabric/50 * no. of tiles * version no.
     beryllium/30 * no. of tiles * version no.
     surge-alloy/80 * no. of tiles * version no.
+    tungsten/50 * no. of tiles * version no.
+    carbide/70 * no. of tiles * version no.

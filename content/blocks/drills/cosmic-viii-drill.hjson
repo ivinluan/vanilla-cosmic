@@ -1,0 +1,48 @@
+name: Cosmic VIII Drill
+description: The 8th version of drill from the COSMOS. Fortified using carbide, it is stronger than Cosmic VII Drill.
+type: Drill
+category: production
+size: 2
+tier: 5
+drillTime: 15.48 # 15.5 items/sec
+
+health: 2560
+armor: 675
+
+hasItems: true
+itemCapacity: 300
+hasLiquids: true
+liquidCapacity: 55
+
+requirements: [
+    copper/320
+    graphite/640
+    silicon/960
+    titanium/960
+    thorium/1280
+    beryllium/960
+    tungsten/1600
+    carbide/2240
+]
+
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 2.5
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 3.25
+
+research: cosmic-vii-drill
+researchCost: [
+    copper/3200
+    graphite/3200
+    silicon/4800
+    titanium/4800
+    thorium/12800
+    beryllium/9600
+    tungsten/16000
+    carbide/11200
+]
