@@ -4,7 +4,7 @@ type: Drill
 category: production
 size: 1
 tier: 4
-drillTime: 100
+drillTime: 60 # 1 item/sec
 
 health: 160
 armor: 37.5
@@ -17,8 +17,8 @@ liquidCapacity: 12.5
 requirements: [
     copper/50
     graphite/25
-    titanium/38
     silicon/13
+    titanium/75
 ]
 
 consumes: {
@@ -35,8 +35,8 @@ research: pneumatic-drill
 researchCost: [
     copper/500
     graphite/250
-    titanium/380
     silicon/130
+    titanium/750
 ]
 
 drawMineItem: false # to prevent the oh no image in single tiled

@@ -4,7 +4,7 @@ type: Drill
 category: production
 size: 2
 tier: 4
-drillTime: 200
+drillTime: 240 # 1 item/sec
 
 health: 320
 armor: 75
@@ -18,7 +18,7 @@ requirements: [
     copper/100
     graphite/50
     silicon/25
-    titanium/75
+    titanium/150
 ]
 
 consumes: {
@@ -36,5 +36,5 @@ researchCost: [
     copper/1000
     graphite/500
     silicon/250
-    titanium/750
+    titanium/1500
 ]
