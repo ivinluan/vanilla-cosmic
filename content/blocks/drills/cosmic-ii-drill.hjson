@@ -4,7 +4,7 @@ type: Drill
 category: production
 size: 2
 tier: 4
-drillTime: 160 # 1.5 item/sec
+drillTime: 160 # 1.5 items/sec
 
 health: 640
 armor: 225
@@ -15,11 +15,11 @@ hasLiquids: true
 liquidCapacity: 25
 
 requirements: [
-    copper/200
-    graphite/100
-    silicon/50
-    titanium/300
-    plastanium/450
+    copper/80
+    graphite/160
+    silicon/240
+    titanium/240
+    plastanium/400
 ]
 
 consumes: {
@@ -34,9 +34,9 @@ liquidBoostIntensity: 1.75
 
 research: cosmic-i-drill
 researchCost: [
-    copper/2000
-    graphite/1000
-    silicon/500
-    titanium/3000
-    plastanium/4500
+    copper/800
+    graphite/800
+    silicon/1200
+    titanium/2400
+    plastanium/2000
 ]

@@ -15,10 +15,10 @@ hasLiquids: true
 liquidCapacity: 25
 
 requirements: [
-    copper/100
-    graphite/50
-    silicon/25
-    titanium/150
+    copper/40
+    graphite/80
+    silicon/120
+    titanium/120
 ]
 
 consumes: {
@@ -33,8 +33,8 @@ liquidBoostIntensity: 1.5
 
 research: pneumatic-drill
 researchCost: [
-    copper/1000
-    graphite/500
-    silicon/250
-    titanium/1500
+    copper/400
+    graphite/400
+    silicon/600
+    titanium/1200
 ]

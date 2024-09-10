@@ -4,7 +4,7 @@ type: Drill
 category: production
 size: 2
 tier: 5
-drillTime: 68.57
+drillTime: 68.57 # 3.5 items/sec
 
 health: 1280
 armor: 375
@@ -15,12 +15,12 @@ hasLiquids: true
 liquidCapacity: 35
 
 requirements: [
-    copper/800
-    graphite/400
-    silicon/200
-    titanium/1200
-    thorium/1800
-    phase-fabric/2700
+    copper/160
+    graphite/320
+    silicon/480
+    titanium/480
+    thorium/640
+    phase-fabric/800
 ]
 
 consumes: {
@@ -31,14 +31,14 @@ consumes: {
         booster: true
     }
 }
-liquidBoostIntensity: 2
+liquidBoostIntensity: 2.25
 
 research: cosmic-iii-drill
 researchCost: [
-    copper/8000
-    graphite/4000
-    silicon/2000
-    titanium/12000
-    thorium/18000
-    phase-fabric/27000
+    copper/1600
+    graphite/1600
+    silicon/2400
+    titanium/2400
+    thorium/6400
+    phase-fabric/4000
 ]
