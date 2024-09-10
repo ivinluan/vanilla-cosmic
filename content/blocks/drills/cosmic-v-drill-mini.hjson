@@ -1,0 +1,44 @@
+name: mini Cosmic V Drill
+description: The smaller version of Cosmic V Drill.
+type: Drill
+category: production
+size: 1
+tier: 5
+drillTime: 8.57 # 7 item/sec
+
+health: 800
+armor: 150
+
+hasItems: true
+itemCapacity: 100
+hasLiquids: true
+liquidCapacity: 22.5
+
+requirements: [
+    copper/100
+    graphite/200
+    silicon/300
+    titanium/300
+    beryllium/300
+]
+
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 1
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 2.5
+
+research: cosmic-iv-drill-mini
+researchCost: [
+    copper/1000
+    graphite/1000
+    silicon/1500
+    titanium/3000
+    beryllium/3000
+]
+
+drawMineItem: false # to prevent the oh no image in single tiled
