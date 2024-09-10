@@ -28,3 +28,15 @@ This is a guideline for putting values in the block properties.
 - Item Capacity base value is **50** just add **50** to the previous version value.
 - Liquid Capacity base value is **25** just add **10** to the previous version value.
 - Consume Liquid Amount base value is **1** just add **0.5** to the previous version value.
+
+### BASE VALUE for CRAFTING
+    copper/10 * no. of tiles * version no.
+    lead/10 * no. of tiles * version no.
+    graphite/20 * no. of tiles * version no.
+    silicon/30 * no. of tiles * version no.
+    titanium/30 * no. of tiles * version no.
+    plastanium/50 * no. of tiles * version no.
+    thorium/40 * no. of tiles * version no.
+    phase-fabric/50 * no. of tiles * version no.
+    beryllium/30 * no. of tiles * version no.
+    surge-alloy/80 * no. of tiles * version no.

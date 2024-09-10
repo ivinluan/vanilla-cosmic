@@ -1,18 +1,18 @@
-name: Cosmic III Drill
-description: The 3rd version of drill from the COSMOS. Enhanced using thorium, it is much more efficient than Cosmic II Drill.
+name: mini Cosmic VI Drill
+description: The smaller version of Cosmic VI Drill.
 type: Drill
 category: production
-size: 2
+size: 1
 tier: 5
-drillTime: 80 # 3 items/sec
+drillTime: 8 # 7.5 items/sec
 
 health: 960
-armor: 300
+armor: 262.5
 
 hasItems: true
-itemCapacity: 125
+itemCapacity: 115
 hasLiquids: true
-liquidCapacity: 35
+liquidCapacity: 22.5
 
 requirements: [
     copper/120
@@ -20,23 +20,29 @@ requirements: [
     silicon/360
     titanium/360
     thorium/480
+    beryllium/360
+    surge-alloy/480
 ]
 
 consumes: {
     liquid: {
         liquid: water
-        amount: 1.5
+        amount: 1
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 2
+liquidBoostIntensity: 2.5
 
-research: cosmic-ii-drill
+research: cosmic-v-drill-mini
 researchCost: [
     copper/1200
     graphite/1200
     silicon/1800
     titanium/3600
     thorium/4800
+    beryllium/3600
+    surge-alloy/2400
 ]
+
+drawMineItem: false # to prevent the oh no image in single tiled

@@ -15,10 +15,10 @@ hasLiquids: true
 liquidCapacity: 12.5
 
 requirements: [
-    copper/50
-    graphite/25
-    silicon/13
-    titanium/75
+    copper/20
+    graphite/40
+    silicon/60
+    titanium/60
 ]
 
 consumes: {
@@ -33,10 +33,10 @@ liquidBoostIntensity: 1.5
 
 research: pneumatic-drill
 researchCost: [
-    copper/500
-    graphite/250
-    silicon/130
-    titanium/750
+    copper/200
+    graphite/200
+    silicon/300
+    titanium/600
 ]
 
 drawMineItem: false # to prevent the oh no image in single tiled

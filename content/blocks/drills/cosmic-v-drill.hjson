@@ -1,0 +1,42 @@
+name: Cosmic V Drill
+description: The 5th version of drill from the COSMOS. Enhanced using beryllium, it is much more efficient than Cosmic IV Drill.
+type: Drill
+category: production
+size: 2
+tier: 5
+drillTime: 34.29 # 7 items/sec
+
+health: 1600
+armor: 300
+
+hasItems: true
+itemCapacity: 200
+hasLiquids: true
+liquidCapacity: 45
+
+requirements: [
+    copper/200
+    graphite/400
+    silicon/600
+    titanium/600
+    beryllium/600
+]
+
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 2
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 2.5
+
+research: cosmic-iv-drill
+researchCost: [
+    copper/2000
+    graphite/2000
+    silicon/3000
+    titanium/6000
+    beryllium/6000
+]
