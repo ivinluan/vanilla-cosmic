@@ -1,0 +1,46 @@
+name: Cosmic VI Drill
+description: The 6th version of drill from the COSMOS. Fortified using surge alloy, it is stronger than Cosmic V Drill.
+type: Drill
+category: production
+size: 2
+tier: 5
+drillTime: 32 # 7.5 items/sec
+
+health: 1920
+armor: 525
+
+hasItems: true
+itemCapacity: 225
+hasLiquids: true
+liquidCapacity: 45
+
+requirements: [
+    copper/240
+    graphite/480
+    silicon/720
+    titanium/720
+    thorium/960
+    beryllium/720
+    surge-alloy/960
+]
+
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 2
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 2.75
+
+research: cosmic-v-drill
+researchCost: [
+    copper/2400
+    graphite/2400
+    silicon/3600
+    titanium/7200
+    thorium/9600
+    beryllium/7200
+    surge-alloy/4800
+]
