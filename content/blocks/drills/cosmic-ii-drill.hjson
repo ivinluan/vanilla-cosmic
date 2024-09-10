@@ -4,13 +4,13 @@ type: Drill
 category: production
 size: 2
 tier: 4
-drillTime: 100
+drillTime: 160 # 1.5 item/sec
 
 health: 640
 armor: 225
 
 hasItems: true
-itemCapacity: 50
+itemCapacity: 75
 hasLiquids: true
 liquidCapacity: 25
 
@@ -18,8 +18,8 @@ requirements: [
     copper/200
     graphite/100
     silicon/50
-    titanium/150
-    plastanium/175
+    titanium/300
+    plastanium/450
 ]
 
 consumes: {
@@ -37,6 +37,6 @@ researchCost: [
     copper/2000
     graphite/1000
     silicon/500
-    titanium/1500
-    plastanium/1750
+    titanium/3000
+    plastanium/4500
 ]
