@@ -1,0 +1,42 @@
+name: Cosmic III Drill
+description: The 3rd version of drill from the COSMOS. Enhanced using thorium, it is much more efficient than Cosmic II Drill.
+type: Drill
+category: production
+size: 2
+tier: 5
+drillTime: 80 # 3 item/sec
+
+health: 960
+armor: 300
+
+hasItems: true
+itemCapacity: 125
+hasLiquids: true
+liquidCapacity: 35
+
+requirements: [
+    copper/400
+    graphite/200
+    silicon/100
+    titanium/600
+    thorium/900
+]
+
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 1.5
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 2
+
+research: cosmic-ii-drill
+researchCost: [
+    copper/4000
+    graphite/2000
+    silicon/1000
+    titanium/6000
+    thorium/9000
+]

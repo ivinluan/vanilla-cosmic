@@ -1,0 +1,44 @@
+name: mini Cosmic III Drill
+description: The smaller version of Cosmic II Drill.
+type: Drill
+category: production
+size: 1
+tier: 5
+drillTime: 20 # 3 item/sec
+
+health: 480
+armor: 150
+
+hasItems: true
+itemCapacity: 65
+hasLiquids: true
+liquidCapacity: 17.5
+
+requirements: [
+    copper/200
+    graphite/100
+    silicon/50
+    titanium/300
+    thorium/450
+]
+
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 0.75
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 2
+
+research: cosmic-ii-drill-mini
+researchCost: [
+    copper/2000
+    graphite/1000
+    silicon/500
+    titanium/3000
+    thorium/4500
+]
+
+drawMineItem: false # to prevent the oh no image in single tiled

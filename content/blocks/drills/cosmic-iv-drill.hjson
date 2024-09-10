@@ -1,0 +1,44 @@
+name: Cosmic IV Drill
+description: The 4th version of drill from the COSMOS. Fortified using phase fabric, it is stronger than Cosmic III Drill.
+type: Drill
+category: production
+size: 2
+tier: 5
+drillTime: 68.57
+
+health: 1280
+armor: 375
+
+hasItems: true
+itemCapacity: 150
+hasLiquids: true
+liquidCapacity: 35
+
+requirements: [
+    copper/800
+    graphite/400
+    silicon/200
+    titanium/1200
+    thorium/1800
+    phase-fabric/2700
+]
+
+consumes: {
+    liquid: {
+        liquid: water
+        amount: 1.5
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 2
+
+research: cosmic-iii-drill
+researchCost: [
+    copper/8000
+    graphite/4000
+    silicon/2000
+    titanium/12000
+    thorium/18000
+    phase-fabric/27000
+]

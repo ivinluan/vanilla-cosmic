@@ -1,6 +1,10 @@
-name: "Vanilla Cosmic"
-displayName: "[white]Vanilla[][gold] Cosmic[]"
+name: "vanilla-cosmic"
+displayName: "[white]Vanilla[][accent] Cosmic[]"
 author: "cosmicDeath"
-description: "A simple mod that[accent] enhances[] the original contents of the game."
+description:
+    '''
+    A simple mod that[accent] enhances the original contents[] of the game.
+    This is my first mod for Mindustry.
+    '''
 version: "1.0"
 minGameVersion: "146"
