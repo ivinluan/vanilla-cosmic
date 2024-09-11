@@ -1,6 +1,7 @@
 name: "vanilla-cosmic"
 displayName: "[white]Vanilla[][accent] Cosmic[]"
 author: "cosmicDeath"
+repo: "ivinluan/vanilla-cosmic"
 description:
     '''
     A simple mod that[accent] enhances the original contents[] of the game.
@@ -8,3 +9,4 @@ description:
     '''
 version: "1.0"
 minGameVersion: "146"
+icon: "icon.png"
