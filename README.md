@@ -1,4 +1,4 @@
-![Logo and title of the mod.](assets/title-banner-black-bg.png)
+![Logo and title of the mod.](github/title-banner-black-bg.png)
 
 A mod that **enhances** the original contents of the game. 
 
