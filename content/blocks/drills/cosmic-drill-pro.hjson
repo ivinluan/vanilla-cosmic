@@ -1,0 +1,65 @@
+name: Cosmic Drill Pro
+description: This is the pro version of Cosmic Drill. Has more capacity and much faster than older Cosmic Drills. Uses cryofluid instead of water to further enhance its drilling speed.
+type: Drill
+category: production
+size: 3
+tier: 5
+drillTime: 7.74 # 31 items/sec
+
+health: 2560
+armor: 675
+
+hasItems: true
+itemCapacity: 300
+hasLiquids: true
+liquidCapacity: 30
+hasPower: true
+
+requirements: [
+    copper/320
+    lead/320
+    graphite/640
+    silicon/960
+    titanium/960
+    thorium/1280
+]
+
+consumes: {
+    power: 5
+    liquid: {
+        liquid: cryofluid
+        amount: 2.5
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 4
+
+research: cosmic-viii-drill
+researchCost: [
+    copper/3200
+    lead/3200
+    graphite/3200
+    silicon/4800
+    titanium/9600
+    thorium/12800
+]
+
+drillEffect: {
+    type: smoke
+    color: #a5b7d2
+    amount: 15
+    lifetime: 45
+    range: 5
+    interval: 0.5
+    size: 10
+}
+updateEffect: {
+        type: dust
+        color: #4a6fa5
+        amount: 10
+        lifetime: 45
+        range: 3
+        interval: 0.5
+        size: 5
+}
