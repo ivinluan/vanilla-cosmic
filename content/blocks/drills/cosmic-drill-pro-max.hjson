@@ -1,0 +1,70 @@
+name: Cosmic Drill Pro Max
+description: This is the best drill from the COSMOS, it surpasses all existing drills. Uses cryofluid instead of water to further enhance its drilling speed.
+type: Drill
+category: production
+size: 4
+tier: 5
+drillTime: 7.62 # 31.5 items/sec
+
+health: 5120
+armor: 1350
+
+hasItems: true
+itemCapacity: 500
+hasLiquids: true
+liquidCapacity: 50
+hasPower: true
+
+requirements: [
+    copper/640
+    lead/640
+    graphite/1280
+    silicon/1920
+    titanium/1920
+    thorium/2560
+]
+
+consumes: {
+    power: 15
+    liquid: {
+        liquid: cryofluid
+        amount: 3
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 5
+
+research: cosmic-drill-pro
+researchCost: [
+    copper/6400
+    lead/6400
+    graphite/6400
+    silicon/9600
+    titanium/19200
+    thorium/25600
+]
+
+rotateSpeed: 10
+warmupSpeed: 0.1
+
+drawRim: true
+drillEffect: {
+    type: smoke
+    color: #ffa1b2
+    amount: 15
+    lifetime: 45
+    range: 10
+    interval: 0.5
+    size: 15
+}
+updateEffect: {
+        type: dust
+        color: #ff4365
+        amount: 10
+        lifetime: 45
+        range: 8
+        interval: 0.5
+        size: 10
+}
+updateEffectChance: 0.2

@@ -5,16 +5,16 @@ repo: "ivinluan/vanilla-cosmic"
 description:
     '''
     A simple mod that[#b39ddb[]] enhances the original contents[#ffffff[]] of the game.
+
     This is my first mod for[#b39ddb[]] Mindustry[#ffffff[]].
 
     Has[#b39ddb[]] Filipino[#ffffff[]] translations.
 
-    This mod is still[#b39ddb[]] under development. Rest assured[#ffffff[]] that the[#b39ddb[]] contents[#ffffff[]] are[#b39ddb[]] working[#ffffff[]] and[#b39ddb[]] tested[#ffffff[]] before releasing. Please[#b39ddb[]] stay tuned for more[#ffffff[]] contents.[#b39ddb[]]
+    This mod is still[#b39ddb[]] under development. Rest assured[#ffffff[]] that the[#b39ddb[]] contents[#ffffff[]] are[#b39ddb[]] complete[#ffffff[]],[#b39ddb[]] working[#ffffff[]] and[#b39ddb[]] tested[#ffffff[]] before releasing. Please[#b39ddb[]] stay tuned for more[#ffffff[]].[#b39ddb[]]
 
-    Thank you so much[#ffffff[]] for checking out my mod. If you[#b39ddb[]] liked[#ffffff[]] this mod, please feel free to[#b39ddb[]] give it a star[#ffffff[]] in[#b39ddb[]] GitHub[#ffffff[]] (Click the Repo button).
-
-    September 2024 - version 1.0
+    Thank you so much[#ffffff[]] for checking out my mod. If you[#b39ddb[]] like[#ffffff[]] it, please feel free to[#b39ddb[]] give it a star[#ffffff[]] in[#b39ddb[]] GitHub[#ffffff[]] (Click the Repo button).
     '''
-version: "1.0"
+version: "1.1"
+subtitle: "September 2024 - version 1.1"
 minGameVersion: "146"
 icon: "icon.png"
