@@ -1,0 +1,66 @@
+name: Cosmic Photon Bore
+description: Harnesses the raw power of photons, the fundamental particles of light. With its focused energy beam, it can cut through any ore wall with unmatched speed and precision. This bore is a pinnacle of advanced technology, tapping into the purest form of energy in the COSMOS.
+type: BeamDrill
+category: production
+size: 5
+tier: 5
+drillTime: 12
+buildCostMultiplier: 0.3
+
+health: 2100
+armor: 1000
+
+hasItems: true
+itemCapacity: 300
+hasLiquids: true
+liquidCapacity: 70
+hasPower: true
+
+range: 15
+fogRadius: 11
+laserWidth: 1.05
+
+sparks: 11
+sparkSpread: 105
+sparkSize: 5.5
+
+glowColor: 635065ff
+sparkColor: 4a2925cc
+heatColor: c59fc9ff
+boostHeatColor: e2cfe4ff
+
+requirements: [
+    copper/250
+    lead/250
+    graphite/250
+    silicon/375
+    titanium/750
+    thorium/1000
+    beryllium/750
+    tungsten/1250
+    carbide/875
+]
+
+consumes: {
+    power: 11
+    liquid: {
+        liquid: neoplasm
+        amount: 2.5
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 3
+
+research: cosmic-spectral-bore
+researchCost: [
+    copper/2500
+    lead/2500
+    graphite/1250
+    silicon/1875
+    titanium/7500
+    thorium/10000
+    beryllium/7500
+    tungsten/12500
+    carbide/4375
+]
