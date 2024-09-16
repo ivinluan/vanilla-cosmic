@@ -1,0 +1,64 @@
+name: Cosmic Spectral Bore
+description: Manipulates the entire light spectrum, allowing it to bore through ore walls by adjusting its energy output. Its versatility comes from its control over different wavelengths, making it adaptable and powerful.
+type: BeamDrill
+category: production
+size: 4
+tier: 5
+drillTime: 15
+buildCostMultiplier: 0.3
+
+health: 1680
+armor: 800
+
+hasItems: true
+itemCapacity: 225
+hasLiquids: true
+liquidCapacity: 55
+hasPower: true
+
+range: 12
+fogRadius: 9
+laserWidth: 0.95
+
+sparks: 10
+sparkSpread: 90
+sparkSize: 5
+
+glowColor: 545e56ff
+sparkColor: 7d6407cc
+heatColor: f9c80eff
+boostHeatColor: fce487ff
+
+requirements: [
+    copper/200
+    lead/200
+    graphite/200
+    silicon/300
+    titanium/600
+    thorium/800
+    beryllium/600
+    surge-alloy/320
+]
+
+consumes: {
+    power: 9
+    liquid: {
+        liquid: neoplasm
+        amount: 2
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 2.5
+
+research: cosmic-radiant-bore
+researchCost: [
+    copper/2000
+    lead/2000
+    graphite/1000
+    silicon/1500
+    titanium/6000
+    thorium/8000
+    beryllium/6000
+    surge-alloy/640
+]

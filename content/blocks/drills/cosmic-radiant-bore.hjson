@@ -1,0 +1,62 @@
+name: Cosmic Radiant Bore
+description: Emits an intense, radiant energy capable of disintegrating anything in its path. Its bright, blinding light is a force to be reckoned with, capable of drilling into ore walls with the sheer power of its radiance.
+type: BeamDrill
+category: production
+size: 3
+tier: 5
+drillTime: 30
+buildCostMultiplier: 0.3
+
+health: 1260
+armor: 600
+
+hasItems: true
+itemCapacity: 150
+hasLiquids: true
+liquidCapacity: 40
+hasPower: true
+
+range: 9
+fogRadius: 7
+laserWidth: 0.85
+
+sparks: 9
+sparkSpread: 75
+sparkSize: 4.5
+
+glowColor: 522100ff
+sparkColor: 7c5554cc
+heatColor: f7a9a8ff
+boostHeatColor: a99080ff
+
+requirements: [
+    copper/150
+    lead/150
+    graphite/150
+    silicon/225
+    titanium/450
+    thorium/600
+    phase-fabric/375
+]
+
+consumes: {
+    power: 7
+    liquid: {
+        liquid: neoplasm
+        amount: 1.5
+        optional: true
+        booster: true
+    }
+}
+liquidBoostIntensity: 2
+
+research: cosmic-prism-bore
+researchCost: [
+    copper/1500
+    lead/1500
+    graphite/750
+    silicon/1125
+    titanium/4500
+    thorium/6000
+    phase-fabric/1875
+]

@@ -5,6 +5,7 @@ category: production
 size: 1
 tier: 5
 drillTime: 4 # 15 items/sec
+buildCostMultiplier: 0.23
 
 health: 1120
 armor: 225
