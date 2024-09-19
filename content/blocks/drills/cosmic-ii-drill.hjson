@@ -41,3 +41,15 @@ researchCost: [
     titanium/2400
     plastanium/2000
 ]
+
+drillEffect: circleColorSpark
+drillEffectChance: 0.75
+updateEffect: {
+    type: MultiEffect,
+    effects: [
+        drillSteam
+        heatReactorSmoke
+        smokePuff
+        ventSteam
+    ]
+}

@@ -43,3 +43,6 @@ researchCost: [
 ]
 
 drawMineItem: false # to prevent the oh no image in single tiled
+
+drillEffect: circleColorSpark
+drillEffectChance: 0.75

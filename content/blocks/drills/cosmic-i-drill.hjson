@@ -39,3 +39,15 @@ researchCost: [
     silicon/600
     titanium/1200
 ]
+
+drillEffect: circleColorSpark
+drillEffectChance: 0.8
+updateEffect: {
+    type: MultiEffect,
+    effects: [
+        drillSteam
+        heatReactorSmoke
+        smokePuff
+        ventSteam
+    ]
+}

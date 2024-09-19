@@ -43,3 +43,15 @@ researchCost: [
     thorium/6400
     phase-fabric/4000
 ]
+
+drillEffect: circleColorSpark
+drillEffectChance: 0.65
+updateEffect: {
+    type: MultiEffect,
+    effects: [
+        drillSteam
+        heatReactorSmoke
+        smokePuff
+        ventSteam
+    ]
+}

@@ -42,3 +42,47 @@ This is a guideline for putting values in the block properties.
     surge-alloy/80 * no. of tiles * version no.
     tungsten/50 * no. of tiles * version no.
     carbide/70 * no. of tiles * version no.
+
+### NOT SHOWING EFFECTS
+    lightning
+    blockCrash
+    trailFade
+    unitSpawn
+    unitControl
+    unitDespawn
+    unitSpirit
+    itemTransfer
+    pointBeam
+    pointHit
+    coreBuildShockwave
+    coreBuildBlock
+    upgradeCore
+    payloadDeposit
+    unitWreck
+    unitAssemble
+    unitLandSmall
+    artilleryTrail
+    incendTrail
+    missileTrail
+    fireRemove
+    forceShrink
+    colorTrail
+    missileTrailShort
+    sapped
+    muddy
+    wet
+    dropItem
+    regenSuppressSeek
+    ripple
+    healBlock
+    healBlockFull
+    rotateBlock
+    lightBlock
+    overdriveBlockFull
+    chainLightning
+    unitShieldBreak
+    chainEmp
+    arcShieldBreak
+    debugLine
+    debugRect
+    legDestroy

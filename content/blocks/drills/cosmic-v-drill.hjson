@@ -41,3 +41,15 @@ researchCost: [
     titanium/6000
     beryllium/6000
 ]
+
+drillEffect: circleColorSpark
+drillEffectChance: 0.6
+updateEffect: {
+    type: MultiEffect,
+    effects: [
+        drillSteam
+        heatReactorSmoke
+        smokePuff
+        ventSteam
+    ]
+}
