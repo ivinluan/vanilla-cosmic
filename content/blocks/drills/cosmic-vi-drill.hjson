@@ -45,3 +45,15 @@ researchCost: [
     beryllium/7200
     surge-alloy/4800
 ]
+
+drillEffect: circleColorSpark
+drillEffectChance: 0.55
+updateEffect: {
+    type: MultiEffect,
+    effects: [
+        drillSteam
+        heatReactorSmoke
+        smokePuff
+        ventSteam
+    ]
+}

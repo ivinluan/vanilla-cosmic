@@ -41,3 +41,15 @@ researchCost: [
     titanium/3600
     thorium/4800
 ]
+
+drillEffect: circleColorSpark
+drillEffectChance: 0.7
+updateEffect: {
+    type: MultiEffect,
+    effects: [
+        drillSteam
+        heatReactorSmoke
+        smokePuff
+        ventSteam
+    ]
+}

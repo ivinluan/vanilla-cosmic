@@ -45,3 +45,15 @@ researchCost: [
     beryllium/8400
     tungsten/14000
 ]
+
+drillEffect: circleColorSpark
+drillEffectChance: 0.5
+updateEffect: {
+    type: MultiEffect,
+    effects: [
+        drillSteam
+        heatReactorSmoke
+        smokePuff
+        ventSteam
+    ]
+}
