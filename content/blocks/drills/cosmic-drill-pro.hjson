@@ -46,21 +46,13 @@ researchCost: [
     thorium/12800
 ]
 
-drillEffect: {
-    type: smoke
-    color: #a5b7d2
-    amount: 15
-    lifetime: 45
-    range: 5
-    interval: 0.5
-    size: 10
-}
+drillEffect: payloadReceive
+drillEffectChance: 0.5
 updateEffect: {
-        type: dust
-        color: #4a6fa5
-        amount: 10
-        lifetime: 45
-        range: 3
-        interval: 0.5
-        size: 5
+    type: MultiEffect,
+    effects: [
+        drillSteam
+        smokeCloud
+        smokePuff
+    ]
 }

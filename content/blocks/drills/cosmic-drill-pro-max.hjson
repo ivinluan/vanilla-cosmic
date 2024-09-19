@@ -50,22 +50,14 @@ rotateSpeed: 10
 warmupSpeed: 0.1
 
 drawRim: true
-drillEffect: {
-    type: smoke
-    color: #ffa1b2
-    amount: 15
-    lifetime: 45
-    range: 10
-    interval: 0.5
-    size: 15
-}
+
+drillEffect: payloadReceive
+drillEffectChance: 0.5
 updateEffect: {
-        type: dust
-        color: #ff4365
-        amount: 10
-        lifetime: 45
-        range: 8
-        interval: 0.5
-        size: 10
+    type: MultiEffect,
+    effects: [
+        drillSteam
+        smokeCloud
+        smokePuff
+    ]
 }
-updateEffectChance: 0.2
