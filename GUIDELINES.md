@@ -3,45 +3,28 @@
 This is a guideline for putting values in the block properties.
 
 ## Drills
-### Common
-- Requirements just multiply the item cost (previous version) to **2**.
-- Requirement the main item should be the same value as the **highest value + half of the highest value.**
-- Research Cost just multiply the requirement cost to 10.
-- Liquid Boost Intensity base value is **1.5** just add **0.25** to the previous version value.
-
-### Mini
-- Just divide all to 2.
-- Liquid Boost Intensity should **remain the same** if it is **Fortify**.
-- Liquid Boost Intensity should **add 0.25** if it is **Enhanced**.
-
-### Fortify
-
-- Health base value is **320** multiply it to the **version number** of the drill.
-- Armor base value is **75** multiply it to the **version number + 1** of the drill.
-- Item Capacity base value is **50** just add **25** to the previous version value.
-- Consume Liquid Amount base value is **1** just add **0.25** to the previous version value.
-
-### Enhanced
-
-- Health base value is **320** multiply it to the **version number** of the drill.
-- Armor base value is **75** multiply it to the **version number - 1** of the drill.
-- Item Capacity base value is **50** just add **50** to the previous version value.
-- Liquid Capacity base value is **25** just add **10** to the previous version value.
-- Consume Liquid Amount base value is **1** just add **0.5** to the previous version value.
+### BASE VALUE
+    health/120 * no. of tiles * version no. (if any) / 2
+    armor/30 * no. of tiles * version no. (if any)
+    liquid/0.2 * no. of tiles * version no. (if any) * 10 / 60
+    liquidCapacity/itemCapacity * 0.4 (round it)
+    liquidBoostIntensity/1.5 + liquid value
+    itemCapacity/normal no. of items/sec * boost (if any) (make it whole number, round it)
+    power/0.25 * no. of tiles * version no. (if any) / 60
 
 ### BASE VALUE for CRAFTING
-    copper/10 * no. of tiles * version no.
-    lead/10 * no. of tiles * version no.
-    graphite/20 * no. of tiles * version no.
-    silicon/30 * no. of tiles * version no.
-    titanium/30 * no. of tiles * version no.
-    plastanium/50 * no. of tiles * version no.
-    thorium/40 * no. of tiles * version no.
-    phase-fabric/50 * no. of tiles * version no.
-    beryllium/30 * no. of tiles * version no.
-    surge-alloy/80 * no. of tiles * version no.
-    tungsten/50 * no. of tiles * version no.
-    carbide/70 * no. of tiles * version no.
+    copper/30 * no. of tiles * version no. (if any)
+    lead/30 * no. of tiles * version no. (if any)
+    graphite/25 * no. of tiles * version no. (if any) / 2
+    silicon/15 * no. of tiles * version no. (if any) / 2
+    titanium/25 * no. of tiles * version no. (if any)
+    plastanium/15 * no. of tiles * version no. (if any) / 2
+    thorium/25 * no. of tiles * version no. (if any)
+    phase-fabric/15 * no. of tiles * version no. (if any) / 2
+    beryllium/25 * no. of tiles * version no. (if any)
+    surge-alloy/5 * no. of tiles * version no. (if any) / 3
+    tungsten/20 * no. of tiles * version no. (if any)
+    carbide/10 * no. of tiles * version no. (if any) / 2
 
 ### NOT SHOWING EFFECTS
     lightning
