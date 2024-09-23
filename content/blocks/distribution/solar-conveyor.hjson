@@ -1,0 +1,22 @@
+name: Solar Conveyor
+description: Powered by the energy of entire solar systems, it efficiently moves resources with stellar precision.
+type: Conveyor
+category: distribution
+size: 1
+
+health: 40
+speed: 0.13
+displayedSpeed: 16
+
+requirements: [
+    copper/20
+    lead/20
+    graphite/10
+]
+
+research: titanium-conveyor
+researchCost: [
+    copper/200
+    lead/200
+    graphite/50
+]

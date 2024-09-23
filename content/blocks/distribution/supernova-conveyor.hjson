@@ -1,0 +1,22 @@
+name: Supernova Conveyor
+description: Harnesses the explosive force of a supernova, propelling materials at tremendous speed.
+type: Conveyor
+category: distribution
+size: 1
+
+health: 60
+speed: 0.18
+displayedSpeed: 21
+
+requirements: [
+    titanium/20
+    thorium/20
+    silicon/10
+]
+
+research: solar-conveyor
+researchCost: [
+    titanium/200
+    thorium/200
+    silicon/50
+]

@@ -1,0 +1,22 @@
+name: Void Conveyor
+description: Utilizes the energy of the cosmic void, warping space to instantly transport resources over vast distances.
+type: Conveyor
+category: distribution
+size: 1
+
+health: 80
+speed: 0.23
+displayedSpeed: 26
+
+requirements: [
+    beryllium/30
+    tungsten/20
+    carbide/10
+]
+
+research: supernova-conveyor
+researchCost: [
+    beryllium/300
+    tungsten/200
+    carbide/50
+]
