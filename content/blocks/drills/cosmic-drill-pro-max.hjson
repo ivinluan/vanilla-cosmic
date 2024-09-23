@@ -7,43 +7,43 @@ tier: 5
 drillTime: 7.62 # 31.5 items/sec
 buildCostMultiplier: 0.25
 
-health: 5120
-armor: 1350
+health: 2080
+armor: 4800
 
 hasItems: true
-itemCapacity: 500
+itemCapacity: 5640
 hasLiquids: true
-liquidCapacity: 50
+liquidCapacity: 2260
 hasPower: true
 
 requirements: [
-    copper/640
-    lead/640
-    graphite/1280
-    silicon/1920
-    titanium/1920
-    thorium/2560
+    copper/780
+    lead/780
+    graphite/330
+    silicon/200
+    phase-fabric/200
+    surge-alloy/40
 ]
 
 consumes: {
-    power: 15
+    power: 0.43
     liquid: {
         liquid: cryofluid
-        amount: 3
+        amount: 5.33
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 5
+liquidBoostIntensity: 6.83
 
 research: cosmic-drill-pro
 researchCost: [
-    copper/6400
-    lead/6400
-    graphite/6400
-    silicon/9600
-    titanium/19200
-    thorium/25600
+    copper/7800
+    lead/7800
+    graphite/1650
+    silicon/1000
+    phase-fabric/1000
+    surge-alloy/200
 ]
 
 rotateSpeed: 10

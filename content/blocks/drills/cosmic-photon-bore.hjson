@@ -4,16 +4,16 @@ type: BeamDrill
 category: production
 size: 5
 tier: 5
-drillTime: 12
+drillTime: 12 # 25 items/sec
 buildCostMultiplier: 0.3
 
-health: 2100
-armor: 1000
+health: 2320
+armor: 3000
 
 hasItems: true
-itemCapacity: 300
+itemCapacity: 3550
 hasLiquids: true
-liquidCapacity: 70
+liquidCapacity: 1420
 hasPower: true
 
 range: 15
@@ -30,37 +30,35 @@ heatColor: c59fc9ff
 boostHeatColor: e2cfe4ff
 
 requirements: [
-    copper/250
-    lead/250
-    graphite/250
-    silicon/375
-    titanium/750
-    thorium/1000
-    beryllium/750
-    tungsten/1250
-    carbide/875
+    copper/870
+    lead/870
+    graphite/360
+    silicon/220
+    titanium/730
+    thorium/730
+    beryllium/730
+    carbide/150
 ]
 
 consumes: {
-    power: 11
+    power: 0.48
     liquid: {
         liquid: neoplasm
-        amount: 2.5
+        amount: 3.33
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 3
+liquidBoostIntensity: 4.83
 
 research: cosmic-spectral-bore
 researchCost: [
-    copper/2500
-    lead/2500
-    graphite/1250
-    silicon/1875
-    titanium/7500
-    thorium/10000
-    beryllium/7500
-    tungsten/12500
-    carbide/4375
+    copper/8700
+    lead/8700
+    graphite/1800
+    silicon/1100
+    titanium/7300
+    thorium/7300
+    beryllium/7300
+    carbide/750
 ]

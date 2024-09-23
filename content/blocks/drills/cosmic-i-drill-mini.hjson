@@ -7,37 +7,37 @@ tier: 4
 drillTime: 60 # 1 item/sec
 buildCostMultiplier: 0.23
 
-health: 160
-armor: 37.5
+health: 200
+armor: 60
 
 hasItems: true
-itemCapacity: 25
+itemCapacity: 30
 hasLiquids: true
-liquidCapacity: 12.5
+liquidCapacity: 10
 
 requirements: [
-    copper/20
-    graphite/40
-    silicon/60
-    titanium/60
+    copper/150
+    graphite/30
+    silicon/20
+    titanium/130
 ]
 
 consumes: {
     liquid: {
         liquid: water
-        amount: 0.5
+        amount: 0.13
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 1.5
+liquidBoostIntensity: 1.63
 
 research: pneumatic-drill
 researchCost: [
-    copper/200
-    graphite/200
-    silicon/300
-    titanium/600
+    copper/1500
+    graphite/150
+    silicon/100
+    titanium/1300
 ]
 
 drawMineItem: false # to prevent the oh no image in single tiled
