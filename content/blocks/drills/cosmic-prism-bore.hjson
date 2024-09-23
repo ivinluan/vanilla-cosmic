@@ -4,16 +4,16 @@ type: BeamDrill
 category: production
 size: 2
 tier: 3
-drillTime: 60
+drillTime: 60 # 2 items/sec
 buildCostMultiplier: 0.3
 
-health: 840
-armor: 400
+health: 400
+armor: 120
 
 hasItems: true
-itemCapacity: 75
+itemCapacity: 70
 hasLiquids: true
-liquidCapacity: 25
+liquidCapacity: 30
 hasPower: true
 
 range: 6
@@ -30,31 +30,29 @@ heatColor: 20fc8fff # glow of the boar, light color
 boostHeatColor: 90fec7ff # boosted glow of the boar, highest light color
 
 requirements: [
-    copper/60
-    lead/60
-    graphite/120
-    silicon/180
-    titanium/180
-    plastanium/300
+    copper/150
+    lead/150
+    graphite/60
+    silicon/40
+    plastanium/40
 ]
 
 consumes: {
-    power: 5
+    power: 0.08
     liquid: {
         liquid: neoplasm
-        amount: 0.5
+        amount: 0.13
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 1.5
+liquidBoostIntensity: 1.63
 
 research: large-plasma-bore
 researchCost: [
-    copper/600
-    lead/600
-    graphite/600
-    silicon/900
-    titanium/1800
-    plastanium/1500
+    copper/1500
+    lead/1500
+    graphite/300
+    silicon/200
+    plastanium/200
 ]

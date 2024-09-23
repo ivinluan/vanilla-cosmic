@@ -7,41 +7,39 @@ tier: 5
 drillTime: 68.57 # 3.5 items/sec
 buildCostMultiplier: 0.25
 
-health: 1280
-armor: 375
+health: 640
+armor: 540
 
 hasItems: true
-itemCapacity: 150
+itemCapacity: 110
 hasLiquids: true
-liquidCapacity: 35
+liquidCapacity: 40
 
 requirements: [
-    copper/160
-    graphite/320
-    silicon/480
-    titanium/480
-    thorium/640
-    phase-fabric/800
+    copper/240
+    graphite/100
+    silicon/60
+    titanium/200
+    phase-fabric/60
 ]
 
 consumes: {
     liquid: {
         liquid: water
-        amount: 1.5
+        amount: 0.53
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 2.25
+liquidBoostIntensity: 2.03
 
 research: cosmic-iii-drill
 researchCost: [
-    copper/1600
-    graphite/1600
-    silicon/2400
-    titanium/2400
-    thorium/6400
-    phase-fabric/4000
+    copper/2400
+    graphite/500
+    silicon/300
+    titanium/2000
+    phase-fabric/300
 ]
 
 drillEffect: circleColorSpark

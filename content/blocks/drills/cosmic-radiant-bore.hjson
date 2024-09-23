@@ -4,16 +4,16 @@ type: BeamDrill
 category: production
 size: 3
 tier: 5
-drillTime: 30
+drillTime: 30 # 6 items/sec
 buildCostMultiplier: 0.3
 
-health: 1260
-armor: 600
+health: 880
+armor: 540
 
 hasItems: true
-itemCapacity: 150
+itemCapacity: 190
 hasLiquids: true
-liquidCapacity: 40
+liquidCapacity: 80
 hasPower: true
 
 range: 9
@@ -30,33 +30,31 @@ heatColor: f7a9a8ff
 boostHeatColor: a99080ff
 
 requirements: [
-    copper/150
-    lead/150
-    graphite/150
-    silicon/225
-    titanium/450
-    thorium/600
-    phase-fabric/375
+    copper/330
+    lead/330
+    graphite/140
+    silicon/80
+    titanium/280
+    phase-fabric/80
 ]
 
 consumes: {
-    power: 7
+    power: 0.18
     liquid: {
         liquid: neoplasm
-        amount: 1.5
+        amount: 0.6
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 2
+liquidBoostIntensity: 2.1
 
 research: cosmic-prism-bore
 researchCost: [
-    copper/1500
-    lead/1500
-    graphite/750
-    silicon/1125
-    titanium/4500
-    thorium/6000
-    phase-fabric/1875
+    copper/3300
+    lead/3300
+    graphite/700
+    silicon/400
+    titanium/2800
+    phase-fabric/400
 ]

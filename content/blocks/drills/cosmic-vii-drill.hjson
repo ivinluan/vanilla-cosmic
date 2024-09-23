@@ -7,43 +7,43 @@ tier: 5
 drillTime: 16 # 15 items/sec
 buildCostMultiplier: 0.25
 
-health: 2240
-armor: 450
+health: 880
+armor: 840
 
 hasItems: true
-itemCapacity: 275
+itemCapacity: 450
 hasLiquids: true
-liquidCapacity: 55
+liquidCapacity: 180
 
 requirements: [
-    copper/280
-    graphite/560
-    silicon/840
-    titanium/840
-    thorium/1120
-    beryllium/840
-    tungsten/1400
+    copper/330
+    graphite/140
+    silicon/80
+    titanium/280
+    thorium/280
+    beryllium/280
+    tungsten/220
 ]
 
 consumes: {
     liquid: {
         liquid: water
-        amount: 2.5
+        amount: 0.93
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 3
+liquidBoostIntensity: 2.43
 
 research: cosmic-vi-drill
 researchCost: [
-    copper/2800
-    graphite/2800
-    silicon/4200
-    titanium/8400
-    thorium/11200
-    beryllium/8400
-    tungsten/14000
+    copper/3300
+    graphite/700
+    silicon/400
+    titanium/2800
+    thorium/2800
+    beryllium/2800
+    tungsten/2200
 ]
 
 drillEffect: circleColorSpark

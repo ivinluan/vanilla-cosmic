@@ -1,0 +1,42 @@
+name: Cosmic Rift Shatterer
+description: Opens dimensional rifts to crush cliffs and extract resources from beyond the stars.
+type: WallCrafter
+category: production
+size: 4
+attribute: sand
+output: sand
+drillTime: 60 # 4 items/sec
+buildCostMultiplier: 0.2
+
+health: 1360
+armor: 480
+
+hasItems: true
+itemCapacity: 190
+hasPower: true
+
+rotateSpeed: 3
+fogRadius: 8
+
+requirements: [
+    copper/510
+    lead/510
+    graphite/210
+    silicon/130
+    plastanium/130
+    phase-fabric/130
+]
+
+consumes: {
+    power: 0.28
+}
+
+research: cliff-crusher
+researchCost: [
+    copper/5100
+    lead/5100
+    graphite/1050
+    silicon/650
+    plastanium/650
+    phase-fabric/650
+]
