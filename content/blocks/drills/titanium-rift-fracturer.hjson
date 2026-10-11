@@ -1,11 +1,11 @@
-name: Cosmic Rift Shatterer
-description: Opens dimensional rifts to shatter sand-bearing cliffs into usable sand.
+name: Titanium Rift Fracturer
+description: Harnesses dimensional rifts to fracture titanium-rich cliffs, extracting valuable titanium.
 type: WallCrafter
 category: production
 size: 4
 attribute: sand
-output: sand
-drillTime: 73 # 3.29 items/sec at full sand-wall frontage (201% above Cliff Crusher)
+output: titanium
+drillTime: 55 # 4.36 items/sec at full sand-wall frontage (300% above Cliff Crusher)
 buildCostMultiplier: 1
 
 health: 700
@@ -25,10 +25,11 @@ requirements: [
     silicon/40
     plastanium/40
     phase-fabric/40
+    titanium/80
 ]
 
 consumes: {
-    power: 0.55
+    power: 0.75
 }
 
 research: cliff-crusher
@@ -39,4 +40,5 @@ researchCost: [
     silicon/200
     plastanium/200
     phase-fabric/200
+    titanium/400
 ]
