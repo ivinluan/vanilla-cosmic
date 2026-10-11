@@ -1,0 +1,46 @@
+name: Beryllium Rift Fracturer
+description: Channels dimensional energy to fracture beryllium-rich cliffs, extracting valuable beryllium deposits.
+type: WallCrafter
+category: production
+size: 4
+attribute: sand
+output: beryllium
+drillTime: 55 # 4.36 items/sec at full sand-wall frontage
+buildCostMultiplier: 1
+
+health: 820
+armor: 80
+
+hasItems: true
+itemCapacity: 50
+hasLiquids: true
+liquidCapacity: 70
+hasPower: true
+
+liquidBoostIntensity: 1.6
+
+rotateSpeed: 3
+fogRadius: 4
+
+requirements: [
+    beryllium/240
+    graphite/120
+    silicon/80
+]
+
+consumes: {
+    power: 0.9
+    liquid: {
+        liquid: water
+        amount: 0.26
+        optional: true
+        booster: true
+    }
+}
+
+research: cliff-crusher
+researchCost: [
+    beryllium/1200
+    graphite/600
+    silicon/400
+]

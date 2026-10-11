@@ -12,8 +12,12 @@ health: 700
 armor: 60
 
 hasItems: true
-itemCapacity: 20
+itemCapacity: 50
+hasLiquids: true
+liquidCapacity: 60
 hasPower: true
+
+liquidBoostIntensity: 1.6
 
 rotateSpeed: 3
 fogRadius: 4
@@ -30,6 +34,12 @@ requirements: [
 
 consumes: {
     power: 0.75
+    liquid: {
+        liquid: water
+        amount: 0.24
+        optional: true
+        booster: true
+    }
 }
 
 research: cliff-crusher
