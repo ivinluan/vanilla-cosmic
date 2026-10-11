@@ -4,14 +4,14 @@ type: Drill
 category: production
 size: 1
 tier: 4
-drillTime: 40 # 1.5 items/sec
-buildCostMultiplier: 0.23
+drillTime: 175 # 0.34 items/sec at full ore coverage
+buildCostMultiplier: 1
 
 health: 240
-armor: 150
+armor: 120
 
 hasItems: true
-itemCapacity: 35
+itemCapacity: 40
 hasLiquids: true
 liquidCapacity: 15
 
@@ -25,16 +25,16 @@ requirements: [
 consumes: {
     liquid: {
         liquid: water
-        amount: 0.27
+        amount: 0.1
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 1.77
+liquidBoostIntensity: 1.75
 
 research: cosmic-i-drill-mini
 researchCost: [
-    copper/900
+    copper/450
     graphite/200
     silicon/125
     plastanium/125

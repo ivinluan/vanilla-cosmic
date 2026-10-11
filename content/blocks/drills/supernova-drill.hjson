@@ -4,20 +4,20 @@ type: BurstDrill
 category: production
 size: 8
 tier: 7
-drillTime: 76.8 # 50 items/sec
-buildCostMultiplier: 0.35
+drillTime: 187 # 20.53 items/sec at full ore coverage (499% above Blast Drill)
+buildCostMultiplier: 1
 
-health: 5200
-armor: 1920
+health: 3200
+armor: 240
 
 hasItems: true
-itemCapacity: 5000
+itemCapacity: 640
 hasLiquids: true
-liquidCapacity: 4740
+liquidCapacity: 720
 hasPower: true
 
-fogRadius: 15
-shake: 10
+fogRadius: 8
+shake: 8
 
 arrowOffset: 2
 arrowSpacing: 8
@@ -27,32 +27,32 @@ baseArrowColor: 17615fcc
 glowColor: 96e1deff
 
 requirements: [
-    copper/1950
-    lead/1950
-    graphite/810
-    silicon/490
-    plastanium/490
-    phase-fabric/490
-    surge-alloy/110
+    copper/390
+    lead/390
+    graphite/180
+    silicon/360
+    plastanium/100
+    phase-fabric/100
+    surge-alloy/40
 ]
 
 consumes: {
-    power: 1.08
+    power: 18
     liquids: [
-        cryofluid/3.2
-        slag/3.2
+        cryofluid/0.6
+        slag/0.6
     ]
 }
 
 research: blast-drill
 researchCost: [
-    copper/19500
-    lead/19500
-    graphite/4050
-    silicon/2450
-    plastanium/2450
-    phase-fabric/2450
-    surge-alloy/550
+    copper/1950
+    lead/1950
+    graphite/900
+    silicon/1800
+    plastanium/500
+    phase-fabric/500
+    surge-alloy/200
 ]
 
 drillEffect: {
