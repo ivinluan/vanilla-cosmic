@@ -1,17 +1,17 @@
 name: Cosmic II Drill
-description: The 2nd version of drill from the COSMOS. Fortified using plastanium, it is stronger than Cosmic II Drill.
+description: The 2nd version of drill from the COSMOS. Fortified using plastanium, it is stronger than Cosmic I Drill.
 type: Drill
 category: production
 size: 2
 tier: 4
-drillTime: 160 # 1.5 items/sec
-buildCostMultiplier: 0.25
+drillTime: 240 # 1.00 items/sec at full ore coverage
+buildCostMultiplier: 1
 
 health: 480
-armor: 300
+armor: 240
 
 hasItems: true
-itemCapacity: 70
+itemCapacity: 80
 hasLiquids: true
 liquidCapacity: 30
 
@@ -25,16 +25,16 @@ requirements: [
 consumes: {
     liquid: {
         liquid: water
-        amount: 0.27
+        amount: 0.1
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 1.77
+liquidBoostIntensity: 1.75
 
 research: cosmic-i-drill
 researchCost: [
-    copper/1800
+    copper/900
     graphite/400
     silicon/250
     plastanium/250

@@ -4,23 +4,23 @@ type: Drill
 category: production
 size: 3
 tier: 5
-drillTime: 7.74 # 31 items/sec
-buildCostMultiplier: 0.25
+drillTime: 52 # 10.38 items/sec at full ore coverage
+buildCostMultiplier: 1
 
-health: 1440
-armor: 2430
+health: 1040
+armor: 1080
 
 hasItems: true
-itemCapacity: 2390
+itemCapacity: 220
 hasLiquids: true
-liquidCapacity: 960
+liquidCapacity: 100
 hasPower: true
 
 requirements: [
     copper/540
     lead/540
     graphite/230
-    silicon/140
+    silicon/170
     titanium/450
     thorium/450
 ]
@@ -29,21 +29,21 @@ consumes: {
     power: 0.3
     liquid: {
         liquid: cryofluid
-        amount: 2.7
+        amount: 0.24
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 4.2
+liquidBoostIntensity: 2.45
 
 research: cosmic-viii-drill
 researchCost: [
-    copper/5400
-    lead/5400
+    copper/2700
+    lead/2700
     graphite/1150
-    silicon/700
-    titanium/4500
-    thorium/4500
+    silicon/850
+    titanium/2250
+    thorium/2250
 ]
 
 drillEffect: payloadReceive

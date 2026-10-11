@@ -4,8 +4,8 @@ type: Drill
 category: production
 size: 2
 tier: 4
-drillTime: 240 # 1 item/sec
-buildCostMultiplier: 0.25
+drillTime: 300 # 0.80 items/sec at full ore coverage
+buildCostMultiplier: 1
 
 health: 400
 armor: 120
@@ -25,19 +25,19 @@ requirements: [
 consumes: {
     liquid: {
         liquid: water
-        amount: 0.13
+        amount: 0.08
         optional: true
         booster: true
     }
 }
-liquidBoostIntensity: 1.63
+liquidBoostIntensity: 1.65
 
 research: pneumatic-drill
 researchCost: [
-    copper/1500
+    copper/750
     graphite/300
     silicon/200
-    titanium/1300
+    titanium/650
 ]
 
 drillEffect: circleColorSpark

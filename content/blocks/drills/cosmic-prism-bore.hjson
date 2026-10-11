@@ -3,9 +3,9 @@ description: Focuses light through a complex prism, splitting it into multiple p
 type: BeamDrill
 category: production
 size: 2
-tier: 3
-drillTime: 60 # 2 items/sec
-buildCostMultiplier: 0.3
+tier: 5
+drillTime: 80 # 1.50 items/sec at full valid wall frontage
+buildCostMultiplier: 1
 
 health: 400
 armor: 120
@@ -38,7 +38,7 @@ requirements: [
 ]
 
 consumes: {
-    power: 0.08
+    power: 0.8
     liquid: {
         liquid: neoplasm
         amount: 0.13
@@ -46,12 +46,12 @@ consumes: {
         booster: true
     }
 }
-liquidBoostIntensity: 1.63
+liquidBoostIntensity: 1.5
 
 research: large-plasma-bore
 researchCost: [
-    copper/1500
-    lead/1500
+    copper/750
+    lead/750
     graphite/300
     silicon/200
     plastanium/200
