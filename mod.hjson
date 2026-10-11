@@ -15,6 +15,6 @@ description:
     Thank you so much[#ffffff[]] for checking out my mod. If you[#b39ddb[]] like[#ffffff[]] it, please feel free to[#b39ddb[]] give it a star[#ffffff[]] in[#b39ddb[]] GitHub[#ffffff[]] (Click the Repo button).
     '''
 version: "1.5"
-subtitle: "September 2024 - version 1.5"
-minGameVersion: "146"
+subtitle: "October 2026 - version 1.6"
+minGameVersion: "160"
 icon: "icon.png"

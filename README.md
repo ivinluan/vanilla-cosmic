@@ -6,11 +6,11 @@ This is my first mod for [Mindustry](https://mindustrygame.github.io/).
 
 Please check the [wiki tab](https://github.com/ivinluan/vanilla-cosmic/wiki) to know more.
 
-Progress Report: [September 2024](https://github.com/ivinluan/vanilla-cosmic/wiki/Progress-Report#september-2024)
+Progress Report: [October 2026](https://github.com/ivinluan/vanilla-cosmic/wiki/Progress-Report)
 
 Available languages:
 
 - English (default)
 - Filipino
 
-Version 1.5
+Version 1.6
