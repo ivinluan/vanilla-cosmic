@@ -1,0 +1,56 @@
+name: Thorium Rift Fracturer
+description: Harnesses dimensional rifts to fracture thorium-rich cliffs, extracting radioactive thorium from their depths.
+type: WallCrafter
+category: production
+size: 4
+attribute: sand
+output: thorium
+drillTime: 60 # 4.00 items/sec at full sand-wall frontage
+buildCostMultiplier: 1
+
+health: 760
+armor: 70
+
+hasItems: true
+itemCapacity: 50
+hasLiquids: true
+liquidCapacity: 60
+hasPower: true
+
+liquidBoostIntensity: 1.6
+
+rotateSpeed: 3
+fogRadius: 4
+
+requirements: [
+    copper/180
+    lead/180
+    graphite/80
+    silicon/60
+    titanium/90
+    thorium/100
+    plastanium/60
+    phase-fabric/60
+]
+
+consumes: {
+    power: 0.85
+    liquid: {
+        liquid: water
+        amount: 0.24
+        optional: true
+        booster: true
+    }
+}
+
+research: blast-drill
+researchCost: [
+    copper/900
+    lead/900
+    graphite/400
+    silicon/300
+    titanium/450
+    thorium/500
+    plastanium/300
+    phase-fabric/300
+]

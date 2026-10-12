@@ -1,0 +1,54 @@
+name: Tungsten Rift Fracturer
+description: Channels powerful dimensional rifts to fracture tungsten-rich cliffs, extracting durable tungsten from their depths.
+type: WallCrafter
+category: production
+size: 4
+attribute: sand
+output: tungsten
+drillTime: 50 # 4.80 items/sec at full sand-wall frontage
+buildCostMultiplier: 1
+
+health: 900
+armor: 100
+
+hasItems: true
+itemCapacity: 50
+hasLiquids: true
+liquidCapacity: 80
+hasPower: true
+
+liquidBoostIntensity: 1.6
+
+rotateSpeed: 3
+fogRadius: 4
+
+requirements: [
+    beryllium/260
+    tungsten/180
+    graphite/140
+    silicon/110
+    oxide/60
+    phase-fabric/60
+    surge-alloy/30
+]
+
+consumes: {
+    power: 1.1
+    liquid: {
+        liquid: water
+        amount: 0.28
+        optional: true
+        booster: true
+    }
+}
+
+research: large-cliff-crusher
+researchCost: [
+    beryllium/1300
+    tungsten/900
+    graphite/700
+    silicon/550
+    oxide/300
+    phase-fabric/300
+    surge-alloy/150
+]

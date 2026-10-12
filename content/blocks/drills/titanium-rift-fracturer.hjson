@@ -1,0 +1,54 @@
+name: Titanium Rift Fracturer
+description: Harnesses dimensional rifts to fracture titanium-rich cliffs, extracting valuable titanium.
+type: WallCrafter
+category: production
+size: 4
+attribute: sand
+output: titanium
+drillTime: 55 # 4.36 items/sec at full sand-wall frontage (300% above Cliff Crusher)
+buildCostMultiplier: 1
+
+health: 700
+armor: 60
+
+hasItems: true
+itemCapacity: 50
+hasLiquids: true
+liquidCapacity: 60
+hasPower: true
+
+liquidBoostIntensity: 1.6
+
+rotateSpeed: 3
+fogRadius: 4
+
+requirements: [
+    copper/150
+    lead/150
+    graphite/60
+    silicon/40
+    plastanium/40
+    phase-fabric/40
+    titanium/80
+]
+
+consumes: {
+    power: 0.75
+    liquid: {
+        liquid: water
+        amount: 0.24
+        optional: true
+        booster: true
+    }
+}
+
+research: cliff-crusher
+researchCost: [
+    copper/750
+    lead/750
+    graphite/300
+    silicon/200
+    plastanium/200
+    phase-fabric/200
+    titanium/400
+]
