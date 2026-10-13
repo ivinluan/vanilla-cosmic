@@ -5,6 +5,7 @@ category: distribution
 size: 1
 
 health: 110
+itemCapacity: 50
 range: 50
 transportTime: 2.3
 pulse: true

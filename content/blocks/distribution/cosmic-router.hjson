@@ -14,7 +14,7 @@ requirements: [
     carbide/12
 ]
 
-research: solar-conveyor
+research: void-conveyor
 researchCost: [
     beryllium/175
     tungsten/125

@@ -1,0 +1,36 @@
+name: Stellar Stack Conveyor
+description: Harnesses stellar energy to transport large stacks of items at exceptional speeds, enabling efficient high-volume distribution.
+type: StackConveyor
+category: distribution
+size: 1
+
+health: 150
+speed: 0.0666667 # 100 items/sec rated throughput with a 25-item stack
+itemCapacity: 25
+outputRouter: false
+
+hasPower: true
+consumesPower: true
+conductivePower: true
+baseEfficiency: 1
+underBullets: true
+buildCostMultiplier: 1
+
+requirements: [
+    beryllium/100
+    tungsten/80
+    carbide/40
+    surge-alloy/40
+]
+
+consumes: {
+    power: 0.0666667
+}
+
+research: surge-conveyor
+researchCost: [
+    beryllium/500
+    tungsten/400
+    carbide/200
+    surge-alloy/200
+]

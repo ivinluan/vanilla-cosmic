@@ -5,6 +5,7 @@ category: distribution
 size: 1
 
 health: 80
+itemCapacity: 25
 range: 25
 speed: 2
 bufferCapacity: 30

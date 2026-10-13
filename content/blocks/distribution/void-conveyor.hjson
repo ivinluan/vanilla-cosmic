@@ -16,7 +16,7 @@ requirements: [
 
 research: supernova-conveyor
 researchCost: [
-    beryllium/300
-    tungsten/200
+    beryllium/150
+    tungsten/100
     carbide/50
 ]

@@ -16,7 +16,7 @@ requirements: [
 
 research: titanium-conveyor
 researchCost: [
-    copper/200
-    lead/200
+    copper/100
+    lead/100
     graphite/50
 ]

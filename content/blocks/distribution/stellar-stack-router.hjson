@@ -1,0 +1,36 @@
+name: Stellar Stack Router
+description: Channels large stacks of items through stellar pathways, rapidly distributing them across connected transportation networks.
+type: StackRouter
+category: distribution
+size: 1
+
+health: 160
+speed: 1 # stack charge delay in frames; unloads a full 25-item stack in a burst
+itemCapacity: 25
+
+hasPower: true
+consumesPower: true
+conductivePower: true
+baseEfficiency: 1
+underBullets: true
+solid: false
+buildCostMultiplier: 1
+
+requirements: [
+    beryllium/110
+    tungsten/90
+    carbide/45
+    surge-alloy/50
+]
+
+consumes: {
+    power: 0.1
+}
+
+research: stellar-stack-conveyor
+researchCost: [
+    beryllium/550
+    tungsten/450
+    carbide/225
+    surge-alloy/250
+]
