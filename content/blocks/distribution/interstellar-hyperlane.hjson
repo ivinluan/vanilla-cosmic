@@ -1,0 +1,32 @@
+name: Interstellar Hyperlane
+description: Harnesses cosmic energy to propel items through interstellar pathways, enabling rapid transportation across immense distances.
+type: ItemBridge
+category: distribution
+size: 1
+
+health: 110
+range: 50
+transportTime: 2.3
+pulse: true
+buildCostMultiplier: 1
+
+requirements: [
+    beryllium/50
+    tungsten/40
+    carbide/25
+    phase-fabric/30
+    silicon/40
+]
+
+consumes: {
+    power: 0.55
+}
+
+research: void-conveyor
+researchCost: [
+    beryllium/250
+    tungsten/200
+    carbide/125
+    phase-fabric/150
+    silicon/200
+]

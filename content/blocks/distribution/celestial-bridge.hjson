@@ -1,0 +1,27 @@
+name: Celestial Bridge
+description: Channels items across vast gaps through celestial pathways, maintaining rapid transportation without requiring power.
+type: BufferedItemBridge
+category: distribution
+size: 1
+
+health: 80
+range: 25
+speed: 2
+bufferCapacity: 30
+displayedSpeed: 15
+buildCostMultiplier: 1
+
+requirements: [
+    titanium/30
+    thorium/30
+    silicon/15
+    graphite/10
+]
+
+research: supernova-conveyor
+researchCost: [
+    titanium/150
+    thorium/150
+    silicon/75
+    graphite/50
+]
