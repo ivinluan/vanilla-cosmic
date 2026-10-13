@@ -16,7 +16,7 @@ requirements: [
 
 research: solar-conveyor
 researchCost: [
-    titanium/200
-    thorium/200
+    titanium/100
+    thorium/100
     silicon/50
 ]

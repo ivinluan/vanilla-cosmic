@@ -1,0 +1,22 @@
+name: Cosmic Router
+description: Channels items through cosmic-infused pathways, distributing them across connected structures at exceptional speeds.
+type: Router
+category: distribution
+size: 1
+
+health: 100
+speed: 2
+buildCostMultiplier: 1
+
+requirements: [
+    beryllium/35
+    tungsten/25
+    carbide/12
+]
+
+research: void-conveyor
+researchCost: [
+    beryllium/175
+    tungsten/125
+    carbide/60
+]

@@ -1,0 +1,24 @@
+name: Cosmic Junction
+description: Harnesses cosmic energy to transport intersecting item streams at exceptional speeds without mixing them.
+type: Junction
+category: distribution
+size: 1
+
+health: 110
+speed: 2
+capacity: 6
+displayedSpeed: 26
+buildCostMultiplier: 1
+
+requirements: [
+    beryllium/40
+    tungsten/30
+    carbide/15
+]
+
+research: void-conveyor
+researchCost: [
+    beryllium/200
+    tungsten/150
+    carbide/75
+]
