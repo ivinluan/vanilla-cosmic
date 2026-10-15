@@ -31,6 +31,7 @@ Do not copy a numeric speed from one transport class to another.
 | `ItemBridge` | `range`, `transportTime` | Approximate rated rate with `60 / transportTime`. Range affects placement, not this rate. |
 | `StackConveyor` | `itemCapacity`, `speed` | Rated rate is `itemCapacity × speed × 60`; actual movement also follows native stack-line efficiency behavior. |
 | `StackRouter` | `itemCapacity`, `speed` | It fills one item type, waits for its charge delay, then unloads the full stack in a burst. `speed` is a charge delay, not an items-per-second value. |
+| `MassDriver` | `range`, `reload`, `itemCapacity`, `minDistribute`, `bulletSpeed`, `bulletLifetime` | Shipment size is limited by source/target item capacity. Rated maximum shipment rate is `itemCapacity × 60 / reload`; projectile travel must fit within its lifetime. |
 
 ## Current distribution progression
 
@@ -47,6 +48,7 @@ This table records the current definitions. It is a cost and progression referen
 | Interstellar Hyperlane | `ItemBridge` | Long powered item link, 50-item buffer      | beryllium 50, tungsten 40, carbide 25, phase fabric 30, silicon 40 | `void-conveyor` |
 | Stellar Stack Conveyor | `StackConveyor` | 25-item stacks / 100 rated items per second | beryllium 100, tungsten 80, carbide 40, surge alloy 40 | `surge-conveyor` |
 | Stellar Stack Router | `StackRouter` | 25-item burst distribution | beryllium 110, tungsten 90, carbide 45, surge alloy 50 | `stellar-stack-conveyor` |
+| Quasar Mass Driver | `MassDriver` | 250-item long-range shipment | titanium 300, silicon 200, lead 300, thorium 150, plastanium 100, phase fabric 80, surge alloy 50 | `mass-driver` |
 
 ## When adding a distribution block
 

@@ -4,7 +4,8 @@ type: Conveyor
 category: distribution
 size: 1
 
-health: 60
+health: 40
+armor: 1
 speed: 0.18
 displayedSpeed: 21
 

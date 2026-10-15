@@ -1,0 +1,31 @@
+name: Quasar Liquid Pump
+description: Harnesses immense quasar energy to extract vast quantities of liquid from the terrain at exceptional speeds without requiring power.
+type: Pump
+category: liquid
+size: 2
+
+health: 190
+armor: 1
+
+# 100 liquid/second for each valid liquid tile: 100 / 60 ticks.
+pumpAmount: 1.66666667
+liquidCapacity: 500
+
+requirements: [
+    copper/150
+    metaglass/180
+    titanium/150
+    silicon/120
+    thorium/100
+    plastanium/60
+]
+
+research: pulsar-liquid-pump
+researchCost: [
+    copper/750
+    metaglass/900
+    titanium/750
+    silicon/600
+    thorium/500
+    plastanium/300
+]

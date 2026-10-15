@@ -8,8 +8,8 @@ output: thorium
 drillTime: 60 # 4.00 items/sec at full sand-wall frontage
 buildCostMultiplier: 1
 
-health: 760
-armor: 70
+health: 900
+armor: 3
 
 hasItems: true
 itemCapacity: 50

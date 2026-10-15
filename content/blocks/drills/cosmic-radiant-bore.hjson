@@ -7,8 +7,8 @@ tier: 5
 drillTime: 64 # 2.81 items/sec at full valid wall frontage
 buildCostMultiplier: 1
 
-health: 500
-armor: 150
+health: 480
+armor: 1
 
 hasItems: true
 itemCapacity: 90

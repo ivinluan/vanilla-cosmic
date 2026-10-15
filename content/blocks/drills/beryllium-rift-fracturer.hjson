@@ -8,8 +8,8 @@ output: beryllium
 drillTime: 55 # 4.36 items/sec at full sand-wall frontage
 buildCostMultiplier: 1
 
-health: 820
-armor: 80
+health: 860
+armor: 2
 
 hasItems: true
 itemCapacity: 50

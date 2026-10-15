@@ -4,7 +4,8 @@ type: BufferedItemBridge
 category: distribution
 size: 1
 
-health: 80
+health: 50
+armor: 2
 itemCapacity: 25
 range: 25
 speed: 2

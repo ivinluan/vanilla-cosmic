@@ -7,8 +7,8 @@ tier: 7
 drillTime: 187 # 20.53 items/sec at full ore coverage (499% above Blast Drill)
 buildCostMultiplier: 1
 
-health: 3200
-armor: 240
+health: 3430
+armor: 2
 
 hasItems: true
 itemCapacity: 640
