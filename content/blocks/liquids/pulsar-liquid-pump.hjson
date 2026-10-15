@@ -1,0 +1,27 @@
+name: Pulsar Liquid Pump
+description: Channels pulsar energy to extract liquids rapidly from the terrain without requiring power.
+type: Pump
+category: liquid
+size: 1
+
+health: 40
+armor: 0
+
+# 25 liquid/second for each valid liquid tile: 25 / 60 ticks.
+pumpAmount: 0.41666667
+liquidCapacity: 100
+
+requirements: [
+    copper/60
+    metaglass/50
+    titanium/35
+    silicon/25
+]
+
+research: rotary-pump
+researchCost: [
+    copper/300
+    metaglass/250
+    titanium/175
+    silicon/125
+]
