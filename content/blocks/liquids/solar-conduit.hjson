@@ -1,0 +1,23 @@
+name: Solar Conduit
+description: Transports liquids through solar-powered channels at improved capacity and pressure without consuming power.
+type: Conduit
+category: liquid
+size: 1
+
+liquidCapacity: 30
+liquidPressure: 1.25
+health: 40
+armor: 0
+
+requirements: [
+    copper/2
+    lead/2
+    metaglass/2
+]
+
+research: conduit
+researchCost: [
+    copper/10
+    lead/10
+    metaglass/10
+]

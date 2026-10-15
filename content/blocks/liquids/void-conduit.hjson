@@ -1,0 +1,29 @@
+name: Void Conduit
+description: Harnesses void technology to transport immense quantities of liquid through high-capacity conduits.
+type: Conduit
+category: liquid
+size: 1
+
+liquidCapacity: 100
+liquidPressure: 2.5
+health: 50
+armor: 1
+
+requirements: [
+    metaglass/4
+    titanium/3
+    silicon/3
+    thorium/2
+    plastanium/2
+    surge-alloy/1
+]
+
+research: supernova-conduit
+researchCost: [
+    metaglass/20
+    titanium/15
+    silicon/15
+    thorium/10
+    plastanium/10
+    surge-alloy/5
+]

@@ -1,0 +1,25 @@
+name: Supernova Conduit
+description: Channels large volumes of liquid through reinforced conduits using advanced supernova technology.
+type: Conduit
+category: liquid
+size: 1
+
+liquidCapacity: 60
+liquidPressure: 1.75
+health: 50
+armor: 1
+
+requirements: [
+    lead/2
+    metaglass/3
+    titanium/2
+    silicon/2
+]
+
+research: solar-conduit
+researchCost: [
+    lead/10
+    metaglass/15
+    titanium/10
+    silicon/10
+]

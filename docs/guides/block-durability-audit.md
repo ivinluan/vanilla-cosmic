@@ -58,9 +58,17 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | `pulsar-liquid-pump` | Pump, 1 | copper 60, metaglass 50, titanium 35, silicon 25 | 40 Native / 0 Default | 40 / 0 | Pump | Keep: native HP already matches formula. |
 | `quasar-liquid-pump` | Pump, 2 | copper 150, metaglass 180, titanium 150, silicon 120, thorium 100, plastanium 60 | 210 Native / 0 Default | 190 / 1 | Pump | Review: formula is a modest HP decrease and adds one armor. |
 
+## Conduits — 3 blocks
+
+| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+|---|---|---|---|---|---|---|
+| solar-conduit | Conduit, 1 | copper 2, lead 2, metaglass 2 | New block | 40 / 0 | Conduit | Applied: entry liquid transport stays inexpensive and unarmored. |
+| supernova-conduit | Conduit, 1 | lead 2, metaglass 3, titanium 2, silicon 2 | New block | 50 / 1 | Pulse Conduit | Applied: modest tier increase without wall-level durability. |
+| void-conduit | Conduit, 1 | metaglass 4, titanium 3, silicon 3, thorium 2, plastanium 2, surge alloy 1 | New block | 50 / 1 | Plated Conduit | Applied: capability rises through capacity and pressure, not excessive HP or armor. |
+
 ## Audit outcome
 
-- Blocks audited: **39**.
+- Blocks currently covered: **42**.
 - Largest proposed HP increase: `cosmic-photon-bore`, 790 → 1380 (+590). The 5×5 footprint drives this result.
 - Largest proposed HP decrease: `cosmic-viii-drill`, 960 → 230 (−730). This reflects the formula's refusal to multiply durability by total recipe quantity.
 - Largest armor decrease: `cosmic-drill-pro-max`, 1200 → 1 (−1199). The existing drill armor series is the dominant manual-review concern.
