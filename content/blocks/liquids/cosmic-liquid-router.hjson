@@ -1,0 +1,26 @@
+name: Cosmic Liquid Router
+description: Distributes liquids between connected conduits using advanced cosmic technology.
+type: LiquidRouter
+category: liquid
+size: 1
+
+liquidCapacity: 300
+solid: false
+underBullets: true
+health: 50
+armor: 2
+
+requirements: [
+    beryllium/35
+    tungsten/25
+    carbide/12
+    metaglass/20
+]
+
+research: solar-conduit
+researchCost: [
+    beryllium/175
+    tungsten/125
+    carbide/60
+    metaglass/100
+]

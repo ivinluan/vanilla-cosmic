@@ -14,6 +14,23 @@ Vanilla Conduit → Solar Conduit → Supernova Conduit → Void Conduit
 
 Research costs are exactly 5× their matching construction requirement, following the repository-wide resource rule.
 
+## Liquid distribution branch
+
+| Block | Class | Capacity | Pressure | Build requirements | Research parent | HP / armor |
+|---|---|---:|---:|---|---|---:|
+| Cosmic Liquid Router | LiquidRouter | 300 | Not used by this class | beryllium 35, tungsten 25, carbide 12, metaglass 20 | solar-conduit | 50 / 2 |
+| Cosmic Liquid Junction | LiquidJunction | No liquid buffer | Not used by this class | beryllium 40, tungsten 30, carbide 15, metaglass 20 | cosmic-liquid-router | 50 / 2 |
+
+Solar Conduit → Cosmic Liquid Router → Cosmic Liquid Junction
+
+The router has 300 liquid capacity, exceeding Void Conduit's 100, so it can act as an advanced routing buffer. The junction has no internal liquid module: it sends a liquid source straight through the opposite side when that destination accepts it, avoiding a shared buffer and preserving the two crossing paths.
+
+## Liquid router and junction mechanics
+
+- LiquidRouter accepts an incoming liquid only when empty or already holding that same liquid. It distributes its current liquid to valid neighboring liquid blocks using native fill balancing. It has no item-style speed setting and does not use liquidPressure.
+- LiquidJunction does not store or mix liquids. Its native destination lookup routes an input to the opposite side; it remains blocked when the destination cannot accept the liquid. It has no capacity, pressure, or speed field to tune in HJSON.
+- Cosmic Liquid Router uses solid: false and underBullets: true, matching vanilla Liquid Router's practical placement behavior. Cosmic Liquid Junction uses solid: false, matching vanilla Liquid Junction.
+
 ## Verified flow behavior
 
 - A conduit updates forward liquid movement each tick while it contains liquid.
@@ -50,9 +67,13 @@ No sprites were created or modified. Conduit loads five top variants, five botto
 
 For example, Solar Conduit uses solar-conduit-top-0.png through solar-conduit-top-4.png, matching bottom variants, and solar-conduit-cap.png.
 
+Liquid Router needs cosmic-liquid-router.png and cosmic-liquid-router-bottom.png. Liquid Junction needs cosmic-liquid-junction.png. No artwork was created or modified.
+
 ## Sources
 
 - [Conduit.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/liquid/Conduit.java)
 - [LiquidBlock.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/liquid/LiquidBlock.java)
 - [BuildingComp.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/entities/comp/BuildingComp.java)
+- [LiquidRouter.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/liquid/LiquidRouter.java)
+- [LiquidJunction.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/liquid/LiquidJunction.java)
 - [Vanilla conduit definitions](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/content/Blocks.java)
