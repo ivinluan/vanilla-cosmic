@@ -4,7 +4,8 @@ type: ItemBridge
 category: distribution
 size: 1
 
-health: 110
+health: 50
+armor: 1
 itemCapacity: 50
 range: 50
 transportTime: 2.3

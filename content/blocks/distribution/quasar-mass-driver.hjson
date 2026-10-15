@@ -4,6 +4,9 @@ type: MassDriver
 category: distribution
 size: 4
 
+health: 1010
+armor: 5
+
 range: 1320
 reload: 66.67
 bulletSpeed: 16.5

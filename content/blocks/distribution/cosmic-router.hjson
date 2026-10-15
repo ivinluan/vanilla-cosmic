@@ -4,7 +4,8 @@ type: Router
 category: distribution
 size: 1
 
-health: 100
+health: 40
+armor: 1
 speed: 2
 buildCostMultiplier: 1
 

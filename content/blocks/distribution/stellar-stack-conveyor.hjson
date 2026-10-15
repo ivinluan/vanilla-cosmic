@@ -4,7 +4,8 @@ type: StackConveyor
 category: distribution
 size: 1
 
-health: 150
+health: 50
+armor: 2
 speed: 0.0666667 # 100 items/sec rated throughput with a 25-item stack
 itemCapacity: 25
 outputRouter: false

@@ -5,6 +5,7 @@ category: distribution
 size: 1
 
 health: 40
+armor: 0
 speed: 0.13
 displayedSpeed: 16
 

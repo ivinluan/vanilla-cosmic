@@ -7,8 +7,8 @@ tier: 5
 drillTime: 140 # 0.43 items/sec at full ore coverage
 buildCostMultiplier: 1
 
-health: 280
-armor: 180
+health: 60
+armor: 2
 
 hasItems: true
 itemCapacity: 50

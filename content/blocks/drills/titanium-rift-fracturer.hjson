@@ -8,8 +8,8 @@ output: titanium
 drillTime: 55 # 4.36 items/sec at full sand-wall frontage (300% above Cliff Crusher)
 buildCostMultiplier: 1
 
-health: 700
-armor: 60
+health: 870
+armor: 2
 
 hasItems: true
 itemCapacity: 50

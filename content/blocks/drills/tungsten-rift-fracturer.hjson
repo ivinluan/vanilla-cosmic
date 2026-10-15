@@ -8,8 +8,8 @@ output: tungsten
 drillTime: 50 # 4.80 items/sec at full sand-wall frontage
 buildCostMultiplier: 1
 
-health: 900
-armor: 100
+health: 960
+armor: 4
 
 hasItems: true
 itemCapacity: 50
