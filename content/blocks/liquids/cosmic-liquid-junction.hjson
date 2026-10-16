@@ -1,5 +1,5 @@
 name: Cosmic Liquid Junction
-description: Allows liquid conduits to cross without mixing their contents.
+description: Allows multiple liquid pathways to cross without interference, maintaining uninterrupted flow.
 type: LiquidJunction
 category: liquid
 size: 1

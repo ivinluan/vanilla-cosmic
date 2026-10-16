@@ -73,9 +73,16 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | cosmic-liquid-router | LiquidRouter, 1 | beryllium 35, tungsten 25, carbide 12, metaglass 20 | New block | 50 / 2 | Liquid Router | Applied: high capacity supports routing without making the block wall-like. |
 | cosmic-liquid-junction | LiquidJunction, 1 | beryllium 40, tungsten 30, carbide 15, metaglass 20 | New block | 50 / 2 | Liquid Junction | Applied: direct crossing has no stored liquid, but retains advanced utility-block durability. |
 
+## Liquid bridges — 2 blocks
+
+| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+|---|---|---|---|---|---|---|
+| celestial-aqueduct | LiquidBridge, 1 | titanium 30, thorium 30, silicon 15, graphite 10, metaglass 30 | New block | 50 / 1 | Bridge Conduit | Applied: advanced unpowered range and buffer without wall-level durability. |
+| voidstream-hyperlane | LiquidBridge, 1 | beryllium 50, tungsten 40, carbide 25, phase fabric 30, silicon 40, metaglass 40 | New block | 50 / 1 | Phase Conduit | Applied: power, range, and buffer define the higher tier instead of extreme durability. |
+
 ## Audit outcome
 
-- Blocks currently covered: **44**.
+- Blocks currently covered: **46**.
 - Largest proposed HP increase: `cosmic-photon-bore`, 790 → 1380 (+590). The 5×5 footprint drives this result.
 - Largest proposed HP decrease: `cosmic-viii-drill`, 960 → 230 (−730). This reflects the formula's refusal to multiply durability by total recipe quantity.
 - Largest armor decrease: `cosmic-drill-pro-max`, 1200 → 1 (−1199). The existing drill armor series is the dominant manual-review concern.
