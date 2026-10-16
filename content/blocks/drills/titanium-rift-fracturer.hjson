@@ -1,6 +1,9 @@
 name: Titanium Rift Fracturer
 description: Harnesses dimensional rifts to fracture titanium-rich cliffs, extracting valuable titanium.
 type: WallCrafter
+# Stellar or rift machinery cannot ignite from stored contents, but retains full rupture strength.
+flammabilityScale: 0
+explosivenessScale: 1
 category: production
 size: 4
 attribute: sand

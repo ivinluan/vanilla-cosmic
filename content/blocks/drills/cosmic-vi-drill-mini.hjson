@@ -1,6 +1,9 @@
 name: mini Cosmic VI Drill
 description: The smaller version of Cosmic VI Drill.
 type: Drill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 1
 tier: 5

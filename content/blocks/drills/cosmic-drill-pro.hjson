@@ -1,6 +1,9 @@
 name: Cosmic Drill Pro
 description: This is the pro version of Cosmic Drill. Has more capacity and much faster than older Cosmic Drills. Uses cryofluid instead of water to further enhance its drilling speed.
 type: Drill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 3
 tier: 5

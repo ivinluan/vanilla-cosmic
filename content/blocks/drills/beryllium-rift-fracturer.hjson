@@ -1,6 +1,9 @@
 name: Beryllium Rift Fracturer
 description: Channels dimensional energy to fracture beryllium-rich cliffs, extracting valuable beryllium deposits.
 type: WallCrafter
+# Stellar or rift machinery cannot ignite from stored contents, but retains full rupture strength.
+flammabilityScale: 0
+explosivenessScale: 1
 category: production
 size: 4
 attribute: sand

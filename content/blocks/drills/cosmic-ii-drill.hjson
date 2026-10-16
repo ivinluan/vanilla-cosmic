@@ -1,6 +1,9 @@
 name: Cosmic II Drill
 description: The 2nd version of drill from the COSMOS. Fortified using plastanium, it is stronger than Cosmic I Drill.
 type: Drill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 2
 tier: 4

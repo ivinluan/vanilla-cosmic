@@ -1,6 +1,9 @@
 name: Cosmic VI Drill
 description: The 6th version of drill from the COSMOS. Fortified using surge alloy, it is stronger than Cosmic V Drill.
 type: Drill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 2
 tier: 5

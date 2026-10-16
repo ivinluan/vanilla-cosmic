@@ -7,6 +7,9 @@ size: 1
 liquidCapacity: 300
 solid: false
 underBullets: true
+# Reinforced routing containment halves the stored-liquid destruction hazard.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 health: 50
 armor: 2
 

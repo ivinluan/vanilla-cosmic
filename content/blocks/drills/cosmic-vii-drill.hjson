@@ -1,6 +1,9 @@
 name: Cosmic VII Drill
 description: The 7th version of drill from the COSMOS. Enhanced using tungsten, it is much more efficient than Cosmic VI Drill.
 type: Drill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 2
 tier: 5

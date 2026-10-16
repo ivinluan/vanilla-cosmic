@@ -1,6 +1,9 @@
 name: Cosmic Drill Pro Max
 description: This is the best drill from the COSMOS, it surpasses all existing drills. Uses cryofluid instead of water to further enhance its drilling speed.
 type: Drill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 4
 tier: 5

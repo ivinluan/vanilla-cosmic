@@ -1,6 +1,9 @@
 name: Cosmic Radiant Bore
 description: Emits an intense, radiant energy capable of disintegrating anything in its path. Its bright, blinding light is a force to be reckoned with, capable of drilling into ore walls with the sheer power of its radiance.
 type: BeamDrill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 3
 tier: 5

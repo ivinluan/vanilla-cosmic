@@ -5,6 +5,9 @@ category: liquid
 size: 1
 
 solid: false
+# Reinforced crossing containment halves the stored-liquid destruction hazard.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 health: 50
 armor: 2
 

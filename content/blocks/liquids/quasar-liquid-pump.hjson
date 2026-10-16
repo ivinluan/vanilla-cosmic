@@ -1,6 +1,9 @@
 name: Quasar Liquid Pump
 description: A colossal pump powered by quasar energy, capable of drawing vast quantities of liquid from the depths.
 type: Pump
+# Stellar or rift machinery cannot ignite from stored contents, but retains full rupture strength.
+flammabilityScale: 0
+explosivenessScale: 1
 category: liquid
 size: 2
 

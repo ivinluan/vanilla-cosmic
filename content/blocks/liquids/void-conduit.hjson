@@ -6,6 +6,9 @@ size: 1
 
 liquidCapacity: 100
 liquidPressure: 2.5
+# Void containment removes stored-liquid fire and explosion effects on destruction.
+flammabilityScale: 0
+explosivenessScale: 0
 health: 50
 armor: 1
 

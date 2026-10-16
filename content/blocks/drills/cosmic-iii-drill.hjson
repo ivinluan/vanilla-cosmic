@@ -1,6 +1,9 @@
 name: Cosmic III Drill
 description: The 3rd version of drill from the COSMOS. Enhanced using thorium, it is much more efficient than Cosmic II Drill.
 type: Drill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 2
 tier: 5

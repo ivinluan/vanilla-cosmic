@@ -1,6 +1,9 @@
 name: Supernova Drill
 description: Harnesses the explosive power of a collapsing star, unleashing intense bursts of energy to rapidly excavate even the toughest ores. Its unrivaled drilling force vaporizes ores in seconds, making it the most powerful drill.
 type: BurstDrill
+# Stellar or rift machinery cannot ignite from stored contents, but retains full rupture strength.
+flammabilityScale: 0
+explosivenessScale: 1
 category: production
 size: 8
 tier: 7

@@ -1,6 +1,9 @@
 name: Cosmic Router
 description: Channels items through cosmic-infused pathways, distributing them across connected structures at exceptional speeds.
 type: Router
+# Cosmic containment halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: distribution
 size: 1
 

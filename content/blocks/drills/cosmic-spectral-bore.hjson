@@ -1,6 +1,9 @@
 name: Cosmic Spectral Bore
 description: Manipulates the entire light spectrum, allowing it to bore through ore walls by adjusting its energy output. Its versatility comes from its control over different wavelengths, making it adaptable and powerful.
 type: BeamDrill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 4
 tier: 5

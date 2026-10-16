@@ -1,6 +1,9 @@
 name: Celestial Bridge
 description: Channels items across vast gaps through celestial pathways, maintaining rapid transportation without requiring power.
 type: BufferedItemBridge
+# Sealed celestial transport prevents fire while retaining a controlled rupture risk.
+flammabilityScale: 0
+explosivenessScale: 0.5
 category: distribution
 size: 1
 
