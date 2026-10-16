@@ -63,11 +63,38 @@ All construction items currently used by Vanilla Cosmic have coefficients. No mi
 | Conveyors, routers, junctions | 0.85 | 0.50 |
 | Item bridges, stack transport | 0.95 | 0.70 |
 | Pumps and liquid transport | 1.00 | 0.80 |
+| Liquid storage | 1.75 | 1.50 |
+| Item storage | 1.75 | 1.50 |
 | Drills, beam bores, BurstDrills, WallCrafters | 1.20 | 1.00 |
 | Mass drivers | 1.25 | 1.20 |
 | Defensive walls | 1.50 | 2.00 |
 
 No defensive-wall multiplier is used in the current audit: the repository has no defensive wall HJSON files.
+
+## Storage Block Durability
+
+Use the **Liquid storage** role for dedicated liquid containers, tanks, and reservoirs. Use the **Item storage** role for dedicated containers, vaults, and warehouses. Both roles use `RH = 1.75` and `RA = 1.50`.
+
+- Classify by primary gameplay function, not Java class alone. A `LiquidRouter` built chiefly to store liquid, such as Celestial Reservoir, is Liquid storage; a router built to distribute liquid remains liquid transport.
+- Do not apply the storage roles to pumps, conduits, liquid bridges, liquid junctions, ordinary liquid routers, conveyors, item routers, mass drivers, stack transport, or production buffers.
+- Treat cores separately. Their base-infrastructure purpose means the Item storage multiplier does not automatically apply.
+- Storage capacity does not add a second health or armor multiplier. The footprint, construction material weights, and storage role multipliers are the complete calculation.
+- Do not assign armor solely because capacity is high. Stronger high-tier materials may improve weighted `MH` and `MA`, but no separate storage formula is needed.
+
+### Celestial Reservoir worked example
+
+Celestial Reservoir is 4×4 and requires metaglass ×150, beryllium ×250, tungsten ×200, and carbide ×25: total construction quantity = 625.
+
+```text
+Material weights = metaglass 0.24, beryllium 0.40, tungsten 0.32, carbide 0.04
+MH = 1 + (0.24 × 0.10) + (0.40 × 0.15) + (0.32 × 0.40) + (0.04 × 0.65) = 1.238
+HP = roundNearest10(40 × 4² × 1.238 × 1.75) = roundNearest10(1386.56) = 1390
+
+MA = (0.24 × 0.0) + (0.40 × 0.3) + (0.32 × 1.2) + (0.04 × 1.4) = 0.560
+Armor = roundNearestWhole((2 + 1.5 × 4) × 0.560 × 1.50) = roundNearestWhole(6.72) = 7
+```
+
+This is more durable than vanilla Reinforced Liquid Tank (900 HP, no explicit armor) because it is a larger dedicated storage block made with high-tier reinforcement materials. Its 13,500 liquid capacity does not independently increase its durability.
 
 ## Rounding and exceptions
 
