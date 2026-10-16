@@ -1,6 +1,9 @@
 name: Stellar Stack Conveyor
 description: Harnesses stellar energy to transport large stacks of items at exceptional speeds, enabling efficient high-volume distribution.
 type: StackConveyor
+# Stellar or rift machinery cannot ignite from stored contents, but retains full rupture strength.
+flammabilityScale: 0
+explosivenessScale: 1
 category: distribution
 size: 1
 

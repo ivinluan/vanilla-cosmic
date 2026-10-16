@@ -1,0 +1,26 @@
+name: Solar Conduit
+description: Channels liquids through radiant solar pathways, ensuring steady and efficient transport.
+type: Conduit
+category: liquid
+size: 1
+
+liquidCapacity: 30
+liquidPressure: 1.25
+# Stored flammable liquid never adds fire risk; explosive liquid retains its full destruction effect.
+flammabilityScale: 0
+explosivenessScale: 1
+health: 40
+armor: 0
+
+requirements: [
+    copper/2
+    lead/2
+    metaglass/2
+]
+
+research: conduit
+researchCost: [
+    copper/10
+    lead/10
+    metaglass/10
+]

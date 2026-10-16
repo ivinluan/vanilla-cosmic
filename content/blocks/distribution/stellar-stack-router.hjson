@@ -1,6 +1,9 @@
 name: Stellar Stack Router
 description: Channels large stacks of items through stellar pathways, rapidly distributing them across connected transportation networks.
 type: StackRouter
+# Stellar or rift machinery cannot ignite from stored contents, but retains full rupture strength.
+flammabilityScale: 0
+explosivenessScale: 1
 category: distribution
 size: 1
 

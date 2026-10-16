@@ -1,0 +1,32 @@
+name: Void Conduit
+description: Utilizes the silence of the cosmic void to transport liquids across great distances with minimal resistance.
+type: Conduit
+category: liquid
+size: 1
+
+liquidCapacity: 100
+liquidPressure: 2.5
+# Void containment removes stored-liquid fire and explosion effects on destruction.
+flammabilityScale: 0
+explosivenessScale: 0
+health: 50
+armor: 1
+
+requirements: [
+    metaglass/4
+    titanium/3
+    silicon/3
+    thorium/2
+    plastanium/2
+    surge-alloy/1
+]
+
+research: supernova-conduit
+researchCost: [
+    metaglass/20
+    titanium/15
+    silicon/15
+    thorium/10
+    plastanium/10
+    surge-alloy/5
+]

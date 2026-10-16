@@ -1,0 +1,28 @@
+name: Supernova Conduit
+description: Infused with the explosive power of a dying star, allowing liquids to flow at extraordinary speeds.
+type: Conduit
+category: liquid
+size: 1
+
+liquidCapacity: 60
+liquidPressure: 1.75
+# Stored flammable liquid never adds fire risk; explosive liquid retains its full destruction effect.
+flammabilityScale: 0
+explosivenessScale: 1
+health: 50
+armor: 1
+
+requirements: [
+    lead/2
+    metaglass/3
+    titanium/2
+    silicon/2
+]
+
+research: solar-conduit
+researchCost: [
+    lead/10
+    metaglass/15
+    titanium/10
+    silicon/10
+]

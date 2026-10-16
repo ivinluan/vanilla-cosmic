@@ -1,6 +1,9 @@
 name: Pulsar Liquid Pump
-description: Channels pulsar energy to extract liquids rapidly from the terrain without requiring power.
+description: Harnesses the rhythmic energy of a pulsar to extract liquids at remarkable speeds.
 type: Pump
+# Stellar or rift machinery cannot ignite from stored contents, but retains full rupture strength.
+flammabilityScale: 0
+explosivenessScale: 1
 category: liquid
 size: 1
 

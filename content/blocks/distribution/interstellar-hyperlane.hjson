@@ -1,6 +1,9 @@
 name: Interstellar Hyperlane
 description: Harnesses cosmic energy to propel items through interstellar pathways, enabling rapid transportation across immense distances.
 type: ItemBridge
+# Interstellar containment prevents fire and heavily suppresses rupture effects.
+flammabilityScale: 0
+explosivenessScale: 0.25
 category: distribution
 size: 1
 

@@ -1,6 +1,9 @@
 name: Cosmic Drill
 description: Also known as Cosmic I Drill. The 1st version of drill from the COSMOS. Enhanced using titanium, it is better than pneumatic drill.
 type: Drill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 2
 tier: 4

@@ -1,0 +1,29 @@
+name: Cosmic Liquid Router
+description: Guides liquid streams through cosmic channels, distributing them evenly among connected structures.
+type: LiquidRouter
+category: liquid
+size: 1
+
+liquidCapacity: 300
+solid: false
+underBullets: true
+# Reinforced routing containment halves the stored-liquid destruction hazard.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+health: 50
+armor: 2
+
+requirements: [
+    beryllium/35
+    tungsten/25
+    carbide/12
+    metaglass/20
+]
+
+research: solar-conduit
+researchCost: [
+    beryllium/175
+    tungsten/125
+    carbide/60
+    metaglass/100
+]

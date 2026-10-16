@@ -1,6 +1,9 @@
 name: Quasar Mass Driver
 description: Harnesses immense quasar energy to launch massive shipments of items across extraordinary distances at exceptional speeds.
 type: MassDriver
+# Stellar or rift machinery cannot ignite from stored contents, but retains full rupture strength.
+flammabilityScale: 0
+explosivenessScale: 1
 category: distribution
 size: 4
 

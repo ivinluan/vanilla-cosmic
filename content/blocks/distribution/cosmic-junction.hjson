@@ -1,6 +1,9 @@
 name: Cosmic Junction
 description: Harnesses cosmic energy to transport intersecting item streams at exceptional speeds without mixing them.
 type: Junction
+# Cosmic containment halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: distribution
 size: 1
 

@@ -1,6 +1,9 @@
 name: Cosmic VIII Drill
 description: The 8th version of drill from the COSMOS. Fortified using carbide, it is stronger than Cosmic VII Drill.
 type: Drill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 2
 tier: 5

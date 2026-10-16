@@ -1,6 +1,9 @@
 name: Cosmic Prism Bore
 description: Focuses light through a complex prism, splitting it into multiple powerful beams. It can refract and redirect energy in strategic ways, making it both powerful and precise. Its unique design allows for maximum efficiency to drill into ore walls.
 type: BeamDrill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 2
 tier: 5

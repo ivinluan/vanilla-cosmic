@@ -1,6 +1,9 @@
 name: Cosmic Photon Bore
 description: Harnesses the raw power of photons, the fundamental particles of light. With its focused energy beam, it can cut through any ore wall with unmatched speed and precision. This bore is a pinnacle of advanced technology, tapping into the purest form of energy in the COSMOS.
 type: BeamDrill
+# Cosmic machinery halves stored-content fire and explosion effects.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
 category: production
 size: 5
 tier: 5

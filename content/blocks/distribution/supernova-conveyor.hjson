@@ -1,6 +1,9 @@
 name: Supernova Conveyor
 description: Harnesses the explosive force of a supernova, propelling materials at tremendous speed.
 type: Conveyor
+# Stellar or rift machinery cannot ignite from stored contents, but retains full rupture strength.
+flammabilityScale: 0
+explosivenessScale: 1
 category: distribution
 size: 1
 
