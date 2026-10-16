@@ -1,0 +1,42 @@
+name: Voidstream Hyperlane
+description: Opens a stable channel through the cosmic void, instantly transporting liquids across immense distances.
+type: LiquidBridge
+category: liquid
+size: 1
+
+range: 50
+liquidCapacity: 300
+liquidPressure: 1.2
+health: 50
+armor: 1
+floating: true
+arrowPeriod: 0.9
+arrowTimeScl: 2.75
+pulse: true
+noAcceptDisabled: true
+# Void containment removes stored-liquid fire and explosion effects on destruction.
+explosivenessScale: 0
+flammabilityScale: 0
+
+requirements: [
+    beryllium/50
+    tungsten/40
+    carbide/25
+    phase-fabric/30
+    silicon/40
+    metaglass/40
+]
+
+consumes: {
+    power: 0.55
+}
+
+research: void-conduit
+researchCost: [
+    beryllium/250
+    tungsten/200
+    carbide/125
+    phase-fabric/150
+    silicon/200
+    metaglass/200
+]

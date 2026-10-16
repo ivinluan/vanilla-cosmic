@@ -25,6 +25,36 @@ Solar Conduit → Cosmic Liquid Router → Cosmic Liquid Junction
 
 The router has 300 liquid capacity, exceeding Void Conduit's 100, so it can act as an advanced routing buffer. The junction has no internal liquid module: it sends a liquid source straight through the opposite side when that destination accepts it, avoiding a shared buffer and preserving the two crossing paths.
 
+## Long-range liquid bridges
+
+| Block | Class | Range | Capacity | Pressure | Power | Research parent | HP / armor |
+|---|---|---:|---:|---:|---:|---|---:|
+| Celestial Aqueduct | LiquidBridge | 25 | 150 | 1.10 | None | supernova-conduit | 50 / 1 |
+| Voidstream Hyperlane | LiquidBridge | 50 | 300 | 1.20 | 0.55 power/sec | void-conduit | 50 / 1 |
+
+Celestial Aqueduct mirrors Celestial Bridge's 25-tile unpowered range. Voidstream Hyperlane mirrors Interstellar Hyperlane's 50-tile range and 0.55 power/sec requirement. Both use LiquidBridge's native linking behavior and only link with their own block type by default.
+
+The original pressure proposals of 1.5 and 2.5 were intentionally reduced to 1.10 and 1.20. LiquidBridge forwards liquid through the standard liquid movement calculation, so large pressure values can create excessively large one-tick transfers from a full internal buffer. Capacity 150/300 already provides substantial buffering.
+
+## Liquid bridge mechanics
+
+- LiquidBridge inherits ItemBridge link/range mechanics, but disables item storage and moves its current liquid through the target bridge after native warmup.
+- liquidCapacity and inherited liquidPressure are supported. Liquid pressure affects the source fill fraction used by liquid transfer; neither field establishes a fixed liquid-per-second throughput.
+- LiquidBridge overrides ItemBridge transport and does not use item transportTime. It calls liquid movement once per tick after warmup, so item-bridge speeds cannot be numerically matched with supported HJSON.
+- At a full source and empty same-capacity target, the first transfer can be up to the source capacity per tick: 150 liquid/tick (9,000 liquid/sec theoretical burst) for Celestial Aqueduct and 300 liquid/tick (18,000 liquid/sec theoretical burst) for Voidstream. This is a burst ceiling, not sustained network throughput.
+- Celestial Aqueduct follows vanilla Bridge Conduit's unpowered visual and disabled-acceptance settings. Voidstream follows Phase Conduit's pulse and arrow behavior, but uses the approved 0.55 power/sec custom requirement.
+
+## Destruction hazard progression
+
+`flammabilityScale` and `explosivenessScale` only modify the destruction effect contributed by stored liquid; they do not alter normal liquid transport. A value of `1` is the native full contribution, `0.5` is half, and `0` removes that contribution.
+
+| Blocks | Flammability scale | Explosiveness scale | Intended result |
+|---|---:|---:|---|
+| Solar Conduit, Supernova Conduit | 0 | 1 | Cannot ignite from stored liquid, but a loaded explosive-liquid line ruptures at full strength. |
+| Void Conduit, Voidstream Hyperlane | 0 | 0 | Void containment prevents stored liquids from adding fire or explosion effects. |
+| Cosmic Liquid Router, Cosmic Liquid Junction | 0.5 | 0.5 | Reinforced routing hardware halves, but does not erase, the risk of a loaded hub. |
+| Celestial Aqueduct | 0 | 0.5 | Sealed transport prevents fire but keeps a controlled rupture risk for stored explosive liquid. |
+
 ## Liquid router and junction mechanics
 
 - LiquidRouter accepts an incoming liquid only when empty or already holding that same liquid. It distributes its current liquid to valid neighboring liquid blocks using native fill balancing. It has no item-style speed setting and does not use liquidPressure.
@@ -69,6 +99,8 @@ For example, Solar Conduit uses solar-conduit-top-0.png through solar-conduit-to
 
 Liquid Router needs cosmic-liquid-router.png and cosmic-liquid-router-bottom.png. Liquid Junction needs cosmic-liquid-junction.png. No artwork was created or modified.
 
+Each LiquidBridge needs four regions: block-id.png, block-id-end.png, block-id-bridge.png, and block-id-arrow.png. Therefore create celestial-aqueduct.png, celestial-aqueduct-end.png, celestial-aqueduct-bridge.png, celestial-aqueduct-arrow.png, and the corresponding voidstream-hyperlane files.
+
 ## Sources
 
 - [Conduit.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/liquid/Conduit.java)
@@ -76,4 +108,6 @@ Liquid Router needs cosmic-liquid-router.png and cosmic-liquid-router-bottom.png
 - [BuildingComp.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/entities/comp/BuildingComp.java)
 - [LiquidRouter.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/liquid/LiquidRouter.java)
 - [LiquidJunction.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/liquid/LiquidJunction.java)
+- [LiquidBridge.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/liquid/LiquidBridge.java)
+- [ItemBridge.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/distribution/ItemBridge.java)
 - [Vanilla conduit definitions](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/content/Blocks.java)

@@ -1,0 +1,37 @@
+name: Celestial Aqueduct
+description: Carries liquids through celestial currents, enabling fast transport over long distances without power.
+type: LiquidBridge
+category: liquid
+size: 1
+
+range: 25
+liquidCapacity: 150
+liquidPressure: 1.1
+health: 50
+armor: 1
+floating: true
+fadeIn: false
+moveArrows: false
+arrowSpacing: 6
+hasPower: false
+noAcceptDisabled: true
+# Sealed celestial transport cannot ignite, but a destroyed loaded line can still rupture.
+explosivenessScale: 0.5
+flammabilityScale: 0
+
+requirements: [
+    titanium/30
+    thorium/30
+    silicon/15
+    graphite/10
+    metaglass/30
+]
+
+research: supernova-conduit
+researchCost: [
+    titanium/150
+    thorium/150
+    silicon/75
+    graphite/50
+    metaglass/150
+]
