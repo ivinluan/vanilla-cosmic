@@ -13,4 +13,4 @@ Available languages:
 - English (default)
 - Filipino
 
-Version 3.10.16
+Version 3.10.17

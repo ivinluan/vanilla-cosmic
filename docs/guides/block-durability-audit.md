@@ -4,6 +4,14 @@ This audit records the pre-approval HJSON values and the formula recommendations
 
 Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router` = router; `Junction` = junction; `Bridge` = buffered/phase conveyor; `Stack` = surge conveyor; `Drill` = pneumatic/laser/impact drill by tier; `Bore` = large plasma bore; `WallCrafter` = cliff crusher or large cliff crusher; `Pump` = mechanical/rotary/impulse pump; `Mass Driver` = mass driver.
 
+## Ultimate defensive walls — 3 blocks
+
+| Block ID | Type, size | Requirements | Standard formula HP / armor | Ultimate result HP / armor | Vanilla comparison | Recommendation and reason |
+|---|---|---|---|---|---|---|
+| `event-horizon-wall` | ShieldWall, 1 | tungsten 50, carbide 20, phase fabric 20, surge alloy 10 | 90 / 8 | 810 / 40 | Carbide Wall; Reinforced Surge Wall | Applied: 9× standard-wall health role produces 3× Carbide Wall HP. Fixed armor 40 is the documented ultimate exception. |
+| `event-horizon-wall-large` | ShieldWall, 2 | tungsten 200, carbide 80, phase fabric 80, surge alloy 40 | 360 / 11 | 3240 / 40 | Carbide Wall Large; Shielded Wall | Applied: 4× footprint cost, HP, shield capacity, regeneration, and power scaling. |
+| `event-horizon-wall-colossal` | ShieldWall, 4 | tungsten 800, carbide 320, phase fabric 320, surge alloy 160 | 1440 / 18 | 12960 / 40 | 4×4 Carbide Wall equivalent | Applied: 16× footprint cost and 3× per-footprint ultimate HP target. |
+
 ## Distribution — 10 blocks
 
 | Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
@@ -88,7 +96,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Audit outcome
 
-- Blocks currently covered: **47**.
+- Blocks currently covered: **50**.
 - Largest proposed HP increase: `cosmic-photon-bore`, 790 → 1380 (+590). The 5×5 footprint drives this result.
 - Largest proposed HP decrease: `cosmic-viii-drill`, 960 → 230 (−730). This reflects the formula's refusal to multiply durability by total recipe quantity.
 - Largest armor decrease: `cosmic-drill-pro-max`, 1200 → 1 (−1199). The existing drill armor series is the dominant manual-review concern.

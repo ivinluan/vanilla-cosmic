@@ -22,6 +22,7 @@ This guide controls the destruction hazard contributed by items or liquids store
 | Interstellar | 0 | 0.25 | Vacuum transport strongly suppresses a stored-content rupture. |
 | Cosmic drills, bores, routers, and junctions | 0.5 | 0.5 | Cosmic containment reduces, but does not eliminate, operational risk. |
 | Solar, Stellar, Pulsar, Quasar, Supernova, and Rift machinery | 0 | 1 | The machinery does not ignite from contents, but a loaded block retains a serious full-strength rupture. |
+| Event Horizon Walls | 0 | 0 | Event-horizon containment removes stored-content fire and explosion effects. |
 
 Apply both properties explicitly to each new block, choosing the family that best matches its name and intended containment technology. Use a different value only when the block's gameplay role clearly requires it, and document the exception.
 

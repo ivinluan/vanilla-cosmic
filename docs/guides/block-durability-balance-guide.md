@@ -68,8 +68,29 @@ All construction items currently used by Vanilla Cosmic have coefficients. No mi
 | Drills, beam bores, BurstDrills, WallCrafters | 1.20 | 1.00 |
 | Mass drivers | 1.25 | 1.20 |
 | Defensive walls | 1.50 | 2.00 |
+| Ultimate Defensive Walls | 13.50 | Fixed 40 armor |
 
-No defensive-wall multiplier is used in the current audit: the repository has no defensive wall HJSON files.
+The current audit applies the documented Ultimate Defensive Wall exception only to the Event Horizon Wall family. The ordinary Defensive walls multiplier remains available for future standard wall blocks.
+
+## Ultimate Defensive Wall exception
+
+Event Horizon Walls are an intentional endgame exception to the ordinary **Defensive walls** role. This does not change the rules for ordinary walls.
+
+- Use the normal material-weighting formulas first and record their result.
+- Event Horizon Wall recipes preserve a fixed material ratio: tungsten 50, carbide 20, phase fabric 20, surge alloy 10 per 1×1 footprint. This gives `MH = 1.500` and `MA = 1.130` for every size.
+- The ultimate tier uses `RH = 13.50`, exactly nine times the ordinary Defensive walls health role multiplier. With the fixed material ratio, this yields 810 HP at 1×1, 3,240 HP at 2×2, and 12,960 HP at 4×4: each is three times vanilla Carbide Wall health for the same footprint.
+- Standard Defensive walls armor would be 8, 11, and 18 for the 1×1, 2×2, and 4×4 variants. The fixed **40 armor** is an explicit ultimate-defense exception, set to twice vanilla Reinforced Surge Wall armor and intentionally shared across sizes following vanilla wall conventions. It is not a result of the normal armor formula.
+- Continue to apply the engine limitation: armor reduces ordinary non-piercing direct bullet damage, but it is neither a shield pool nor universal protection against splash/tile damage.
+
+The three Event Horizon recipes and research costs scale exactly by footprint: 1×, 4×, and 16×. Do not apply a capacity, total-cost, or additional size multiplier beyond the formula and this documented tier exception.
+
+### Native ShieldWall configuration
+
+All Event Horizon variants use the same supported native defensive settings: `chanceDeflect = 30`, `flashHit = true`, `lightningChance = 0.15`, `lightningDamage = 90`, `lightningLength = 51`, `absorbLasers = true`, and `insulated = true`. Deflection is damage-dependent (`chanceDeflect / incoming bullet damage`), not a flat 30% chance. Lightning length is the native lightning-segment length, not a guaranteed straight-line tile range.
+
+The shield values scale by footprint: 675 / 2,700 / 10,800 shield health and 1.5 / 6 / 24 regeneration per tick. Each uses the same 400-tick break cooldown. Shields require power: HJSON consumer values of 0.0375 / 0.15 / 0.6 power per tick equal 2.25 / 9 / 36 power per second. Power remains unchanged because shield capacity and regeneration are unchanged. When unpowered, the native shield is unavailable while the physical wall remains.
+
+`emitLight`, `lightColor`, and `lightRadius` provide constant native block light; the colors and `glowColor` are visual settings, not additional shield mechanics.
 
 ## Storage Block Durability
 
