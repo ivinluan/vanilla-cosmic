@@ -2,6 +2,7 @@ name: Event Horizon Wall
 description: An advanced defensive wall that absorbs lasers, reflects incoming projectiles, retaliates with lightning, and generates a regenerative shield. Requires power for shielding.
 type: ShieldWall
 category: defense
+shownPlanets: [serpulo, erekir]
 size: 1
 
 # Ultimate-defense exception; see Block Durability Balance Guide.

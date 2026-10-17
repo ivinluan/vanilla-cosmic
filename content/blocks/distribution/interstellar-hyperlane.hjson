@@ -5,6 +5,7 @@ type: ItemBridge
 flammabilityScale: 0
 explosivenessScale: 0.25
 category: distribution
+shownPlanets: [serpulo, erekir]
 size: 1
 
 health: 50

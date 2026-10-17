@@ -2,6 +2,7 @@ name: Celestial Aqueduct
 description: Carries liquids through celestial currents, enabling fast transport over long distances without power.
 type: LiquidBridge
 category: liquid
+shownPlanets: [serpulo, erekir]
 size: 1
 
 range: 25

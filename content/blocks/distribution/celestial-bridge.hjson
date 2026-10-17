@@ -5,6 +5,7 @@ type: BufferedItemBridge
 flammabilityScale: 0
 explosivenessScale: 0.5
 category: distribution
+shownPlanets: [serpulo, erekir]
 size: 1
 
 health: 50

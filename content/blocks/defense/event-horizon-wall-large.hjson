@@ -2,6 +2,7 @@ name: Large Event Horizon Wall
 description: A larger Event Horizon Wall with increased structural durability, shield capacity, and regeneration.
 type: ShieldWall
 category: defense
+shownPlanets: [serpulo, erekir]
 size: 2
 
 # Ultimate-defense exception; see Block Durability Balance Guide.

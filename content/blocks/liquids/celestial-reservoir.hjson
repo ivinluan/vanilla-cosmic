@@ -2,6 +2,7 @@ name: Celestial Reservoir
 description: Stores vast quantities of liquids within a reinforced celestial containment structure.
 type: LiquidRouter
 category: liquid
+shownPlanets: [serpulo, erekir]
 size: 4
 
 # Five times the 2,700 capacity of vanilla Reinforced Liquid Tank.

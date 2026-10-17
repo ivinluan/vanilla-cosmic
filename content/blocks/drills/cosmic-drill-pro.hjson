@@ -5,6 +5,7 @@ type: Drill
 flammabilityScale: 0.5
 explosivenessScale: 0.5
 category: production
+shownPlanets: [serpulo, erekir]
 size: 3
 tier: 5
 drillTime: 52 # 10.38 items/sec at full ore coverage

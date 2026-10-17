@@ -2,6 +2,7 @@ name: Colossal Event Horizon Wall
 description: A massive celestial fortification with exceptional durability, powerful shielding, projectile reflection, laser absorption, and long-range lightning retaliation.
 type: ShieldWall
 category: defense
+shownPlanets: [serpulo, erekir]
 size: 4
 
 # Ultimate-defense exception; see Block Durability Balance Guide.

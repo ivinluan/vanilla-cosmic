@@ -2,6 +2,7 @@ name: Cosmic Liquid Junction
 description: Allows multiple liquid pathways to cross without interference, maintaining uninterrupted flow.
 type: LiquidJunction
 category: liquid
+shownPlanets: [serpulo, erekir]
 size: 1
 
 solid: false

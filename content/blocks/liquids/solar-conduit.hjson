@@ -2,6 +2,7 @@ name: Solar Conduit
 description: Channels liquids through radiant solar pathways, ensuring steady and efficient transport.
 type: Conduit
 category: liquid
+shownPlanets: [serpulo, erekir]
 size: 1
 
 liquidCapacity: 30

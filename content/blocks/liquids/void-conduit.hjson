@@ -2,6 +2,7 @@ name: Void Conduit
 description: Utilizes the silence of the cosmic void to transport liquids across great distances with minimal resistance.
 type: Conduit
 category: liquid
+shownPlanets: [serpulo, erekir]
 size: 1
 
 liquidCapacity: 100
