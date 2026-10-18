@@ -19,7 +19,7 @@ requirements: [
     metaglass/2
 ]
 
-research: conduit
+research: pulsar-liquid-pump
 researchCost: [
     copper/10
     lead/10

@@ -46,7 +46,7 @@ consumes: {
     }
 }
 
-research: large-cliff-crusher
+research: beryllium-rift-fracturer
 researchCost: [
     beryllium/1300
     tungsten/900

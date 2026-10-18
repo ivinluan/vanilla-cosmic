@@ -21,7 +21,7 @@ requirements: [
     carbide/15
 ]
 
-research: void-conveyor
+research: cosmic-router
 researchCost: [
     beryllium/200
     tungsten/150

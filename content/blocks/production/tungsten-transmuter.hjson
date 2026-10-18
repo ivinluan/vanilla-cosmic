@@ -2,7 +2,7 @@ name: Tungsten Transmuter
 description: Converts advanced Serpulo resources into tungsten through an energy-intensive cryogenic transmutation process.
 type: GenericCrafter
 category: crafting
-shownPlanets: [serpulo]
+shownPlanets: [serpulo, erekir]
 
 size: 3
 outputItem: tungsten/1

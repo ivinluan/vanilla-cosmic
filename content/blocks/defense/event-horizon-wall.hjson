@@ -51,7 +51,7 @@ requirements: [
     surge-alloy/10
 ]
 
-research: shielded-wall
+research: tungsten-rift-fracturer
 researchCost: [
     tungsten/250
     carbide/100

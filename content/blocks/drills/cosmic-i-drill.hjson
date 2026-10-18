@@ -36,7 +36,12 @@ consumes: {
 }
 liquidBoostIntensity: 1.65
 
-research: pneumatic-drill
+research: {
+    root: true
+    name: vanilla-cosmic
+    planet: serpulo
+    requiresUnlock: false
+}
 researchCost: [
     copper/750
     graphite/300

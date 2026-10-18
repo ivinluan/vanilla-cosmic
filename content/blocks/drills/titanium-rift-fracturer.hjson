@@ -46,7 +46,7 @@ consumes: {
     }
 }
 
-research: cliff-crusher
+research: cosmic-i-drill
 researchCost: [
     copper/750
     lead/750

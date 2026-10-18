@@ -47,7 +47,7 @@ consumes: {
     }
 }
 
-research: blast-drill
+research: titanium-rift-fracturer
 researchCost: [
     copper/900
     lead/900

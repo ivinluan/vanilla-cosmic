@@ -22,7 +22,7 @@ requirements: [
     silicon/25
 ]
 
-research: rotary-pump
+research: cosmic-i-drill
 researchCost: [
     copper/300
     metaglass/250

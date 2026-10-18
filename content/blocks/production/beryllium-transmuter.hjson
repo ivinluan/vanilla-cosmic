@@ -2,7 +2,7 @@ name: Beryllium Transmuter
 description: Transmutes advanced Serpulo resources into beryllium through a precise synthesis process.
 type: GenericCrafter
 category: crafting
-shownPlanets: [serpulo]
+shownPlanets: [serpulo, erekir]
 
 size: 2
 outputItem: beryllium/1
@@ -56,7 +56,7 @@ consumes: {
     ]
 }
 
-research: phase-weaver
+research: titanium-rift-fracturer
 researchCost: [
     copper/600
     lead/500

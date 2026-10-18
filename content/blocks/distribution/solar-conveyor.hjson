@@ -19,7 +19,7 @@ requirements: [
     graphite/10
 ]
 
-research: titanium-conveyor
+research: cosmic-i-drill
 researchCost: [
     copper/100
     lead/100
