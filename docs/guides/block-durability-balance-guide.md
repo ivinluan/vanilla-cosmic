@@ -65,12 +65,17 @@ All construction items currently used by Vanilla Cosmic have coefficients. No mi
 | Pumps and liquid transport | 1.00 | 0.80 |
 | Liquid storage | 1.75 | 1.50 |
 | Item storage | 1.75 | 1.50 |
+| Production / GenericCrafter | 1.10 | 0.90 |
 | Drills, beam bores, BurstDrills, WallCrafters | 1.20 | 1.00 |
 | Mass drivers | 1.25 | 1.20 |
 | Defensive walls | 1.50 | 2.00 |
 | Ultimate Defensive Walls | 13.50 | Fixed 40 armor |
 
 The current audit applies the documented Ultimate Defensive Wall exception only to the Event Horizon Wall family. The ordinary Defensive walls multiplier remains available for future standard wall blocks.
+
+### Production / GenericCrafter role
+
+Use this role for stationary item-production machines whose primary function is transforming delivered inputs into a fixed output, including the Beryllium and Tungsten Transmuters. It sits below extraction machinery because it has no exposed mining head or wall-facing operating position, but above ordinary logistics because it represents a compact advanced processing structure. Do not apply it to pumps, drills, bores, WallCrafters, or storage blocks merely because they produce or hold a resource.
 
 ## Ultimate Defensive Wall exception
 
