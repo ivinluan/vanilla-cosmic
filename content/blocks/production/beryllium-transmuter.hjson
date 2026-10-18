@@ -1,0 +1,67 @@
+name: Beryllium Transmuter
+description: Transmutes advanced Serpulo resources into beryllium through a precise synthesis process.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo]
+
+size: 2
+outputItem: beryllium/1
+# 60 ticks = 1 second, so this produces 60 beryllium/minute at full efficiency.
+craftTime: 60
+itemCapacity: 50
+
+# Draw the main block region followed by its emissive overlay.
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        # DrawGlowRegion is visible only while this crafter is actively warmed up.
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasPower: true
+
+# Cosmic containment reduces stored-content fire and rupture hazards.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.154, MA 0.341, RH 1.10, RA 0.90.
+health: 200
+armor: 2
+
+requirements: [
+    copper/120
+    lead/100
+    titanium/80
+    thorium/50
+    silicon/50
+    phase-fabric/15
+]
+
+consumes: {
+    # 2.5 power/second ÷ 60 ticks/second.
+    power: 0.04166667
+    items: [
+        titanium/3
+        thorium/2
+        phase-fabric/1
+    ]
+}
+
+research: phase-weaver
+researchCost: [
+    copper/600
+    lead/500
+    titanium/400
+    thorium/250
+    silicon/250
+    phase-fabric/75
+]

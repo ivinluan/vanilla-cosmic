@@ -4,6 +4,21 @@ This audit records the pre-approval HJSON values and the formula recommendations
 
 Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router` = router; `Junction` = junction; `Bridge` = buffered/phase conveyor; `Stack` = surge conveyor; `Drill` = pneumatic/laser/impact drill by tier; `Bore` = large plasma bore; `WallCrafter` = cliff crusher or large cliff crusher; `Pump` = mechanical/rotary/impulse pump; `Mass Driver` = mass driver.
 
+## Production / GenericCrafter — 2 blocks
+
+| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+|---|---|---|---|---|---|---|
+| `beryllium-transmuter` | GenericCrafter, 2 | copper 120, lead 100, titanium 80, thorium 50, silicon 50, phase fabric 15 | 200 explicit / 2 explicit | 200 / 2 | Phase Weaver | Applied: production role with advanced Serpulo synthesis materials; close to the vanilla 2x2 Phase Weaver's durability without claiming drill-tier protection. |
+| `tungsten-transmuter` | GenericCrafter, 3 | copper 220, lead 180, titanium 150, thorium 120, silicon 120, plastanium 60, phase fabric 40, surge alloy 30 | 470 explicit / 2 explicit | 470 / 2 | Surge Smelter | Applied: larger, reinforced late-Serpulo production machine. Its modest armor is not a substitute for its required coolant and power infrastructure. |
+
+## Ultimate defensive walls — 3 blocks
+
+| Block ID | Type, size | Requirements | Standard formula HP / armor | Ultimate result HP / armor | Vanilla comparison | Recommendation and reason |
+|---|---|---|---|---|---|---|
+| `event-horizon-wall` | ShieldWall, 1 | tungsten 50, carbide 20, phase fabric 20, surge alloy 10 | 90 / 8 | 810 / 40 | Carbide Wall; Reinforced Surge Wall | Applied: 9× standard-wall health role produces 3× Carbide Wall HP. Fixed armor 40 is the documented ultimate exception. |
+| `event-horizon-wall-large` | ShieldWall, 2 | tungsten 200, carbide 80, phase fabric 80, surge alloy 40 | 360 / 11 | 3240 / 40 | Carbide Wall Large; Shielded Wall | Applied: 4× footprint cost, HP, shield capacity, regeneration, and power scaling. |
+| `event-horizon-wall-colossal` | ShieldWall, 4 | tungsten 800, carbide 320, phase fabric 320, surge alloy 160 | 1440 / 18 | 12960 / 40 | 4×4 Carbide Wall equivalent | Applied: 16× footprint cost and 3× per-footprint ultimate HP target. |
+
 ## Distribution — 10 blocks
 
 | Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
@@ -73,6 +88,12 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | cosmic-liquid-router | LiquidRouter, 1 | beryllium 35, tungsten 25, carbide 12, metaglass 20 | New block | 50 / 2 | Liquid Router | Applied: high capacity supports routing without making the block wall-like. |
 | cosmic-liquid-junction | LiquidJunction, 1 | beryllium 40, tungsten 30, carbide 15, metaglass 20 | New block | 50 / 2 | Liquid Junction | Applied: direct crossing has no stored liquid, but retains advanced utility-block durability. |
 
+## Liquid storage — 1 block
+
+| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+|---|---|---|---|---|---|---|
+| celestial-reservoir | LiquidRouter, 4 | metaglass 150, beryllium 250, tungsten 200, carbide 25 | New block | 1390 / 7 | Reinforced Liquid Tank | Applied: dedicated 4×4 storage uses the Liquid storage role, not the ordinary liquid-router role. Capacity does not add a separate durability multiplier. |
+
 ## Liquid bridges — 2 blocks
 
 | Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
@@ -82,7 +103,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Audit outcome
 
-- Blocks currently covered: **46**.
+- Blocks currently covered: **50**.
 - Largest proposed HP increase: `cosmic-photon-bore`, 790 → 1380 (+590). The 5×5 footprint drives this result.
 - Largest proposed HP decrease: `cosmic-viii-drill`, 960 → 230 (−730). This reflects the formula's refusal to multiply durability by total recipe quantity.
 - Largest armor decrease: `cosmic-drill-pro-max`, 1200 → 1 (−1199). The existing drill armor series is the dominant manual-review concern.

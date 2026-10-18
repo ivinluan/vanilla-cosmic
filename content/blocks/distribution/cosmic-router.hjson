@@ -5,6 +5,7 @@ type: Router
 flammabilityScale: 0.5
 explosivenessScale: 0.5
 category: distribution
+shownPlanets: [serpulo, erekir]
 size: 1
 
 health: 40

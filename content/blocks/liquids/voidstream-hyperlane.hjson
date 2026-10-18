@@ -2,6 +2,7 @@ name: Voidstream Hyperlane
 description: Opens a stable channel through the cosmic void, instantly transporting liquids across immense distances.
 type: LiquidBridge
 category: liquid
+shownPlanets: [serpulo, erekir]
 size: 1
 
 range: 50

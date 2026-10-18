@@ -5,6 +5,7 @@ type: BurstDrill
 flammabilityScale: 0
 explosivenessScale: 1
 category: production
+shownPlanets: [serpulo, erekir]
 size: 8
 tier: 7
 drillTime: 187 # 20.53 items/sec at full ore coverage (499% above Blast Drill)

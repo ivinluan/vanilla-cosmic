@@ -1,0 +1,57 @@
+name: Colossal Event Horizon Wall
+description: A massive celestial fortification with exceptional durability, powerful shielding, projectile reflection, laser absorption, and long-range lightning retaliation.
+type: ShieldWall
+category: defense
+shownPlanets: [serpulo, erekir]
+size: 4
+
+# Ultimate-defense exception; see Block Durability Balance Guide.
+health: 12960
+armor: 40
+
+shieldHealth: 10800
+regenSpeed: 24
+breakCooldown: 400
+
+chanceDeflect: 30
+flashHit: true
+flashColor: b39ddbff
+lightningChance: 0.15
+lightningDamage: 90
+lightningLength: 51
+lightningColor: 9460BDff
+absorbLasers: true
+insulated: true
+
+emitLight: true
+lightColor: 9460BDff
+lightRadius: 96
+glowColor: 9460BD80
+glowMag: 0.6
+glowScl: 8
+
+flammabilityScale: 0
+explosivenessScale: 0
+
+outputsPower: false
+hasPower: true
+consumesPower: true
+conductivePower: true
+consumes: {
+    power: 0.6
+}
+
+requirements: [
+    tungsten/800
+    carbide/320
+    phase-fabric/320
+    surge-alloy/160
+]
+
+research: event-horizon-wall-large
+researchCost: [
+    tungsten/4000
+    carbide/1600
+    phase-fabric/1600
+    surge-alloy/800
+]

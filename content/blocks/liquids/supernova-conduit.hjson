@@ -2,6 +2,7 @@ name: Supernova Conduit
 description: Infused with the explosive power of a dying star, allowing liquids to flow at extraordinary speeds.
 type: Conduit
 category: liquid
+shownPlanets: [serpulo, erekir]
 size: 1
 
 liquidCapacity: 60

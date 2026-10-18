@@ -1,0 +1,33 @@
+name: Celestial Reservoir
+description: Stores vast quantities of liquids within a reinforced celestial containment structure.
+type: LiquidRouter
+category: liquid
+shownPlanets: [serpulo, erekir]
+size: 4
+
+# Five times the 2,700 capacity of vanilla Reinforced Liquid Tank.
+liquidCapacity: 13500
+solid: true
+
+# Celestial containment prevents fire while retaining controlled loaded-liquid rupture risk.
+flammabilityScale: 0
+explosivenessScale: 0.5
+
+# Storage durability role: MH 1.238, MA 0.560, RH 1.75, RA 1.50.
+health: 1390
+armor: 7
+
+requirements: [
+    metaglass/150
+    beryllium/250
+    tungsten/200
+    carbide/25
+]
+
+research: reinforced-liquid-tank
+researchCost: [
+    metaglass/750
+    beryllium/1250
+    tungsten/1000
+    carbide/125
+]

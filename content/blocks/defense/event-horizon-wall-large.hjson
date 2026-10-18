@@ -1,0 +1,57 @@
+name: Large Event Horizon Wall
+description: A larger Event Horizon Wall with increased structural durability, shield capacity, and regeneration.
+type: ShieldWall
+category: defense
+shownPlanets: [serpulo, erekir]
+size: 2
+
+# Ultimate-defense exception; see Block Durability Balance Guide.
+health: 3240
+armor: 40
+
+shieldHealth: 2700
+regenSpeed: 6
+breakCooldown: 400
+
+chanceDeflect: 30
+flashHit: true
+flashColor: b39ddbff
+lightningChance: 0.15
+lightningDamage: 90
+lightningLength: 51
+lightningColor: 9460BDff
+absorbLasers: true
+insulated: true
+
+emitLight: true
+lightColor: 9460BDff
+lightRadius: 48
+glowColor: 9460BD80
+glowMag: 0.6
+glowScl: 8
+
+flammabilityScale: 0
+explosivenessScale: 0
+
+outputsPower: false
+hasPower: true
+consumesPower: true
+conductivePower: true
+consumes: {
+    power: 0.15
+}
+
+requirements: [
+    tungsten/200
+    carbide/80
+    phase-fabric/80
+    surge-alloy/40
+]
+
+research: event-horizon-wall
+researchCost: [
+    tungsten/1000
+    carbide/400
+    phase-fabric/400
+    surge-alloy/200
+]

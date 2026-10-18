@@ -5,6 +5,7 @@ type: MassDriver
 flammabilityScale: 0
 explosivenessScale: 1
 category: distribution
+shownPlanets: [serpulo, erekir]
 size: 4
 
 health: 1010

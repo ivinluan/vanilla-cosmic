@@ -1,0 +1,60 @@
+name: Event Horizon Wall
+description: An advanced defensive wall that absorbs lasers, reflects incoming projectiles, retaliates with lightning, and generates a regenerative shield. Requires power for shielding.
+type: ShieldWall
+category: defense
+shownPlanets: [serpulo, erekir]
+size: 1
+
+# Ultimate-defense exception; see Block Durability Balance Guide.
+health: 810
+armor: 40
+
+shieldHealth: 675
+regenSpeed: 1.5
+breakCooldown: 400
+
+# Reflection chance is evaluated as chanceDeflect divided by incoming bullet damage.
+chanceDeflect: 30
+flashHit: true
+flashColor: b39ddbff
+lightningChance: 0.15
+lightningDamage: 90
+lightningLength: 51
+lightningColor: 9460BDff
+absorbLasers: true
+insulated: true
+
+emitLight: true
+lightColor: 9460BDff
+lightRadius: 24
+glowColor: 9460BD80
+glowMag: 0.6
+glowScl: 8
+
+# Event Horizon containment prevents stored-content fire and explosion effects.
+flammabilityScale: 0
+explosivenessScale: 0
+
+# Matches Shielded Wall power connectivity; raw consumer units are power per tick.
+outputsPower: false
+hasPower: true
+consumesPower: true
+conductivePower: true
+consumes: {
+    power: 0.0375
+}
+
+requirements: [
+    tungsten/50
+    carbide/20
+    phase-fabric/20
+    surge-alloy/10
+]
+
+research: shielded-wall
+researchCost: [
+    tungsten/250
+    carbide/100
+    phase-fabric/100
+    surge-alloy/50
+]

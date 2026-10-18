@@ -2,6 +2,7 @@ name: Cosmic Liquid Router
 description: Guides liquid streams through cosmic channels, distributing them evenly among connected structures.
 type: LiquidRouter
 category: liquid
+shownPlanets: [serpulo, erekir]
 size: 1
 
 liquidCapacity: 300

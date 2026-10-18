@@ -1,6 +1,6 @@
 # Vanilla Cosmic — Liquid Transport Balance Guide (Mindustry v160.7)
 
-This guide covers native Conduit blocks. It does not equate liquid transport with conveyor item throughput: conduit capacity and pressure control liquid storage and transfer behavior, not a fixed displayed liquids-per-second value.
+This guide covers Vanilla Cosmic liquid transport and storage blocks. It does not equate liquid transport with conveyor item throughput: capacity and pressure control liquid storage and transfer behavior, not a fixed displayed liquids-per-second value.
 
 ## Current progression
 
@@ -13,6 +13,14 @@ This guide covers native Conduit blocks. It does not equate liquid transport wit
 Vanilla Conduit → Solar Conduit → Supernova Conduit → Void Conduit
 
 Research costs are exactly 5× their matching construction requirement, following the repository-wide resource rule.
+
+## Liquid storage
+
+| Block | Class | Size | Capacity | Power | Build requirements | Research parent | HP / armor |
+|---|---|---:|---:|---|---|---|---:|
+| Celestial Reservoir | LiquidRouter | 4×4 | 13,500 | None | metaglass 150, beryllium 250, tungsten 200, carbide 25 | reinforced-liquid-tank | 1,390 / 7 |
+
+Celestial Reservoir is a dedicated storage block using native `LiquidRouter` behavior: it stores one liquid type and distributes that liquid to valid neighboring blocks when they can accept it. Its 13,500 capacity is exactly 5× vanilla Reinforced Liquid Tank's verified 2,700 capacity. It has no power requirement and leaves `liquidPressure` at the native default; capacity is not treated as a transfer-speed stat.
 
 ## Liquid distribution branch
 
@@ -98,6 +106,8 @@ No sprites were created or modified. Conduit loads five top variants, five botto
 For example, Solar Conduit uses solar-conduit-top-0.png through solar-conduit-top-4.png, matching bottom variants, and solar-conduit-cap.png.
 
 Liquid Router needs cosmic-liquid-router.png and cosmic-liquid-router-bottom.png. Liquid Junction needs cosmic-liquid-junction.png. No artwork was created or modified.
+
+Celestial Reservoir also uses the native LiquidRouter renderer and requires `celestial-reservoir.png` and `celestial-reservoir-bottom.png`. No artwork was created or modified.
 
 Each LiquidBridge needs four regions: block-id.png, block-id-end.png, block-id-bridge.png, and block-id-arrow.png. Therefore create celestial-aqueduct.png, celestial-aqueduct-end.png, celestial-aqueduct-bridge.png, celestial-aqueduct-arrow.png, and the corresponding voidstream-hyperlane files.
 

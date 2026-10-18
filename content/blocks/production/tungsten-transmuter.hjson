@@ -1,0 +1,79 @@
+name: Tungsten Transmuter
+description: Converts advanced Serpulo resources into tungsten through an energy-intensive cryogenic transmutation process.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo]
+
+size: 3
+outputItem: tungsten/1
+# 120 ticks = 2 seconds, so this produces 30 tungsten/minute at full efficiency.
+craftTime: 120
+itemCapacity: 50
+liquidCapacity: 100
+
+# Draw the main block region followed by its emissive overlay.
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        # DrawGlowRegion is visible only while this crafter is actively warmed up.
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+
+# Cosmic containment reduces stored-content fire and rupture hazards.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.198, MA 0.416, RH 1.10, RA 0.90.
+health: 470
+armor: 2
+
+requirements: [
+    copper/220
+    lead/180
+    titanium/150
+    thorium/120
+    silicon/120
+    plastanium/60
+    phase-fabric/40
+    surge-alloy/30
+]
+
+consumes: {
+    # 5 power/second ÷ 60 ticks/second.
+    power: 0.08333334
+    items: [
+        thorium/4
+        surge-alloy/1
+        phase-fabric/1
+    ]
+    # Continuous rate: 0.1 cryofluid/tick = 6/second = 12/craft.
+    liquid: {
+        liquid: cryofluid
+        amount: 0.1
+    }
+}
+
+# This is a research progression only; beryllium is never an input or cost here.
+research: beryllium-transmuter
+researchCost: [
+    copper/1100
+    lead/900
+    titanium/750
+    thorium/600
+    silicon/600
+    plastanium/300
+    phase-fabric/200
+    surge-alloy/150
+]

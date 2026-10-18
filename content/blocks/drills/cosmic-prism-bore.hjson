@@ -5,6 +5,7 @@ type: BeamDrill
 flammabilityScale: 0.5
 explosivenessScale: 0.5
 category: production
+shownPlanets: [serpulo, erekir]
 size: 2
 tier: 5
 drillTime: 80 # 1.50 items/sec at full valid wall frontage

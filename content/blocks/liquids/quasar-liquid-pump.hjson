@@ -5,6 +5,7 @@ type: Pump
 flammabilityScale: 0
 explosivenessScale: 1
 category: liquid
+shownPlanets: [serpulo, erekir]
 size: 2
 
 health: 190
