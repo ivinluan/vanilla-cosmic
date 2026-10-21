@@ -28,7 +28,7 @@ This guide groups vanilla resources by **practical progression rarity** for Vani
 
 - A Serpulo-facing transmuter may output an existing Erekir item when its HJSON uses that vanilla item as its fixed output. This does not create a duplicate item and does not change the native planet association of the item or unlock Erekir blocks.
 - Every input, construction requirement, and research cost for a Serpulo transmuter must remain obtainable through Serpulo progression. Do not use Erekir-exclusive materials such as beryllium, tungsten, oxide, carbide, arkycite, hydrogen, nitrogen, ozone, or cyanogen as costs for the machine that introduces them.
-- Use `shownPlanets: [serpulo]` deliberately for a Serpulo-facing transmuter. It controls content presentation/progression visibility; it is not an environment-placement restriction.
+- Use `shownPlanets: [serpulo, erekir]` for a cross-planet transmuter. It controls which planet scopes consider the content applicable (including related database/build visibility); it is not an environment-placement restriction and does not itself create a tech-tree node. This does not by itself place the block in both research trees.
 - Prefer one meaningful infrastructure tradeoff—advanced item inputs, power, or a liquid line—over a long chain of arbitrary ingredients. Keep a slower, higher-tier output meaningfully more expensive than an earlier cross-planet output.
 
 ## Liquid and gas rarity groups

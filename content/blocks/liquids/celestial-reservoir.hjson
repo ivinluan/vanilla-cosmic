@@ -24,7 +24,7 @@ requirements: [
     carbide/25
 ]
 
-research: reinforced-liquid-tank
+research: tungsten-rift-fracturer
 researchCost: [
     metaglass/750
     beryllium/1250

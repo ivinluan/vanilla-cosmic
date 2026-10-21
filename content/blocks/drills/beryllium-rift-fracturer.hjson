@@ -42,7 +42,7 @@ consumes: {
     }
 }
 
-research: cliff-crusher
+research: thorium-rift-fracturer
 researchCost: [
     beryllium/1200
     graphite/600

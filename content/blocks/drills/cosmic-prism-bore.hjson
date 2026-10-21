@@ -52,7 +52,7 @@ consumes: {
 }
 liquidBoostIntensity: 1.5
 
-research: large-plasma-bore
+research: cosmic-i-drill
 researchCost: [
     copper/750
     lead/750

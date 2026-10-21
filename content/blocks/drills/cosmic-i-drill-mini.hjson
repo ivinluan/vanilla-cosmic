@@ -36,7 +36,7 @@ consumes: {
 }
 liquidBoostIntensity: 1.65
 
-research: pneumatic-drill
+research: cosmic-i-drill
 researchCost: [
     copper/375
     graphite/150

@@ -44,7 +44,7 @@ consumes: {
     power: 6
 }
 
-research: mass-driver
+research: void-conveyor
 researchCost: [
     titanium/1500
     silicon/1000

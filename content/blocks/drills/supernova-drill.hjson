@@ -48,7 +48,7 @@ consumes: {
     ]
 }
 
-research: blast-drill
+research: cosmic-drill-pro-max
 researchCost: [
     copper/1950
     lead/1950
