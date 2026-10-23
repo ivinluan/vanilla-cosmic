@@ -4,12 +4,15 @@ This audit records the pre-approval HJSON values and the formula recommendations
 
 Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router` = router; `Junction` = junction; `Bridge` = buffered/phase conveyor; `Stack` = surge conveyor; `Drill` = pneumatic/laser/impact drill by tier; `Bore` = large plasma bore; `WallCrafter` = cliff crusher or large cliff crusher; `Pump` = mechanical/rotary/impulse pump; `Mass Driver` = mass driver.
 
-## Production / GenericCrafter — 2 blocks
+## Production / GenericCrafter — 5 blocks
 
 | Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | `beryllium-transmuter` | GenericCrafter, 2 | copper 120, lead 100, titanium 80, thorium 50, silicon 50, phase fabric 15 | 200 explicit / 2 explicit | 200 / 2 | Phase Weaver | Applied: production role with advanced Serpulo synthesis materials; close to the vanilla 2x2 Phase Weaver's durability without claiming drill-tier protection. |
 | `tungsten-transmuter` | GenericCrafter, 3 | copper 220, lead 180, titanium 150, thorium 120, silicon 120, plastanium 60, phase fabric 40, surge alloy 30 | 470 explicit / 2 explicit | 470 / 2 | Surge Smelter | Applied: larger, reinforced late-Serpulo production machine. Its modest armor is not a substitute for its required coolant and power infrastructure. |
+| `copper-transmuter` | GenericCrafter, 3 | beryllium 80, tungsten 40, oxide 20 | 500 explicit / 4 explicit | 500 / 4 | 3x3 Erekir crafter | Applied: larger footprint follows the three-resource recipe rule; Erekir reinforcement adds moderate armor without reaching defensive-block protection. |
+| `lead-transmuter` | GenericCrafter, 3 | beryllium 75, tungsten 75, oxide 30, carbide 20 | 530 explicit / 5 explicit | 530 / 5 | 3x3 Erekir crafter | Applied: three-resource footprint and denser tungsten/carbide construction produce the next durability step. |
+| `titanium-transmuter` | GenericCrafter, 4 | beryllium 150, tungsten 150, oxide 80, carbide 50 | 950 explicit / 6 explicit | 950 / 6 | 4x4 advanced crafter | Applied: four-resource plasma process has the largest permitted footprint and retains production-role, rather than extraction or storage-role, durability. |
 
 ## Ultimate defensive walls — 3 blocks
 

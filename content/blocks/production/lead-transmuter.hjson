@@ -1,0 +1,68 @@
+name: Lead Transmuter
+description: Compresses dense metals through an advanced chemical process to produce lead.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Three distinct consumed resources (tungsten, arkycite, nitrogen) make this a 3x3 machine.
+size: 3
+outputItem: lead/5
+# 12 crafts/minute x 5 lead = 60 lead/minute at full efficiency.
+craftTime: 300
+itemCapacity: 50
+# Per-liquid buffer; both arkycite and nitrogen are accepted simultaneously.
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+
+# Cosmic containment reduces stored-content fire and rupture hazards.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.339, MA 0.808, RH 1.10, RA 0.90.
+health: 530
+armor: 5
+
+requirements: [
+    beryllium/75
+    tungsten/75
+    oxide/30
+    carbide/20
+]
+
+consumes: {
+    # 4 power/second ÷ 60 ticks/second.
+    power: 0.06666667
+    items: [
+        tungsten/1
+    ]
+    # 12 arkycite and 8 nitrogen per 300-tick craft.
+    liquids: [
+        arkycite/0.04
+        nitrogen/0.02666667
+    ]
+}
+
+research: copper-transmuter
+researchCost: [
+    beryllium/375
+    tungsten/375
+    oxide/150
+    carbide/100
+]
