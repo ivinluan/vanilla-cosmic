@@ -1,0 +1,66 @@
+name: Copper Transmuter
+description: Uses electrochemical transmutation to produce copper from beryllium, slag, and ozone.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Three distinct consumed resources (beryllium, slag, ozone) make this a 3x3 machine.
+size: 3
+outputItem: copper/5
+# 12 crafts/minute x 5 copper = 60 copper/minute at full efficiency.
+craftTime: 300
+itemCapacity: 50
+# Per-liquid buffer; both slag and ozone are accepted simultaneously.
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+
+# Cosmic containment reduces stored-content fire and rupture hazards.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.264, MA 0.614, RH 1.10, RA 0.90.
+health: 500
+armor: 4
+
+requirements: [
+    beryllium/80
+    tungsten/40
+    oxide/20
+]
+
+consumes: {
+    # 3 power/second ÷ 60 ticks/second.
+    power: 0.05
+    items: [
+        beryllium/2
+    ]
+    # 12 slag and 6 ozone per 300-tick craft.
+    liquids: [
+        slag/0.04
+        ozone/0.02
+    ]
+}
+
+research: tungsten-transmuter
+researchCost: [
+    beryllium/400
+    tungsten/200
+    oxide/100
+]

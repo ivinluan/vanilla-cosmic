@@ -24,12 +24,13 @@ This guide groups vanilla resources by **practical progression rarity** for Vani
 - Keep a block's existing ingredient list when rebalancing it. Use the entry rules in the drill, bore, burst-drill, and wall-crafter guides only when creating a new recipe or introducing a material for the first time.
 - Set `researchCost` to 5× every corresponding construction requirement unless a block-specific guide explicitly establishes another rule.
 
-## Cross-planet transmutation on Serpulo
+## Cross-planet transmutation
 
 - A Serpulo-facing transmuter may output an existing Erekir item when its HJSON uses that vanilla item as its fixed output. This does not create a duplicate item and does not change the native planet association of the item or unlock Erekir blocks.
 - Every input, construction requirement, and research cost for a Serpulo transmuter must remain obtainable through Serpulo progression. Do not use Erekir-exclusive materials such as beryllium, tungsten, oxide, carbide, arkycite, hydrogen, nitrogen, ozone, or cyanogen as costs for the machine that introduces them.
 - Use `shownPlanets: [serpulo, erekir]` for a cross-planet transmuter. It controls which planet scopes consider the content applicable (including related database/build visibility); it is not an environment-placement restriction and does not itself create a tech-tree node. This does not by itself place the block in both research trees.
 - Prefer one meaningful infrastructure tradeoff—advanced item inputs, power, or a liquid line—over a long chain of arbitrary ingredients. Keep a slower, higher-tier output meaningfully more expensive than an earlier cross-planet output.
+- The reverse direction—manufacturing a Serpulo item from Erekir resources—uses the same rules: source-planet inputs and costs only, fixed vanilla-item output, and no duplicate item definition. The current Vanilla Cosmic root is Serpulo-based, so Erekir-only research costs cannot be paid there without a future research-system change; construction can still be Erekir-only for blocks already unlocked.
 
 ## Liquid and gas rarity groups
 

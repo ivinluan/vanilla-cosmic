@@ -14,7 +14,7 @@ Vanilla Cosmic — Cosmic I Drill
 │  └─ Mini chain: Cosmic I Mini → II Mini → III Mini → IV Mini → V Mini → VI Mini → VII Mini → VIII Mini
 ├─ Bores: Prism → Radiant → Spectral → Photon
 ├─ Rift extraction: Titanium → Thorium → Beryllium → Tungsten
-│  ├─ Beryllium Transmuter → Tungsten Transmuter
+│  ├─ Beryllium Transmuter → Tungsten Transmuter → Copper Transmuter → Lead Transmuter → Titanium Transmuter
 │  ├─ Celestial Reservoir
 │  └─ Event Horizon Wall → Large → Colossal
 ├─ Item distribution: Solar Conveyor → Supernova Conveyor → Void Conveyor
@@ -33,7 +33,7 @@ The diagram expresses prerequisite links, not an automatic guarantee that every 
 
 ## Cross-planet material gates
 
-Beryllium and tungsten have Serpulo production through the two Transmuters. Nodes that also require oxide or carbide remain visible but cannot be researched from the Serpulo Cosmic tree until future Cosmic crafters provide those items on Serpulo. This is intentional progression gating, not an unsupported attempt to read Erekir sector inventories.
+Beryllium and tungsten have Serpulo production through the two Transmuters. Copper, lead, and titanium now have Erekir-only construction and research costs in their reverse-transmutation lane. All nodes needing Erekir-only research items—including oxide or carbide—remain visible but cannot be paid for from the Serpulo-rooted Cosmic tree until the mod adopts a compatible cross-planet research solution. This is an explicit engine limitation, not an unsupported attempt to read Erekir sector inventories.
 
 When adding a new cross-planet crafter, attach it to the earliest Cosmic prerequisite that the player can already research and make its own construction and research costs obtainable before its output is required. Do not move the Cosmic root to Erekir unless the entire tree’s research-cost model is rebalanced for Erekir inventories.
 

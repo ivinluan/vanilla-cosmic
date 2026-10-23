@@ -1,0 +1,69 @@
+name: Titanium Transmuter
+description: Uses high-energy plasma processing to transmute advanced minerals into titanium.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Four distinct consumed resources (tungsten, oxide, hydrogen, ozone) make this a 4x4 machine.
+size: 4
+outputItem: titanium/6
+# 10 crafts/minute x 6 titanium = 60 titanium/minute at full efficiency.
+craftTime: 360
+itemCapacity: 50
+# Per-liquid buffer; both hydrogen and ozone are accepted simultaneously.
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+
+# Cosmic containment reduces stored-content fire and rupture hazards.
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.351, MA 0.816, RH 1.10, RA 0.90.
+health: 950
+armor: 6
+
+requirements: [
+    beryllium/150
+    tungsten/150
+    oxide/80
+    carbide/50
+]
+
+consumes: {
+    # 5 power/second ÷ 60 ticks/second.
+    power: 0.08333334
+    items: [
+        tungsten/2
+        oxide/1
+    ]
+    # 12 hydrogen and 6 ozone per 360-tick craft.
+    liquids: [
+        hydrogen/0.03333334
+        ozone/0.01666667
+    ]
+}
+
+research: lead-transmuter
+researchCost: [
+    beryllium/750
+    tungsten/750
+    oxide/400
+    carbide/250
+]
