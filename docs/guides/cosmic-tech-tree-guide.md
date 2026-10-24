@@ -14,7 +14,7 @@ Vanilla Cosmic — Cosmic I Drill
 │  └─ Mini chain: Cosmic I Mini → II Mini → III Mini → IV Mini → V Mini → VI Mini → VII Mini → VIII Mini
 ├─ Bores: Prism → Radiant → Spectral → Photon
 ├─ Rift extraction: Titanium → Thorium → Beryllium → Tungsten
-│  ├─ Beryllium Transmuter → Tungsten Transmuter → Copper Transmuter → Lead Transmuter → Titanium Transmuter
+│  ├─ Stellar Spallation Chamber → Pulsar Nucleoforge → Nebular Alchemy Reactor → Neutron Flux Forge → Quasar Plasma Crucible
 │  ├─ Celestial Reservoir
 │  └─ Event Horizon Wall → Large → Colossal
 ├─ Item distribution: Solar Conveyor → Supernova Conveyor → Void Conveyor
@@ -22,7 +22,7 @@ Vanilla Cosmic — Cosmic I Drill
 │  ├─ Celestial Bridge
 │  ├─ Interstellar Hyperlane
 │  └─ Quasar Mass Driver
-│  └─ Beryllium Transmuter → Stellar Stack Conveyor → Stellar Stack Router
+│  └─ Stellar Spallation Chamber → Stellar Stack Conveyor → Stellar Stack Router
 └─ Liquids: Pulsar Liquid Pump → Quasar Liquid Pump
    └─ Solar Conduit → Supernova Conduit → Void Conduit → Voidstream Hyperlane
       ├─ Celestial Aqueduct

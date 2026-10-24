@@ -32,7 +32,7 @@ consumes: {
     power: 0.0666667
 }
 
-research: beryllium-transmuter
+research: stellar-spallation-chamber
 researchCost: [
     beryllium/500
     tungsten/400

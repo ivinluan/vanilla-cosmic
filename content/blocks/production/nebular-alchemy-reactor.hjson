@@ -1,5 +1,5 @@
-name: Copper Transmuter
-description: Uses electrochemical transmutation to produce copper from beryllium, slag, and ozone.
+name: Nebular Alchemy Reactor
+description: Uses controlled nuclear transmutation to convert beryllium and reactive substances into copper.
 type: GenericCrafter
 category: crafting
 shownPlanets: [serpulo, erekir]
@@ -58,7 +58,7 @@ consumes: {
     ]
 }
 
-research: tungsten-transmuter
+research: pulsar-nucleoforge
 researchCost: [
     beryllium/400
     tungsten/200

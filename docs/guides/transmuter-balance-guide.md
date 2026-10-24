@@ -1,6 +1,6 @@
 # Vanilla Cosmic — Cross-Planet Transmuter Balance Guide (Mindustry v160.7)
 
-This guide covers GenericCrafter machines that manufacture an existing item native to the opposite campaign from locally obtainable resources. Beryllium and Tungsten Transmuters provide Erekir items from Serpulo progression; Copper, Lead, and Titanium Transmuters provide Serpulo items from Erekir progression. All are available on both planets through `shownPlanets: [serpulo, erekir]`. This controls content applicability; it does not create a second tech-tree node, make an item native to another planet, unlock vanilla buildings, or impose an environment-placement restriction.
+This guide covers GenericCrafter machines that manufacture an existing item native to the opposite campaign from locally obtainable resources. Stellar Spallation Chamber (`stellar-spallation-chamber`) and Pulsar Nucleoforge (`pulsar-nucleoforge`) provide Erekir items from Serpulo progression; Nebular Alchemy Reactor (`nebular-alchemy-reactor`), Neutron Flux Forge (`neutron-flux-forge`), and Quasar Plasma Crucible (`quasar-plasma-crucible`) provide Serpulo items from Erekir progression. All are available on both planets through `shownPlanets: [serpulo, erekir]`. This controls content applicability; it does not create a second tech-tree node, make an item native to another planet, unlock vanilla buildings, or impose an environment-placement restriction.
 
 ## Technical conventions
 
@@ -14,7 +14,7 @@ This guide covers GenericCrafter machines that manufacture an existing item nati
 
 ## Recipe evaluation
 
-### Beryllium Transmuter
+### Stellar Spallation Chamber (`stellar-spallation-chamber`)
 
 | Approach | Assessment |
 |---|---|
@@ -24,11 +24,11 @@ This guide covers GenericCrafter machines that manufacture an existing item nati
 
 Final recipe: titanium x3, thorium x2, and phase fabric x1 produce beryllium x1 every 60 ticks. That is 60 beryllium/minute (1/second) at full efficiency, with 2.5 power/second and no liquid input.
 
-### Tungsten Transmuter
+### Pulsar Nucleoforge (`pulsar-nucleoforge`)
 
 | Approach | Assessment |
 |---|---|
-| A — item-only | Viable, but it would make the higher-tier machine differ only by higher item counts and power, offering little operational distinction from Beryllium Transmuter. |
+| A — item-only | Viable, but it would make the higher-tier machine differ only by higher item counts and power, offering little operational distinction from the Stellar Spallation Chamber. |
 | B — item + liquid | **Selected.** Thorium, surge alloy, and phase fabric establish a costly late-Serpulo material basis; continuous cryofluid adds meaningful cooling and pipe infrastructure while remaining readily producible on Serpulo. |
 | C — liquid-intensive | Rejected. Large cryofluid consumption would make coolant generation, rather than rare items and power, the dominant constraint. |
 
@@ -38,7 +38,7 @@ Final recipe: thorium x4, surge alloy x1, phase fabric x1, and cryofluid at 0.1/
 
 These machines preserve the requested size rule: count every distinct consumed resource, including liquids and gases. `liquidCapacity: 60` is a per-liquid buffer, so each required liquid can be accepted up to 60 units while the native `ConsumeLiquids` consumer removes both rates together.
 
-| Property | Copper Transmuter | Lead Transmuter | Titanium Transmuter |
+| Property | Nebular Alchemy Reactor | Neutron Flux Forge | Quasar Plasma Crucible |
 |---|---|---|---|
 | Item inputs per craft | beryllium 2 | tungsten 1 | tungsten 2, oxide 1 |
 | Liquid/gas inputs per craft | slag 12, ozone 6 | arkycite 12, nitrogen 8 | hydrogen 12, ozone 6 |
@@ -51,20 +51,20 @@ These machines preserve the requested size rule: count every distinct consumed r
 | Liquid/gas rate | slag 2.4/s, ozone 1.2/s | arkycite 2.4/s, nitrogen 1.6/s | hydrogen 2/s, ozone 1/s |
 | Construction | beryllium 80, tungsten 40, oxide 20 | beryllium 75, tungsten 75, oxide 30, carbide 20 | beryllium 150, tungsten 150, oxide 80, carbide 50 |
 | Research cost | beryllium 400, tungsten 200, oxide 100 | beryllium 375, tungsten 375, oxide 150, carbide 100 | beryllium 750, tungsten 750, oxide 400, carbide 250 |
-| Research parent | `tungsten-transmuter` | `copper-transmuter` | `lead-transmuter` |
+| Research parent | `pulsar-nucleoforge` | `nebular-alchemy-reactor` | `neutron-flux-forge` |
 
 The construction and research values contain only Erekir-obtainable items and follow the project’s standard 5x construction-to-research multiplier.
 
 ### Research accessibility limitation
 
-The current `Vanilla Cosmic` root is explicitly assigned to Serpulo. In v160.7, all child nodes inherit that root’s planet and research inventory source. Therefore these Erekir-only research costs cannot currently be paid from the Cosmic tree, even though the blocks are shown on both planets. The HJSON lane is valid and non-circular—Tungsten → Copper → Lead → Titanium—but it is deliberately future-gated until the mod adopts a custom shared-inventory research system, adds a separate Erekir-side progression design, or revises the root and cost model. `shownPlanets` does not solve this engine limitation.
+The current `Vanilla Cosmic` root is explicitly assigned to Serpulo. In v160.7, all child nodes inherit that root’s planet and research inventory source. Therefore these Erekir-only research costs cannot currently be paid from the Cosmic tree, even though the blocks are shown on both planets. The HJSON lane is valid and non-circular—Pulsar Nucleoforge → Nebular Alchemy Reactor → Neutron Flux Forge → Quasar Plasma Crucible—but it is deliberately future-gated until the mod adopts a custom shared-inventory research system, adds a separate Erekir-side progression design, or revises the root and cost model. `shownPlanets` does not solve this engine limitation.
 
 ## Progression and costs
 
-| Property | Beryllium Transmuter | Tungsten Transmuter |
+| Property | Stellar Spallation Chamber | Pulsar Nucleoforge |
 |---|---|---|
 | Size | 2x2 | 3x3 |
-| Research parent | `titanium-rift-fracturer` | `beryllium-transmuter` |
+| Research parent | `titanium-rift-fracturer` | `stellar-spallation-chamber` |
 | Construction | copper 120, lead 100, titanium 80, thorium 50, silicon 50, phase fabric 15 | copper 220, lead 180, titanium 150, thorium 120, silicon 120, plastanium 60, phase fabric 40, surge alloy 30 |
 | Research cost | 5x its construction recipe | 5x its construction recipe |
 | Output | beryllium x1 / 60 ticks | tungsten x1 / 120 ticks |
@@ -74,13 +74,13 @@ The current `Vanilla Cosmic` root is explicitly assigned to Serpulo. In v160.7, 
 | Liquid | none | cryofluid 6/second |
 | Internal buffers | 50 items | 50 items, 100 liquid |
 
-The Tungsten Transmuter follows Beryllium Transmuter in research because it represents the next transmutation tier, but it does **not** consume, require, or research-cost beryllium. The resulting chain is linear in machine knowledge while remaining free of a resource-production deadlock.
+The Pulsar Nucleoforge follows the Stellar Spallation Chamber in research because it represents the next transmutation tier, but it does **not** consume, require, or research-cost beryllium. The resulting chain is linear in machine knowledge while remaining free of a resource-production deadlock.
 
 Both output rates are deliberate fixed-factory rates, not a claim of mining parity: native Erekir extraction depends on ore layout, drill type, boosters, and operating frontage. These machines trade a modest, reliable Serpulo output for expensive refined inputs, power, and—at the tungsten tier—continuous cryofluid.
 
 ## Durability calculations
 
-### Beryllium Transmuter
+### Stellar Spallation Chamber (`stellar-spallation-chamber`)
 
 Construction total: 415.
 
@@ -92,7 +92,7 @@ MA = ((100 x 0.20) + (80 x 0.80) + (50 x 1.00) + (15 x 0.50)) / 415 = 0.341
 Armor = roundNearestWhole((2 + 1.5 x 2) x 0.341 x 0.90) = 2
 ```
 
-### Tungsten Transmuter
+### Pulsar Nucleoforge (`pulsar-nucleoforge`)
 
 Construction total: 920.
 
@@ -104,7 +104,7 @@ MA = ((180 x 0.20) + (150 x 0.80) + (120 x 1.00) + (60 x 0.70) + (40 x 0.50) + (
 Armor = roundNearestWhole((2 + 1.5 x 3) x 0.416 x 0.90) = 2
 ```
 
-### Copper Transmuter
+### Nebular Alchemy Reactor (`nebular-alchemy-reactor`)
 
 Construction total: 140.
 
@@ -116,7 +116,7 @@ MA = ((80 x 0.30) + (40 x 1.20) + (20 x 0.70)) / 140 = 0.614
 Armor = roundNearestWhole((2 + 1.5 x 3) x 0.614 x 0.90) = 4
 ```
 
-### Lead Transmuter
+### Neutron Flux Forge (`neutron-flux-forge`)
 
 Construction total: 200.
 
@@ -128,7 +128,7 @@ MA = ((75 x 0.30) + (75 x 1.20) + (30 x 0.70) + (20 x 1.40)) / 200 = 0.808
 Armor = roundNearestWhole((2 + 1.5 x 3) x 0.808 x 0.90) = 5
 ```
 
-### Titanium Transmuter
+### Quasar Plasma Crucible (`quasar-plasma-crucible`)
 
 Construction total: 430.
 
@@ -148,11 +148,11 @@ When configuring a drawer in HJSON, use a separate multiline object for any regi
 
 | Block | Main sprite | Recommended dimensions |
 |---|---|---|
-| Beryllium Transmuter | `beryllium-transmuter.png`, `beryllium-transmuter-glow.png` | 64x64 pixels each (2x2 at 32 pixels/tile) |
-| Tungsten Transmuter | `tungsten-transmuter.png`, `tungsten-transmuter-glow.png` | 96x96 pixels each (3x3 at 32 pixels/tile) |
-| Copper Transmuter | `copper-transmuter.png`, `copper-transmuter-glow.png` | 96x96 pixels each (3x3 at 32 pixels/tile) |
-| Lead Transmuter | `lead-transmuter.png`, `lead-transmuter-glow.png` | 96x96 pixels each (3x3 at 32 pixels/tile) |
-| Titanium Transmuter | `titanium-transmuter.png`, `titanium-transmuter-glow.png` | 128x128 pixels each (4x4 at 32 pixels/tile) |
+| Stellar Spallation Chamber (`stellar-spallation-chamber`) | `stellar-spallation-chamber.png`, `stellar-spallation-chamber-glow.png` | 64x64 pixels each (2x2 at 32 pixels/tile) |
+| Pulsar Nucleoforge (`pulsar-nucleoforge`) | `pulsar-nucleoforge.png`, `pulsar-nucleoforge-glow.png` | 96x96 pixels each (3x3 at 32 pixels/tile) |
+| Nebular Alchemy Reactor (`nebular-alchemy-reactor`) | `nebular-alchemy-reactor.png`, `nebular-alchemy-reactor-glow.png` | 96x96 pixels each (3x3 at 32 pixels/tile) |
+| Neutron Flux Forge (`neutron-flux-forge`) | `neutron-flux-forge.png`, `neutron-flux-forge-glow.png` | 96x96 pixels each (3x3 at 32 pixels/tile) |
+| Quasar Plasma Crucible (`quasar-plasma-crucible`) | `quasar-plasma-crucible.png`, `quasar-plasma-crucible-glow.png` | 128x128 pixels each (4x4 at 32 pixels/tile) |
 
 No sprite files are generated by this implementation.
 

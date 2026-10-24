@@ -1,5 +1,5 @@
-name: Beryllium Transmuter
-description: Transmutes advanced Serpulo resources into beryllium through a precise synthesis process.
+name: Stellar Spallation Chamber
+description: Uses high-energy particle bombardment to restructure advanced materials into beryllium through controlled nuclear spallation.
 type: GenericCrafter
 category: crafting
 shownPlanets: [serpulo, erekir]
