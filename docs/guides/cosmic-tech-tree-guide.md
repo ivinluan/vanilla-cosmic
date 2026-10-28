@@ -25,6 +25,8 @@ Vanilla Cosmic — Cosmic I Drill
 │  └─ Stellar Spallation Chamber → Stellar Stack Conveyor → Stellar Stack Router
 ├─ Cross-planet liquids: Solar Conduit → Nebula Condenser → Astral Catalyzer → Eventide Bioreactor
 │                         └→ Ionosphere Reactor → Protostar Extractor → Void Atmospheric Harvester
+│                                                             └→ Stellar Petroforge
+├─ Serpulo coolant synthesis: Solar Conduit → Nebular Cryoforge
 └─ Liquids: Pulsar Liquid Pump → Quasar Liquid Pump
    └─ Solar Conduit → Supernova Conduit → Void Conduit → Voidstream Hyperlane
       ├─ Celestial Aqueduct

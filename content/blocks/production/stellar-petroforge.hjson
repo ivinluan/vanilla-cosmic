@@ -1,0 +1,83 @@
+name: Stellar Petroforge
+description: Uses stellar-powered hydrocarbon synthesis to transform graphite and hydrogen into synthetic oil.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Graphite and hydrogen are the two distinct physical inputs.
+size: 2
+outputLiquid: oil/1.6666667
+# Liquid output is continuous: 1.6666667/tick = 100/second = 6000/minute.
+craftTime: 120
+itemCapacity: 100
+liquidCapacity: 200
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            # Shared 64x64 base used by the 2x2 liquid/gas producers.
+            name: vanilla-cosmic-cosmic-liquid-bottom
+        }
+        {
+            # Fixed input-gas fill remains visible even while oil is being dumped.
+            type: DrawLiquidTile
+            drawLiquid: hydrogen
+        }
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+flammabilityScale: 1
+explosivenessScale: 0.8
+
+# Crafting role: MH 1.118, MA 0.248, RH 1.10, RA 0.90.
+health: 200
+armor: 1
+
+requirements: [
+    copper/150
+    lead/130
+    graphite/100
+    silicon/100
+    titanium/80
+    thorium/40
+    plastanium/20
+]
+
+consumes: {
+    # 5 power/second ÷ 60 ticks/second.
+    power: 0.08333334
+    items: [
+        # 3 graphite per 120-tick craft = 1.5/second.
+        graphite/3
+    ]
+    # 0.33333334 hydrogen/tick = 20/second = 40 per 120-tick craft.
+    liquid: {
+        liquid: hydrogen
+        amount: 0.33333334
+    }
+}
+
+# Hydrogen is introduced by Protostar Extractor; no oil dependency is created.
+research: protostar-extractor
+researchCost: [
+    copper/750
+    lead/650
+    graphite/500
+    silicon/500
+    titanium/400
+    thorium/200
+    plastanium/100
+]

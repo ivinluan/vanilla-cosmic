@@ -1,0 +1,83 @@
+name: Nebular Cryoforge
+description: Uses advanced cryogenic processing to combine water and titanium into high-performance cryofluid.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Water and titanium are the two distinct physical inputs.
+size: 2
+outputLiquid: cryofluid/1.6666667
+# Liquid output is continuous: 1.6666667/tick = 100/second = 6000/minute.
+craftTime: 120
+itemCapacity: 100
+liquidCapacity: 200
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            # Shared 64x64 base used by the 2x2 liquid/gas producers.
+            name: vanilla-cosmic-cosmic-liquid-bottom
+        }
+        {
+            # Fixed water fill remains visible even while cryofluid is being dumped.
+            type: DrawLiquidTile
+            drawLiquid: water
+        }
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+flammabilityScale: 0
+explosivenessScale: 0.2
+
+# Crafting role: MH 1.138, MA 0.293, RH 1.10, RA 0.90.
+health: 200
+armor: 1
+
+requirements: [
+    copper/160
+    lead/140
+    graphite/90
+    silicon/130
+    titanium/120
+    thorium/60
+    plastanium/30
+]
+
+consumes: {
+    # 8.33333334 power/second ÷ 60 ticks/second.
+    power: 0.13888889
+    items: [
+        # 10 titanium per 120-tick craft = 5/second.
+        titanium/10
+    ]
+    # 1.6666667 water/tick = 100/second = 200 per 120-tick craft.
+    liquid: {
+        liquid: water
+        amount: 1.6666667
+    }
+}
+
+# Solar Conduit establishes the liquid infrastructure; titanium is vanilla Serpulo progression.
+research: solar-conduit
+researchCost: [
+    copper/800
+    lead/700
+    graphite/450
+    silicon/650
+    titanium/600
+    thorium/300
+    plastanium/150
+]

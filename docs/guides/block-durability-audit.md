@@ -4,7 +4,7 @@ This audit records the pre-approval HJSON values and the formula recommendations
 
 Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router` = router; `Junction` = junction; `Bridge` = buffered/phase conveyor; `Stack` = surge conveyor; `Drill` = pneumatic/laser/impact drill by tier; `Bore` = large plasma bore; `WallCrafter` = cliff crusher or large cliff crusher; `Pump` = mechanical/rotary/impulse pump; `Mass Driver` = mass driver.
 
-## Production / GenericCrafter — 11 blocks
+## Production / GenericCrafter — 13 blocks
 
 | Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
@@ -19,6 +19,8 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | `void-atmospheric-harvester` | GenericCrafter, 2 | copper 150, lead 125, graphite 80, silicon 100, titanium 110, thorium 60, plastanium 40, surge alloy 20 | 200 explicit / 2 explicit | 200 / 2 | Advanced 2x2 liquid crafter | Applied: cryogenic separation earns reinforced construction and modest armor. |
 | `astral-catalyzer` | GenericCrafter, 2 | copper 180, lead 150, graphite 110, silicon 130, titanium 110, thorium 90, plastanium 60, phase fabric 60, surge alloy 60 | 210 explicit / 2 explicit | 210 / 2 | Advanced 2x2 liquid crafter | Applied: high-power cyanogen process uses late Serpulo reinforcement while remaining a production block. |
 | `eventide-bioreactor` | GenericCrafter, 3 | copper 240, lead 200, graphite 130, silicon 170, titanium 160, thorium 140, plastanium 100, phase fabric 100, surge alloy 100 | 470 explicit / 2 explicit | 470 / 2 | 3x3 advanced crafter | Applied: hazardous neoplasm cultivation gets a larger reinforced shell, not defensive-wall durability. |
+| `stellar-petroforge` | GenericCrafter, 2 | copper 150, lead 130, graphite 100, silicon 100, titanium 80, thorium 40, plastanium 20 | 200 explicit / 1 explicit | 200 / 1 | 2x2 liquid crafter | Applied: hydrogen-based synthetic oil needs reinforced processing materials but remains ordinary production durability. |
+| `nebular-cryoforge` | GenericCrafter, 2 | copper 160, lead 140, graphite 90, silicon 130, titanium 120, thorium 60, plastanium 30 | 200 explicit / 1 explicit | 200 / 1 | 2x2 liquid crafter | Applied: titanium-heavy cryogenic processing has modest production armor, not reactor durability. |
 
 ## Ultimate defensive walls — 3 blocks
 
