@@ -70,6 +70,35 @@ These six `GenericCrafter` blocks create existing Erekir-associated liquids and 
 
 All six blocks deliberately output approximately 100 liquid/second. This is far above vanilla factory benchmarks—cyanogen is about 8.3x vanilla Cyanogen Synthesizer's 12/second, and neoplasm is 5x vanilla Neoplasia Reactor's 20/second—so continuous high-capacity liquid transport is required. Neoplasm is a hostile spreading `CellLiquid`, so players must keep its output line contained and test its in-game behavior before relying on it in normal logistics.
 
+## Serpulo liquid synthesis
+
+These two 2x2 `GenericCrafter` blocks manufacture native Serpulo liquids from existing infrastructure. They follow the same 100/second Cosmic liquid-output standard. Their output buffers are intentionally 200, giving a short two-second reserve while a connected liquid network drains the 100/second continuous output.
+
+| Block (ID) | Physical inputs | Output | Output rate | Craft time | Input rates / craft item | Power | Size | Liquid capacity |
+|---|---|---|---:|---:|---|---:|---:|---:|
+| Stellar Petroforge (`stellar-petroforge`) | graphite, hydrogen | oil | 100/s | 120 ticks | graphite 1.5/s; hydrogen 20/s | 5/s | 2x2 | 200 |
+| Nebular Cryoforge (`nebular-cryoforge`) | water, titanium | cryofluid | 100/s | 120 ticks | water 100/s; titanium 5/s | 8.33/s | 2x2 | 200 |
+
+Vanilla Oil Extractor is an attribute-dependent 3x3 Fracker with a displayed base rate of 15 oil/second (`pumpAmount: 0.25`); it needs an oil-bearing floor, water, sand, and 3 power/second. Stellar Petroforge trades that terrain restriction for the existing 100/second Cosmic-output standard, but requires the mod's hydrogen production branch, graphite, and higher power. Vanilla Cryofluid Mixer outputs 12 cryofluid/second from 12 water/second, 1 titanium per 120 ticks, and 1 power/second. Nebular Cryoforge is deliberately 8.33x faster and scales its water, titanium, and power demand accordingly.
+
+### Construction, research, and tree placement
+
+| Block | Construction | Research cost | Parent | Placement reason |
+|---|---|---|---|---|
+| Stellar Petroforge | copper 150, lead 130, graphite 100, silicon 100, titanium 80, thorium 40, plastanium 20 | 5x construction | `protostar-extractor` | Hydrogen is its required gas and is introduced by Protostar Extractor, preventing an oil or research loop. |
+| Nebular Cryoforge | copper 160, lead 140, graphite 90, silicon 130, titanium 120, thorium 60, plastanium 30 | 5x construction | `solar-conduit` | A water-and-titanium Serpulo recipe becomes available after the mod's liquid-transport foundation. |
+
+Both costs are payable through the Serpulo-rooted Cosmic tree and neither contains its produced liquid. Both explicitly use `shownPlanets: [serpulo, erekir]`, which permits use on either planet once supplied but does not create a second research node.
+
+### Durability calculations
+
+The two synthesizers use the Production / GenericCrafter role (`RH 1.10`, `RA 0.90`).
+
+| Block | Material health `MH` | Material armor `MA` | Formula result: HP / armor |
+|---|---:|---:|---:|
+| Stellar Petroforge | 1.118 | 0.248 | 200 / 1 |
+| Nebular Cryoforge | 1.138 | 0.293 | 200 / 1 |
+
 ### Construction, research, and tree placement
 
 | Block | Construction | Research cost | Parent | Placement reason |
@@ -185,7 +214,7 @@ Armor = roundNearestWhole((2 + 1.5 x 4) x 0.816 x 0.90) = 6
 
 Most listed machines use `DrawMulti` to layer the native default main region and a white, additive `DrawGlowRegion` overlay. `DrawGlowRegion` is visible only while the machine has crafting warmup (power and all required inputs are being consumed); it is intentionally absent while idle. No bottom, liquid, rotator, or top region is required unless a row states otherwise.
 
-The six liquid/gas producers layer a bottom region, a fixed input-liquid `DrawLiquidTile`, the main region, and an active glow. `DrawLiquidTile` uses native tiled liquid frames and needs no `-liquid.png`; fixed input liquids avoid an ambiguous shaped overlay for machines that store multiple inputs and outputs. These liquid tiles deliberately omit padding, allowing their fill layer to span each block's full footprint beneath the main sprite. The four 2x2 machines share `cosmic-liquid-bottom.png` through an explicit `DrawRegion.name`; Protostar Extractor and Eventide Bioreactor retain their correctly sized individual bottom regions.
+The liquid/gas producers layer a bottom region, a fixed input-liquid `DrawLiquidTile`, the main region, and an active glow. `DrawLiquidTile` uses native tiled liquid frames and needs no `-liquid.png`; fixed input liquids avoid an ambiguous shaped overlay for machines that store multiple inputs and outputs. These liquid tiles deliberately omit padding, allowing their fill layer to span each block's full footprint beneath the main sprite. The six 2x2 machines share `cosmic-liquid-bottom.png` through an explicit `DrawRegion.name`; Protostar Extractor and Eventide Bioreactor retain their correctly sized individual bottom regions.
 
 When configuring a drawer in HJSON, use a separate multiline object for any region that has more than `type`; HJSON does not treat spaces between inline object fields as separators. The transmuters therefore declare `type`, `suffix`, `color`, `alpha`, and `glowIntensity` on separate lines for `DrawGlowRegion`.
 
@@ -202,6 +231,8 @@ When configuring a drawer in HJSON, use a separate multiline object for any regi
 | Void Atmospheric Harvester (`void-atmospheric-harvester`) | `void-atmospheric-harvester.png`, shared `cosmic-liquid-bottom.png`, `void-atmospheric-harvester-glow.png` | 64x64 pixels each (2x2 at 32 pixels/tile) |
 | Astral Catalyzer (`astral-catalyzer`) | `astral-catalyzer.png`, shared `cosmic-liquid-bottom.png`, `astral-catalyzer-glow.png` | 64x64 pixels each (2x2 at 32 pixels/tile) |
 | Eventide Bioreactor (`eventide-bioreactor`) | `eventide-bioreactor.png`, `eventide-bioreactor-bottom.png`, `eventide-bioreactor-glow.png` | 96x96 pixels each (3x3 at 32 pixels/tile) |
+| Stellar Petroforge (`stellar-petroforge`) | `stellar-petroforge.png`, shared `cosmic-liquid-bottom.png`, `stellar-petroforge-glow.png` | 64x64 pixels each (2x2 at 32 pixels/tile) |
+| Nebular Cryoforge (`nebular-cryoforge`) | `nebular-cryoforge.png`, shared `cosmic-liquid-bottom.png`, `nebular-cryoforge-glow.png` | 64x64 pixels each (2x2 at 32 pixels/tile) |
 
 No sprite files are generated by this implementation.
 
