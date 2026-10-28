@@ -1,8 +1,17 @@
 name: Void Atmospheric Harvester
 description: Uses cryogenic separation and atmospheric processing to collect nitrogen for advanced manufacturing.
-type: GenericCrafter
+type: AttributeCrafter
 category: crafting
 shownPlanets: [serpulo, erekir]
+
+# Keeps full baseline production on ordinary terrain; Erekir steam vents add up to 25%.
+attribute: steam
+baseEfficiency: 1
+minEfficiency: -1
+boostScale: 0.0625
+maxBoost: 0.25
+# Attribute speed also scales continuous liquid inputs and power.
+scaleLiquidConsumption: true
 
 # Water and cryofluid are the two physical inputs.
 size: 2
