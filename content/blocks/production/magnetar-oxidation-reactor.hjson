@@ -1,0 +1,82 @@
+name: Magnetar Oxidation Reactor
+description: Uses magnetar-inspired energy fields to oxidize beryllium with ozone, producing advanced oxide materials.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Beryllium and ozone are the two distinct physical inputs.
+size: 2
+outputItem: oxide/1
+# 1 oxide per 60 ticks = 1/second = 60/minute.
+craftTime: 60
+itemCapacity: 50
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            name: vanilla-cosmic-cosmic-liquid-bottom
+        }
+        {
+            # Fixed ozone chamber fill; no custom -liquid sprite is required.
+            type: DrawLiquidTile
+            drawLiquid: ozone
+        }
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.131, MA 0.275, RH 1.10, RA 0.90.
+health: 200
+armor: 1
+
+requirements: [
+    copper/160
+    lead/130
+    graphite/100
+    silicon/120
+    titanium/100
+    thorium/60
+    plastanium/20
+]
+
+consumes: {
+    # 3 power/second ÷ 60 ticks/second.
+    power: 0.05
+    items: [
+        # 2 beryllium per 60-tick craft = 2/second.
+        beryllium/2
+    ]
+    # 0.1 ozone/tick = 6/second = 6 per 60-tick craft.
+    liquid: {
+        liquid: ozone
+        amount: 0.1
+    }
+}
+
+# Ionosphere Reactor introduces the mandatory ozone infrastructure.
+research: ionosphere-reactor
+researchCost: [
+    copper/800
+    lead/650
+    graphite/500
+    silicon/600
+    titanium/500
+    thorium/300
+    plastanium/100
+]
