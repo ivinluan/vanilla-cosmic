@@ -1,0 +1,76 @@
+name: Ionosphere Reactor
+description: Uses energized water-derived oxygen and electrical discharge fields to generate ozone.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Water and silicon are the two physical inputs.
+size: 2
+outputLiquid: ozone/1.6666667
+# Liquid output is continuous: 1.6666667/tick = 100/second = 6000/minute.
+craftTime: 90
+itemCapacity: 30
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            # Shared 64x64 base used by the 2x2 liquid/gas producers.
+            name: vanilla-cosmic-cosmic-liquid-bottom
+        }
+        {
+            type: DrawLiquidTile
+            drawLiquid: water
+        }
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.088, MA 0.177, RH 1.10, RA 0.90.
+health: 190
+armor: 1
+
+requirements: [
+    copper/130
+    lead/110
+    graphite/70
+    silicon/100
+    titanium/70
+]
+
+consumes: {
+    # 2 power/second ÷ 60 ticks/second.
+    power: 0.03333334
+    items: [
+        silicon/1
+    ]
+    # 0.1 water/tick = 6/second = 9 per 90-tick craft.
+    liquid: {
+        liquid: water
+        amount: 0.1
+    }
+}
+
+research: solar-conduit
+researchCost: [
+    copper/650
+    lead/550
+    graphite/350
+    silicon/500
+    titanium/350
+]

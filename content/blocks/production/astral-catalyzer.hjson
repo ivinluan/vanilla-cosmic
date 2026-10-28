@@ -1,0 +1,84 @@
+name: Astral Catalyzer
+description: Catalyzes arkycite and carbon-rich materials under exotic reaction fields to produce cyanogen.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Arkycite and graphite are the two physical inputs.
+size: 2
+outputLiquid: cyanogen/1.6666667
+# Liquid output is continuous: 1.6666667/tick = 100/second = 6000/minute.
+craftTime: 180
+itemCapacity: 30
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            # Shared 64x64 base used by the 2x2 liquid/gas producers.
+            name: vanilla-cosmic-cosmic-liquid-bottom
+        }
+        {
+            type: DrawLiquidTile
+            drawLiquid: arkycite
+        }
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.175, MA 0.369, RH 1.10, RA 0.90.
+health: 210
+armor: 2
+
+requirements: [
+    copper/180
+    lead/150
+    graphite/110
+    silicon/130
+    titanium/110
+    thorium/90
+    plastanium/60
+    phase-fabric/60
+    surge-alloy/60
+]
+
+consumes: {
+    # 5 power/second ÷ 60 ticks/second.
+    power: 0.08333334
+    items: [
+        graphite/1
+    ]
+    # 0.2 arkycite/tick = 12/second = 36 per 180-tick craft.
+    liquid: {
+        liquid: arkycite
+        amount: 0.2
+    }
+}
+
+research: nebula-condenser
+researchCost: [
+    copper/900
+    lead/750
+    graphite/550
+    silicon/650
+    titanium/550
+    thorium/450
+    plastanium/300
+    phase-fabric/300
+    surge-alloy/300
+]

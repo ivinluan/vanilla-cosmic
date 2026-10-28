@@ -1,0 +1,76 @@
+name: Nebula Condenser
+description: Condenses volatile hydrocarbons and spore-derived compounds into arkycite using controlled cosmic-energy fields.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Oil and spore pod are the two physical inputs.
+size: 2
+outputLiquid: arkycite/1.6666667
+# Liquid output is continuous: 1.6666667/tick = 100/second = 6000/minute.
+craftTime: 120
+itemCapacity: 30
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            # Shared 64x64 base used by the 2x2 liquid/gas producers.
+            name: vanilla-cosmic-cosmic-liquid-bottom
+        }
+        {
+            type: DrawLiquidTile
+            drawLiquid: oil
+        }
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.075, MA 0.160, RH 1.10, RA 0.90.
+health: 190
+armor: 1
+
+requirements: [
+    copper/110
+    lead/90
+    graphite/60
+    silicon/50
+    titanium/40
+]
+
+consumes: {
+    # 2 power/second ÷ 60 ticks/second.
+    power: 0.03333334
+    items: [
+        spore-pod/1
+    ]
+    # 0.1 oil/tick = 6/second = 12 per 120-tick craft.
+    liquid: {
+        liquid: oil
+        amount: 0.1
+    }
+}
+
+research: solar-conduit
+researchCost: [
+    copper/550
+    lead/450
+    graphite/300
+    silicon/250
+    titanium/200
+]

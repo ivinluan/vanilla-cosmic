@@ -1,5 +1,5 @@
-name: Tungsten Transmuter
-description: Converts advanced Serpulo resources into tungsten through an energy-intensive cryogenic transmutation process.
+name: Pulsar Nucleoforge
+description: Harnesses intense particle fields and cryogenic stabilization to reconstruct advanced materials into tungsten.
 type: GenericCrafter
 category: crafting
 shownPlanets: [serpulo, erekir]
@@ -66,7 +66,7 @@ consumes: {
 }
 
 # This is a research progression only; beryllium is never an input or cost here.
-research: beryllium-transmuter
+research: stellar-spallation-chamber
 researchCost: [
     copper/1100
     lead/900

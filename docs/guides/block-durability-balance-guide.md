@@ -75,7 +75,7 @@ The current audit applies the documented Ultimate Defensive Wall exception only 
 
 ### Production / GenericCrafter role
 
-Use this role for stationary item-production machines whose primary function is transforming delivered inputs into a fixed output, including the Beryllium and Tungsten Transmuters. It sits below extraction machinery because it has no exposed mining head or wall-facing operating position, but above ordinary logistics because it represents a compact advanced processing structure. Do not apply it to pumps, drills, bores, WallCrafters, or storage blocks merely because they produce or hold a resource.
+Use this role for stationary item-production machines whose primary function is transforming delivered inputs into a fixed output, including the Stellar Spallation Chamber (`stellar-spallation-chamber`) and Pulsar Nucleoforge (`pulsar-nucleoforge`). It sits below extraction machinery because it has no exposed mining head or wall-facing operating position, but above ordinary logistics because it represents a compact advanced processing structure. Do not apply it to pumps, drills, bores, WallCrafters, or storage blocks merely because they produce or hold a resource.
 
 ## Ultimate Defensive Wall exception
 

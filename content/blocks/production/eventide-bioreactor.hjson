@@ -1,0 +1,86 @@
+name: Eventide Bioreactor
+description: Uses arkycite, water, and phase fabric to cultivate unstable neoplasm within a controlled biological reactor.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Arkycite, water, and phase fabric are the three physical inputs.
+size: 3
+outputLiquid: neoplasm/1.6666667
+# Liquid output is continuous: 1.6666667/tick = 100/second = 6000/minute.
+craftTime: 240
+itemCapacity: 30
+liquidCapacity: 100
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        # A structural base, then the bioreactor's fixed arkycite chamber fill.
+        # DrawLiquidTile renders native liquid frames; it does not need a -liquid sprite.
+        {
+            type: DrawRegion
+            suffix: "-bottom"
+        }
+        {
+            type: DrawLiquidTile
+            drawLiquid: arkycite
+        }
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.189, MA 0.404, RH 1.10, RA 0.90.
+health: 470
+armor: 2
+
+requirements: [
+    copper/240
+    lead/200
+    graphite/130
+    silicon/170
+    titanium/160
+    thorium/140
+    plastanium/100
+    phase-fabric/100
+    surge-alloy/100
+]
+
+consumes: {
+    # 7 power/second ÷ 60 ticks/second.
+    power: 0.11666667
+    items: [
+        phase-fabric/1
+    ]
+    # 0.2 arkycite/tick = 12/second = 48 per 240-tick craft.
+    liquids: [
+        arkycite/0.2
+        # 0.3 water/tick = 18/second = 72 per 240-tick craft.
+        water/0.3
+    ]
+}
+
+research: astral-catalyzer
+researchCost: [
+    copper/1200
+    lead/1000
+    graphite/650
+    silicon/850
+    titanium/800
+    thorium/700
+    plastanium/500
+    phase-fabric/500
+    surge-alloy/500
+]

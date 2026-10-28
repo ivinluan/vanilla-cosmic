@@ -1,5 +1,5 @@
-name: Lead Transmuter
-description: Compresses dense metals through an advanced chemical process to produce lead.
+name: Neutron Flux Forge
+description: Exposes tungsten to concentrated neutron fields, restructuring its atomic nuclei to produce lead.
 type: GenericCrafter
 category: crafting
 shownPlanets: [serpulo, erekir]
@@ -59,7 +59,7 @@ consumes: {
     ]
 }
 
-research: copper-transmuter
+research: nebular-alchemy-reactor
 researchCost: [
     beryllium/375
     tungsten/375

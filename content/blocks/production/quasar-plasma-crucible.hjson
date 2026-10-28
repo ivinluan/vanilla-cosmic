@@ -1,5 +1,5 @@
-name: Titanium Transmuter
-description: Uses high-energy plasma processing to transmute advanced minerals into titanium.
+name: Quasar Plasma Crucible
+description: Channels high-energy plasma and nuclear restructuring fields to transform advanced minerals into titanium.
 type: GenericCrafter
 category: crafting
 shownPlanets: [serpulo, erekir]
@@ -60,7 +60,7 @@ consumes: {
     ]
 }
 
-research: lead-transmuter
+research: neutron-flux-forge
 researchCost: [
     beryllium/750
     tungsten/750
