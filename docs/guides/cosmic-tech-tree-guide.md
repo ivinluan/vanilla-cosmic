@@ -23,6 +23,8 @@ Vanilla Cosmic — Cosmic I Drill
 │  ├─ Interstellar Hyperlane
 │  └─ Quasar Mass Driver
 │  └─ Stellar Spallation Chamber → Stellar Stack Conveyor → Stellar Stack Router
+├─ Cross-planet liquids: Solar Conduit → Nebula Condenser → Astral Catalyzer → Eventide Bioreactor
+│                         └→ Ionosphere Reactor → Protostar Extractor → Void Atmospheric Harvester
 └─ Liquids: Pulsar Liquid Pump → Quasar Liquid Pump
    └─ Solar Conduit → Supernova Conduit → Void Conduit → Voidstream Hyperlane
       ├─ Celestial Aqueduct

@@ -4,7 +4,7 @@ This audit records the pre-approval HJSON values and the formula recommendations
 
 Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router` = router; `Junction` = junction; `Bridge` = buffered/phase conveyor; `Stack` = surge conveyor; `Drill` = pneumatic/laser/impact drill by tier; `Bore` = large plasma bore; `WallCrafter` = cliff crusher or large cliff crusher; `Pump` = mechanical/rotary/impulse pump; `Mass Driver` = mass driver.
 
-## Production / GenericCrafter — 5 blocks
+## Production / GenericCrafter — 11 blocks
 
 | Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
@@ -13,6 +13,12 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | `nebular-alchemy-reactor` | GenericCrafter, 3 | beryllium 80, tungsten 40, oxide 20 | 500 explicit / 4 explicit | 500 / 4 | 3x3 Erekir crafter | Applied: larger footprint follows the three-resource recipe rule; Erekir reinforcement adds moderate armor without reaching defensive-block protection. |
 | `neutron-flux-forge` | GenericCrafter, 3 | beryllium 75, tungsten 75, oxide 30, carbide 20 | 530 explicit / 5 explicit | 530 / 5 | 3x3 Erekir crafter | Applied: three-resource footprint and denser tungsten/carbide construction produce the next durability step. |
 | `quasar-plasma-crucible` | GenericCrafter, 4 | beryllium 150, tungsten 150, oxide 80, carbide 50 | 950 explicit / 6 explicit | 950 / 6 | 4x4 advanced crafter | Applied: four-resource plasma process has the largest permitted footprint and retains production-role, rather than extraction or storage-role, durability. |
+| `nebula-condenser` | GenericCrafter, 2 | copper 110, lead 90, graphite 60, silicon 50, titanium 40 | 190 explicit / 1 explicit | 190 / 1 | 2x2 liquid crafter | Applied: first arkycite producer uses ordinary processing materials and modest production-role protection. |
+| `ionosphere-reactor` | GenericCrafter, 2 | copper 130, lead 110, graphite 70, silicon 100, titanium 70 | 190 explicit / 1 explicit | 190 / 1 | 2x2 liquid crafter | Applied: water-to-ozone processing has similar footprint and structural tier to the arkycite producer. |
+| `protostar-extractor` | GenericCrafter, 1 | copper 70, lead 55, graphite 35, silicon 45, titanium 35 | 50 explicit / 1 explicit | 50 / 1 | Small liquid crafter | Applied: single-input hydrogen production keeps a compact and vulnerable 1x1 footprint. |
+| `void-atmospheric-harvester` | GenericCrafter, 2 | copper 150, lead 125, graphite 80, silicon 100, titanium 110, thorium 60, plastanium 40, surge alloy 20 | 200 explicit / 2 explicit | 200 / 2 | Advanced 2x2 liquid crafter | Applied: cryogenic separation earns reinforced construction and modest armor. |
+| `astral-catalyzer` | GenericCrafter, 2 | copper 180, lead 150, graphite 110, silicon 130, titanium 110, thorium 90, plastanium 60, phase fabric 60, surge alloy 60 | 210 explicit / 2 explicit | 210 / 2 | Advanced 2x2 liquid crafter | Applied: high-power cyanogen process uses late Serpulo reinforcement while remaining a production block. |
+| `eventide-bioreactor` | GenericCrafter, 3 | copper 240, lead 200, graphite 130, silicon 170, titanium 160, thorium 140, plastanium 100, phase fabric 100, surge alloy 100 | 470 explicit / 2 explicit | 470 / 2 | 3x3 advanced crafter | Applied: hazardous neoplasm cultivation gets a larger reinforced shell, not defensive-wall durability. |
 
 ## Ultimate defensive walls — 3 blocks
 

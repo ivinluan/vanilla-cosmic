@@ -1,0 +1,70 @@
+name: Protostar Extractor
+description: Splits water through high-energy electrolysis to produce hydrogen for advanced gas processing.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Water is the sole physical input.
+size: 1
+outputLiquid: hydrogen/1.6666667
+# Liquid output is continuous: 1.6666667/tick = 100/second = 6000/minute.
+craftTime: 60
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            suffix: "-bottom"
+        }
+        {
+            type: DrawLiquidTile
+            drawLiquid: water
+        }
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasLiquids: true
+hasPower: true
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.086, MA 0.177, RH 1.10, RA 0.90.
+health: 50
+armor: 1
+
+requirements: [
+    copper/70
+    lead/55
+    graphite/35
+    silicon/45
+    titanium/35
+]
+
+consumes: {
+    # 1.5 power/second ÷ 60 ticks/second.
+    power: 0.025
+    # 0.16666667 water/tick = 10/second = 10 per 60-tick craft.
+    liquid: {
+        liquid: water
+        amount: 0.16666667
+    }
+}
+
+research: ionosphere-reactor
+researchCost: [
+    copper/350
+    lead/275
+    graphite/175
+    silicon/225
+    titanium/175
+]
