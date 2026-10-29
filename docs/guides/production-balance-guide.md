@@ -12,6 +12,21 @@ This guide covers GenericCrafter machines that manufacture an existing item nati
 - Multiple mandatory liquids/gases must use one `consumes.liquids` array. v160.7 `ConsumeLiquids` accepts, checks, and removes every declared `LiquidStack` each tick. Gases such as ozone, hydrogen, and nitrogen use the same `Liquid` system.
 - Apply the Production / GenericCrafter durability role (`RH 1.10`, `RA 0.90`) from the [Block Durability Balance Guide](block-durability-balance-guide.md). Add a row to the durability audit for every new machine.
 
+## Terrain-attribute production bonuses
+
+Four existing Cosmic producers use the v160.7 `AttributeCrafter` subclass. They all set `baseEfficiency: 1` and `minEfficiency: -1`, so their listed ordinary-terrain rates remain available everywhere and terrain never blocks placement. `maxBoost: 0.25` caps the floor-derived bonus at +25%; it is deliberately not a 2x multiplier for the already high-throughput liquid/gas machines.
+
+| Block | Attribute | `boostScale` | Full-footprint intended maximum | Baseline rate | Terrain-capped rate |
+|---|---|---:|---:|---:|---:|
+| Nebula Condenser | `spores` | 0.20833334 | Dense 2x2 spore-floor coverage | 100 arkycite/s | 125 arkycite/s |
+| Eventide Bioreactor | `spores` | 0.10 | Dense 3x3 spore-floor coverage | 100 neoplasm/s | 125 neoplasm/s |
+| Accretion Carbothermal Forge | `steam` | 0.0625 | Four Erekir steam-vent tiles | 2 carbide/s | 2.5 carbide/s |
+| Void Atmospheric Harvester | `steam` | 0.0625 | Four Erekir steam-vent tiles | 100 nitrogen/s | 125 nitrogen/s |
+
+`AttributeCrafter` sums the chosen floor attribute beneath the complete footprint. In v160.7, common spore floors contribute 0.15 or 0.30 each and Erekir steam vents contribute 1 each. The four selected blocks set `scaleLiquidConsumption: true`; the engine applies their terrain efficiency scale to standard update consumers, so increased output also raises their continuous liquid and power demand rather than creating a free production multiplier. Item inputs continue to scale naturally because faster crafting completes more item-consuming craft cycles.
+
+`Attribute.heat` is intentionally not used. Erekir has an environmental heat value, which would give an ambient planet-wide bonus rather than a reward for special floor placement. `spores` is reserved for the two biological/spore-themed machines; `steam` is reserved for the two thermal/atmospheric machines. Portable transmuters, water/gas conversion, synthetic oil, cryofluid, and ozone oxidation remain ordinary `GenericCrafter` blocks because their recipes—not terrain—define their intended progression.
+
 ## Recipe evaluation
 
 ### Stellar Spallation Chamber (`stellar-spallation-chamber`)
@@ -54,6 +69,37 @@ These machines preserve the requested size rule: count every distinct consumed r
 | Research parent | `pulsar-nucleoforge` | `nebular-alchemy-reactor` | `neutron-flux-forge` |
 
 The construction and research values contain only Erekir-obtainable items and follow the project’s standard 5x construction-to-research multiplier.
+
+## Serpulo-to-Erekir advanced materials
+
+Magnetar Oxidation Reactor and Accretion Carbothermal Forge are 2x2 `GenericCrafter` blocks. Their two physical inputs set their footprint; power is infrastructure, not a physical recipe input. Both make existing Erekir items, retain `shownPlanets: [serpulo, erekir]`, and use costs that the Serpulo-rooted Cosmic research tree can pay. Their output quantities are fixed item crafts, not the separate 100/second liquid-output convention.
+
+| Block (ID) | Inputs per 60-tick craft | Output | Output rate | Power | Buffers | Size |
+|---|---|---|---:|---:|---|---:|
+| Magnetar Oxidation Reactor (`magnetar-oxidation-reactor`) | beryllium 2; ozone 6 | oxide 1 | 1/s (60/minute) | 3/s | 50 items, 60 liquid | 2x2 |
+| Accretion Carbothermal Forge (`accretion-carbothermal-forge`) | silicon 2; graphite 3 | carbide 2 | 2/s (120/minute) | 4/s | 50 items | 2x2 |
+
+The existing Cosmic item-machine rates are 1 beryllium/second (Stellar Spallation Chamber), 0.5 tungsten/second (Pulsar Nucleoforge), 1 copper/second (Nebular Alchemy Reactor), 1 lead/second (Neutron Flux Forge), and 1 titanium/second (Quasar Plasma Crucible). Oxide stays at the established 1/second standard. Carbide is 2/second because its two-item output requires both refined silicon and graphite, while still remaining a compact late-tier factory rather than a liquid-output-scale producer.
+
+Vanilla v160.7's 3x3 Oxidation Chamber makes 1 oxide every 120 ticks (0.5/s) from 1 beryllium and ozone at 2/s, with 0.5 power/s plus heat. Magnetar is 2x its item rate, but needs 2 beryllium and 6 ozone per craft, 3 power/s, a 2x2 Cosmic construction tier, and separately established ozone infrastructure. Vanilla's 3x3 Carbide Crucible makes 1 carbide every 33.75 ticks (about 1.78/s) from 2 tungsten and 3 graphite, with 2 power/s plus heat. Accretion makes 2/s (12.5% faster) but substitutes accessible silicon for tungsten, consumes 4 power/s, and is gated behind the preceding oxide tier. Neither removes meaningful infrastructure or makes vanilla progression irrelevant.
+
+### Construction, research, and tree placement
+
+| Block | Construction | Research cost | Parent | Placement reason |
+|---|---|---|---|---|
+| Magnetar Oxidation Reactor | copper 160, lead 130, graphite 100, silicon 120, titanium 100, thorium 60, plastanium 20 | 5x construction | `ionosphere-reactor` | Ionosphere Reactor establishes the mandatory ozone input. Beryllium is supplied by the separately unlocked Stellar Spallation Chamber; one HJSON node can have only one research parent. |
+| Accretion Carbothermal Forge | copper 190, lead 160, graphite 120, silicon 160, titanium 130, thorium 80, plastanium 50, phase fabric 30 | 5x construction | `magnetar-oxidation-reactor` | The research sequence establishes the advanced Erekir-material branch. Oxide is not an ingredient or a research cost, so the parent link is not a production loop. |
+
+Both construction lists add meaningful late-Serpulo structural materials without requiring their own outputs. Research costs are exactly five times construction, preserving the current Cosmic convention and remaining payable by the existing Serpulo root.
+
+### Durability calculations
+
+Both use the Production / GenericCrafter role (`RH 1.10`, `RA 0.90`).
+
+| Block | Material health `MH` | Material armor `MA` | Formula result: HP / armor |
+|---|---:|---:|---:|
+| Magnetar Oxidation Reactor | 1.131 | 0.275 | 200 / 1 |
+| Accretion Carbothermal Forge | 1.153 | 0.302 | 200 / 1 |
 
 ## Serpulo liquid and gas production
 
@@ -214,7 +260,7 @@ Armor = roundNearestWhole((2 + 1.5 x 4) x 0.816 x 0.90) = 6
 
 Most listed machines use `DrawMulti` to layer the native default main region and a white, additive `DrawGlowRegion` overlay. `DrawGlowRegion` is visible only while the machine has crafting warmup (power and all required inputs are being consumed); it is intentionally absent while idle. No bottom, liquid, rotator, or top region is required unless a row states otherwise.
 
-The liquid/gas producers layer a bottom region, a fixed input-liquid `DrawLiquidTile`, the main region, and an active glow. `DrawLiquidTile` uses native tiled liquid frames and needs no `-liquid.png`; fixed input liquids avoid an ambiguous shaped overlay for machines that store multiple inputs and outputs. These liquid tiles deliberately omit padding, allowing their fill layer to span each block's full footprint beneath the main sprite. The six 2x2 machines share `cosmic-liquid-bottom.png` through an explicit `DrawRegion.name`; Protostar Extractor and Eventide Bioreactor retain their correctly sized individual bottom regions.
+The liquid/gas producers layer a bottom region, a fixed input-liquid `DrawLiquidTile`, the main region, and an active glow. `DrawLiquidTile` uses native tiled liquid frames and needs no `-liquid.png`; fixed input liquids avoid an ambiguous shaped overlay for machines that store multiple inputs and outputs. These liquid tiles deliberately omit padding, allowing their fill layer to span each block's full footprint beneath the main sprite. Seven 2x2 machines share `cosmic-liquid-bottom.png` through an explicit `DrawRegion.name`; Magnetar adds its ozone `DrawLiquidTile`. Accretion has no bottom layer because it has no liquid/gas chamber. Protostar Extractor and Eventide Bioreactor retain their correctly sized individual bottom regions.
 
 When configuring a drawer in HJSON, use a separate multiline object for any region that has more than `type`; HJSON does not treat spaces between inline object fields as separators. The transmuters therefore declare `type`, `suffix`, `color`, `alpha`, and `glowIntensity` on separate lines for `DrawGlowRegion`.
 
@@ -233,6 +279,8 @@ When configuring a drawer in HJSON, use a separate multiline object for any regi
 | Eventide Bioreactor (`eventide-bioreactor`) | `eventide-bioreactor.png`, `eventide-bioreactor-bottom.png`, `eventide-bioreactor-glow.png` | 96x96 pixels each (3x3 at 32 pixels/tile) |
 | Stellar Petroforge (`stellar-petroforge`) | `stellar-petroforge.png`, shared `cosmic-liquid-bottom.png`, `stellar-petroforge-glow.png` | 64x64 pixels each (2x2 at 32 pixels/tile) |
 | Nebular Cryoforge (`nebular-cryoforge`) | `nebular-cryoforge.png`, shared `cosmic-liquid-bottom.png`, `nebular-cryoforge-glow.png` | 64x64 pixels each (2x2 at 32 pixels/tile) |
+| Magnetar Oxidation Reactor (`magnetar-oxidation-reactor`) | `magnetar-oxidation-reactor.png`, shared `cosmic-liquid-bottom.png`, `magnetar-oxidation-reactor-glow.png` | 64x64 pixels each (2x2 at 32 pixels/tile) |
+| Accretion Carbothermal Forge (`accretion-carbothermal-forge`) | `accretion-carbothermal-forge.png`, `accretion-carbothermal-forge-glow.png` | 64x64 pixels each (2x2 at 32 pixels/tile) |
 
 No sprite files are generated by this implementation.
 

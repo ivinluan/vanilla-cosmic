@@ -1,8 +1,17 @@
 name: Eventide Bioreactor
 description: Uses arkycite, water, and phase fabric to cultivate unstable neoplasm within a controlled biological reactor.
-type: GenericCrafter
+type: AttributeCrafter
 category: crafting
 shownPlanets: [serpulo, erekir]
+
+# Keeps full baseline production on ordinary terrain; dense spore floors add up to 25%.
+attribute: spores
+baseEfficiency: 1
+minEfficiency: -1
+boostScale: 0.1
+maxBoost: 0.25
+# Attribute speed also scales continuous liquid inputs and power.
+scaleLiquidConsumption: true
 
 # Arkycite, water, and phase fabric are the three physical inputs.
 size: 3

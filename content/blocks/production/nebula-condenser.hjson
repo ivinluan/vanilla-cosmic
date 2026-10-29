@@ -1,8 +1,17 @@
 name: Nebula Condenser
 description: Condenses volatile hydrocarbons and spore-derived compounds into arkycite using controlled cosmic-energy fields.
-type: GenericCrafter
+type: AttributeCrafter
 category: crafting
 shownPlanets: [serpulo, erekir]
+
+# Keeps full baseline production on ordinary terrain; spore-rich floors add up to 25%.
+attribute: spores
+baseEfficiency: 1
+minEfficiency: -1
+boostScale: 0.20833334
+maxBoost: 0.25
+# Attribute speed also scales continuous inputs and power, avoiding a free oil-output increase.
+scaleLiquidConsumption: true
 
 # Oil and spore pod are the two physical inputs.
 size: 2

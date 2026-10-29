@@ -27,6 +27,7 @@ Vanilla Cosmic — Cosmic I Drill
 │                         └→ Ionosphere Reactor → Protostar Extractor → Void Atmospheric Harvester
 │                                                             └→ Stellar Petroforge
 ├─ Serpulo coolant synthesis: Solar Conduit → Nebular Cryoforge
+├─ Advanced materials: Ionosphere Reactor → Magnetar Oxidation Reactor → Accretion Carbothermal Forge
 └─ Liquids: Pulsar Liquid Pump → Quasar Liquid Pump
    └─ Solar Conduit → Supernova Conduit → Void Conduit → Voidstream Hyperlane
       ├─ Celestial Aqueduct

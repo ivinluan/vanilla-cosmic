@@ -1,0 +1,78 @@
+name: Accretion Carbothermal Forge
+description: Uses extreme thermal energy to fuse silicon and carbon-rich graphite into advanced carbide materials.
+type: AttributeCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Keeps full baseline production on ordinary terrain; Erekir steam vents add up to 25%.
+attribute: steam
+baseEfficiency: 1
+minEfficiency: -1
+boostScale: 0.0625
+maxBoost: 0.25
+# This routes the terrain efficiency multiplier through the standard power consumer.
+scaleLiquidConsumption: true
+
+# Silicon and graphite are the two distinct physical inputs.
+size: 2
+outputItem: carbide/2
+# 2 carbide per 60 ticks = 2/second = 120/minute.
+craftTime: 60
+itemCapacity: 50
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasPower: true
+flammabilityScale: 0
+explosivenessScale: 0.3
+
+# Crafting role: MH 1.153, MA 0.302, RH 1.10, RA 0.90.
+health: 200
+armor: 1
+
+requirements: [
+    copper/190
+    lead/160
+    graphite/120
+    silicon/160
+    titanium/130
+    thorium/80
+    plastanium/50
+    phase-fabric/30
+]
+
+consumes: {
+    # 4 power/second ÷ 60 ticks/second.
+    power: 0.06666667
+    items: [
+        # 2 silicon and 3 graphite per 60-tick craft.
+        silicon/2
+        graphite/3
+    ]
+}
+
+# Oxide establishes the preceding advanced Erekir-material tier without becoming a recipe input.
+research: magnetar-oxidation-reactor
+researchCost: [
+    copper/950
+    lead/800
+    graphite/600
+    silicon/800
+    titanium/650
+    thorium/400
+    plastanium/250
+    phase-fabric/150
+]
