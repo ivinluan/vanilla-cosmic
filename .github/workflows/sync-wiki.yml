@@ -1,0 +1,64 @@
+
+name: Sync GitHub Wiki
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "docs/wiki/**"
+      - ".github/workflows/sync-wiki.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-wiki
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Publish documentation to Wiki
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$WIKI_TOKEN" ]; then
+            echo "::error::Missing WIKI_TOKEN secret"
+            exit 1
+          fi
+
+          AUTH=$(printf 'x-access-token:%s' "$WIKI_TOKEN" | base64 -w 0)
+
+          git -c http.extraheader="AUTHORIZATION: basic $AUTH" \
+            clone "https://github.com/${GITHUB_REPOSITORY}.wiki.git" wiki-publish
+
+          rsync -av --delete \
+            --exclude='.git/' \
+            docs/wiki/ wiki-publish/
+
+          # GitHub Wiki's landing page is Home.md
+          cp docs/wiki/README.md wiki-publish/Home.md
+          rm -f wiki-publish/README.md
+
+          cd wiki-publish
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Wiki already up to date"
+            exit 0
+          fi
+
+          git commit -m "Sync Wiki documentation"
+          git -c http.extraheader="AUTHORIZATION: basic $AUTH" push origin HEAD
