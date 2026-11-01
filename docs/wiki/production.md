@@ -1,4 +1,4 @@
-# Cosmic Vanilla Production Blocks
+# Cosmic Vanilla Production
 
 This is a gameplay-facing catalogue of every Cosmic Vanilla production block. `Input` means resources consumed while operating; construction and research requirements are intentionally not repeated here. Rates are the baseline full-efficiency rate. Attribute Crafters retain that baseline away from their preferred terrain and can gain up to 25% efficiency on it.
 
