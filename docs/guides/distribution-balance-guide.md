@@ -32,6 +32,7 @@ Do not copy a numeric speed from one transport class to another.
 | `StackConveyor` | `itemCapacity`, `speed` | Rated rate is `itemCapacity × speed × 60`; actual movement also follows native stack-line efficiency behavior. |
 | `StackRouter` | `itemCapacity`, `speed` | It fills one item type, waits for its charge delay, then unloads the full stack in a burst. `speed` is a charge delay, not an items-per-second value. |
 | `MassDriver` | `range`, `reload`, `itemCapacity`, `minDistribute`, `bulletSpeed`, `bulletLifetime` | Shipment size is limited by source/target item capacity. Rated maximum shipment rate is `itemCapacity × 60 / reload`; projectile travel must fit within its lifetime. |
+| `LaunchPad` / `LandingPad` | `itemCapacity`, `launchTime`, `arrivalDuration`, `cooldownTime` | Campaign-only sector logistics. A Launch Pad launches only when full. A Landing Pad's underlying import rate remains the limiting source; its capacity sets batch size and arrival/cooldown set its maximum receive cadence. |
 
 ## Current distribution progression
 
@@ -49,6 +50,17 @@ This table records the current definitions. It is a cost and progression referen
 | Stellar Stack Conveyor | `StackConveyor` | 25-item stacks / 100 rated items per second | beryllium 100, tungsten 80, carbide 40, surge alloy 40 | `surge-conveyor` |
 | Stellar Stack Router | `StackRouter` | 25-item burst distribution | beryllium 110, tungsten 90, carbide 45, surge alloy 50 | `stellar-stack-conveyor` |
 | Quasar Mass Driver | `MassDriver` | 250-item long-range shipment | titanium 300, silicon 200, lead 300, thorium 150, plastanium 100, phase fabric 80, surge alloy 50 | `mass-driver` |
+| Astral Departure Nexus | `LaunchPad` | 200-item mixed campaign export every 10 seconds | copper 500, lead 450, silicon 350, titanium 350, thorium 250, plastanium 150, phase fabric 75, surge alloy 40, beryllium 100, tungsten 75 | `celestial-bridge` |
+| Astral Arrival Nexus | `LandingPad` | 400-item one-type campaign import per eligible landing | copper 550, lead 500, silicon 400, titanium 450, thorium 300, plastanium 200, phase fabric 100, surge alloy 60, beryllium 125, tungsten 100, carbide 40 | `astral-departure-nexus` |
+
+## Campaign logistics pads
+
+Campaign pads are a separate transport family. They use native campaign export/import statistics rather than a local link, projectile, or conveyor path.
+
+- `Astral Departure Nexus` launches only when its 200-item inventory is full. Its 600-tick interval gives a nominal full-batch export capacity of **20 items/s**. It continuously consumes 720 power/s and 6 cryofluid/s during the charge interval; its 120-liquid buffer covers 20 seconds of cryofluid use.
+- `Astral Arrival Nexus` accepts no local input and is configured for one item type. When campaign imports for that item have accumulated and water is available, it receives a full 400-item batch. Its required 180-tick arrival plus 300-tick cooldown caps repeated full deliveries at **400 / 8 = 50 items/s**; lower campaign export rates remain lower.
+- The Arrival Nexus consumes 6,000 water per landing (15 water per delivered item) and stores exactly one full landing's cost. Its delivery batch does not create items or raise the campaign import rate.
+- Both pads retain Serpulo-rooted research while using a mixed material family: their beryllium and tungsten are available from the Stellar Spallation Chamber and Pulsar Nucleoforge, and Arrival's carbide is available from the Accretion Carbothermal Forge. `shownPlanets` exposes them to both planet scopes after unlock, but native campaign pads only operate where that planet's campaign rules and compatible sector import/export state are available.
 
 ## When adding a distribution block
 

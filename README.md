@@ -1,12 +1,12 @@
 ![Logo and title of the mod.](github/title-banner-cosmic-bg.png)
 
-A mod that **enhances** the original contents of the game. 
+A **cosmic expansion** for Mindustry that enhances vanilla progression with new drills, production, distribution, liquid infrastructure, and defensive blocks.
 
 This is my first mod for [Mindustry](https://mindustrygame.github.io/).
 
 Please check the [wiki tab](https://github.com/ivinluan/vanilla-cosmic/wiki) to know more.
 
-Progress Report: [October 2026](https://github.com/ivinluan/vanilla-cosmic/wiki/Progress-Report)
+Progress Report: [November 2026](https://github.com/ivinluan/vanilla-cosmic/wiki/Progress-Report)
 
 Available languages:
 

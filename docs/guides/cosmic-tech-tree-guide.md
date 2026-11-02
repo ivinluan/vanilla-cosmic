@@ -23,6 +23,7 @@ Vanilla Cosmic — Cosmic I Drill
 │  ├─ Interstellar Hyperlane
 │  └─ Quasar Mass Driver
 │  └─ Stellar Spallation Chamber → Stellar Stack Conveyor → Stellar Stack Router
+│  └─ Celestial Bridge → Astral Departure Nexus → Astral Arrival Nexus
 ├─ Cross-planet liquids: Solar Conduit → Nebula Condenser → Astral Catalyzer → Eventide Bioreactor
 │                         └→ Ionosphere Reactor → Protostar Extractor → Void Atmospheric Harvester
 │                                                             └→ Stellar Petroforge
