@@ -46,7 +46,7 @@ jobs:
             docs/wiki/ wiki-publish/
 
           # GitHub Wiki's landing page is Home.md
-          cp docs/wiki/README.md wiki-publish/Home.md
+          cp docs/wiki/README.md wiki-publish/home.md
           rm -f wiki-publish/README.md
 
           cd wiki-publish

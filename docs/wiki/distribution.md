@@ -29,6 +29,13 @@ Only each block's default sprite is shown. Conveyor connection frames, bridge en
 | <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/distribution/interstellar-hyperlane.png" alt="Interstellar Hyperlane" width="48"></div> | Interstellar Hyperlane | Linked hyperlane; items; power 33/s. | Bridges items up to 50 tiles; 50-item capacity; 2.3-tick transport interval. |
 | <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/docs/wiki/images/distribution/quasar-mass-driver.png" alt="Quasar Mass Driver" width="160"></div> | Quasar Mass Driver | Items; power 360/s; a receiving Quasar Mass Driver in range. | Launches shipments of at least 50 items, up to 250 stored, across 1,320 tiles. |
 
+## Campaign logistics pads
+
+| Picture | Name | Input | Output |
+| --- | --- | --- | --- |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/distribution/astral-departure-nexus.png" alt="Astral Departure Nexus" width="160"></div> | Astral Departure Nexus | Up to 200 mixed items; 720 power/s; 6 cryofluid/s. | Launches a full mixed cargo batch to a selected same-planet campaign sector every 10 seconds. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/distribution/astral-arrival-nexus.png" alt="Astral Arrival Nexus" width="160"></div> | Astral Arrival Nexus | One selected campaign-import item; 6,000 water per landing. | Receives a 400-item import batch after a 3-second landing and 5-second cooldown; actual rate remains limited by campaign exports. |
+
 ## Liquid conduits
 
 | Picture | Name | Input | Output |

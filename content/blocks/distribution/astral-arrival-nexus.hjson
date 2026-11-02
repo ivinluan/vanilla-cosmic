@@ -1,0 +1,48 @@
+name: Astral Arrival Nexus
+description: Receives assigned imported items from sectors on the same planet. Requires water for each landing.
+type: LandingPad
+category: effect
+shownPlanets: [serpulo, erekir]
+size: 5
+
+# Water is removed during each landing animation; no flammable operating resource is stored.
+flammabilityScale: 0
+explosivenessScale: 1
+health: 1510
+armor: 5
+
+itemCapacity: 400
+arrivalDuration: 180 # 3 seconds
+cooldownTime: 300 # 5 seconds; a full cycle is 8 seconds, or at most 50 items/s.
+liquidCapacity: 6000
+consumeLiquid: water
+consumeLiquidAmount: 6000 # 15 water per delivered item, consumed once per landing.
+
+requirements: [
+    copper/550
+    lead/500
+    silicon/400
+    titanium/450
+    thorium/300
+    plastanium/200
+    phase-fabric/100
+    surge-alloy/60
+    beryllium/125
+    tungsten/100
+    carbide/40
+]
+
+research: astral-departure-nexus
+researchCost: [
+    copper/2750
+    lead/2500
+    silicon/2000
+    titanium/2250
+    thorium/1500
+    plastanium/1000
+    phase-fabric/500
+    surge-alloy/300
+    beryllium/625
+    tungsten/500
+    carbide/200
+]

@@ -1,0 +1,57 @@
+name: Astral Departure Nexus
+description: Launches mixed-item cargo batches to selected sectors on the same planet.
+type: LaunchPad
+category: effect
+shownPlanets: [serpulo, erekir]
+size: 5
+
+# Campaign logistics pads contain no flammable stored fuel; their launch hardware retains normal rupture strength.
+flammabilityScale: 0
+explosivenessScale: 1
+health: 1480
+armor: 5
+
+itemCapacity: 200
+launchTime: 600 # 10 seconds; a full 200-item launch is nominally 20 items/s.
+acceptMultipleItems: true
+lightStep: 2
+lightSteps: 4
+lightColor: eab678
+
+liquidCapacity: 120
+drawLiquid: cryofluid
+
+requirements: [
+    copper/500
+    lead/450
+    silicon/350
+    titanium/350
+    thorium/250
+    plastanium/150
+    phase-fabric/75
+    surge-alloy/40
+    beryllium/100
+    tungsten/75
+]
+
+consumes: {
+    power: 12 # 720 power/s
+    liquid: {
+        liquid: cryofluid
+        amount: 0.1 # 6 cryofluid/s
+    }
+}
+
+research: celestial-bridge
+researchCost: [
+    copper/2500
+    lead/2250
+    silicon/1750
+    titanium/1750
+    thorium/1250
+    plastanium/750
+    phase-fabric/375
+    surge-alloy/200
+    beryllium/500
+    tungsten/375
+]

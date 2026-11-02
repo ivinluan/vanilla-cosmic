@@ -4,17 +4,15 @@ author: "cosmicDeath"
 repo: "ivinluan/vanilla-cosmic"
 description:
     '''
-    A simple mod that[#b39ddb[]] enhances the original contents[#ffffff[]] of the game.
+    A [#b39ddb[]]cosmic expansion[#ffffff[]] for Mindustry that enhances vanilla progression with new drills, production, distribution, liquid infrastructure, and defensive blocks.
 
-    This is my first mod for[#b39ddb[]] Mindustry[#ffffff[]].
+    Built to complement the [#b39ddb[]]original content[#ffffff[]], with [#b39ddb[]]English[#ffffff[]] and [#b39ddb[]]Filipino[#ffffff[]] translations.
 
-    Has[#b39ddb[]] Filipino[#ffffff[]] translations.
+    This is my first mod for[#b39ddb[]] Mindustry[#ffffff[]]. [#b39ddb[]]More[#ffffff[]] cosmic content is in development.
 
-    This mod is still[#b39ddb[]] under development. Rest assured[#ffffff[]] that the[#b39ddb[]] contents[#ffffff[]] are[#b39ddb[]] complete[#ffffff[]],[#b39ddb[]] working[#ffffff[]] and[#b39ddb[]] tested[#ffffff[]] before releasing. Please[#b39ddb[]] stay tuned for more[#ffffff[]].[#b39ddb[]]
-
-    Thank you so much[#ffffff[]] for checking out my mod. If you[#b39ddb[]] like[#ffffff[]] it, please feel free to[#b39ddb[]] give it a star[#ffffff[]] in[#b39ddb[]] GitHub[#ffffff[]] (Click the Repo button).
+    If you enjoy [#b39ddb[]]Vanilla Cosmic[#ffffff[]], consider giving it a [#b39ddb[]]star[#ffffff[]] in [#b39ddb[]]GitHub[#ffffff[]] (Click the Repo button).
     '''
-version: "3.10.28"
-subtitle: "October 2026 - version 3.10.28"
+version: "3.11.02"
+subtitle: "November 2026 - version 3.11.02"
 minGameVersion: "160.7"
 icon: "icon.png"
