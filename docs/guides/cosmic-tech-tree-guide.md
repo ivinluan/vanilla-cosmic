@@ -12,6 +12,7 @@ All Cosmic blocks retain `shownPlanets: [serpulo, erekir]` where configured. Tha
 Vanilla Cosmic — Cosmic I Drill
 ├─ Drill chain: Cosmic I → II → III → IV → V → VI → VII → VIII → Pro → Pro Max → Supernova
 │  └─ Mini chain: Cosmic I Mini → II Mini → III Mini → IV Mini → V Mini → VI Mini → VII Mini → VIII Mini
+├─ Defense: Pulsar
 ├─ Bores: Prism → Radiant → Spectral → Photon
 ├─ Rift extraction: Titanium → Thorium → Beryllium → Tungsten
 │  ├─ Stellar Spallation Chamber → Pulsar Nucleoforge → Nebular Alchemy Reactor → Neutron Flux Forge → Quasar Plasma Crucible
