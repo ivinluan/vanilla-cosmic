@@ -6,9 +6,10 @@ Welcome to the gameplay reference for Vanilla Cosmic. This wiki documents the mo
 
 | Section | Covers | Current blocks |
 | --- | --- | ---: |
-| [Production](https://github.com/ivinluan/vanilla-cosmic/wiki/production) | Crafters, transmuters, and liquid/gas producers. | 15 |
+| [Production](https://github.com/ivinluan/vanilla-cosmic/wiki/production) | Crafters, transmuters, and liquid/gas producers. | 18 |
 | [Extractors](https://github.com/ivinluan/vanilla-cosmic/wiki/extractors) | Floor drills, wall bores, Rift Fracturers, and pumps. | 29 |
 | [Distribution](https://github.com/ivinluan/vanilla-cosmic/wiki/distribution) | Item and liquid conveyors, routers, bridges, storage, campaign pads, and the mass driver. | 20 |
+| [Turrets](https://github.com/ivinluan/vanilla-cosmic/wiki/turrets) | Ammunition-driven defensive turrets. | 1 |
 | [Shields](https://github.com/ivinluan/vanilla-cosmic/wiki/shields) | Event Horizon ShieldWalls and their defensive behavior. | 3 |
 
 ## Reading the tables
@@ -23,5 +24,5 @@ See the concise [Progress Report](https://github.com/ivinluan/vanilla-cosmic/wik
 
 ## Current scope
 
-The wiki covers all 67 current Cosmic Vanilla HJSON block definitions. Construction, research, durability, and balance rationale remain in the repository’s [guides](https://github.com/ivinluan/vanilla-cosmic/tree/master/docs/guides).
+The wiki covers all 71 current Cosmic Vanilla HJSON block definitions. Construction, research, durability, and balance rationale remain in the repository’s [guides](https://github.com/ivinluan/vanilla-cosmic/tree/master/docs/guides).
 

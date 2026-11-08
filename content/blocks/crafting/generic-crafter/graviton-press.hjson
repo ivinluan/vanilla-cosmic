@@ -1,0 +1,69 @@
+name: Graviton Press
+description: Uses water-assisted gravitational compression and controlled material restructuring to synthesize graphite from copper and silica-rich sand.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Copper, sand, and water are the three physical operating inputs.
+size: 3
+outputItem: graphite/3
+# 3 graphite per 60 ticks = 3/second = 180/minute.
+craftTime: 60
+itemCapacity: 60
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.064, MA 0.114, RH 1.10, RA 0.90.
+health: 420
+armor: 1
+
+requirements: [
+    copper/100
+    lead/80
+    metaglass/50
+    silicon/30
+    titanium/20
+]
+
+consumes: {
+    # 4 power/second ÷ 60 ticks/second.
+    power: 0.06666667
+    items: [
+        # 4 copper and 8 sand per 60-tick craft.
+        copper/4
+        sand/8
+    ]
+    # 0.1 water/tick = 6/second = 6 per craft.
+    liquid: {
+        liquid: water
+        amount: 0.1
+    }
+}
+
+research: cosmic-i-drill
+researchCost: [
+    copper/500
+    lead/400
+    metaglass/250
+    silicon/150
+    titanium/100
+]

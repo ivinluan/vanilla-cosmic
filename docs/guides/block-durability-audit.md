@@ -4,7 +4,7 @@ This audit records the pre-approval HJSON values and the formula recommendations
 
 Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router` = router; `Junction` = junction; `Bridge` = buffered/phase conveyor; `Stack` = surge conveyor; `Drill` = pneumatic/laser/impact drill by tier; `Bore` = large plasma bore; `WallCrafter` = cliff crusher or large cliff crusher; `Pump` = mechanical/rotary/impulse pump; `Mass Driver` = mass driver.
 
-## Production / GenericCrafter — 15 blocks
+## Production / GenericCrafter — 18 blocks
 
 | Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
@@ -23,6 +23,9 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | `nebular-cryoforge` | GenericCrafter, 2 | copper 160, lead 140, graphite 90, silicon 130, titanium 120, thorium 60, plastanium 30 | 200 explicit / 1 explicit | 200 / 1 | 2x2 liquid crafter | Applied: titanium-heavy cryogenic processing has modest production armor, not reactor durability. |
 | `magnetar-oxidation-reactor` | GenericCrafter, 2 | copper 160, lead 130, graphite 100, silicon 120, titanium 100, thorium 60, plastanium 20 | 200 explicit / 1 explicit | 200 / 1 | Oxidation Chamber | Applied: compact ozone-processing factory has reinforced late-Serpulo construction without defensive-block durability. |
 | `accretion-carbothermal-forge` | GenericCrafter, 2 | copper 190, lead 160, graphite 120, silicon 160, titanium 130, thorium 80, plastanium 50, phase fabric 30 | 200 explicit / 1 explicit | 200 / 1 | Carbide Crucible | Applied: advanced two-input carbide process gets modest production armor despite its high material tier. |
+| `graviton-press` | GenericCrafter, 3 | copper 100, lead 80, metaglass 50, silicon 30, titanium 20 | 420 explicit / 1 explicit | 420 / 1 | Multi Press | Applied: three physical inputs require 3×3 handling; its copper-and-sand graphite synthesis is slower than Multi Press and needs water and higher power. |
+| `ionforge` | GenericCrafter, 3 | copper 120, lead 100, graphite 60, metaglass 50, silicon 60, titanium 40 | 430 explicit / 1 explicit | 430 / 1 | Silicon Smelter / Silicon Crucible | Applied: 3×3 high-throughput silicon processing remains below Silicon Crucible output and requires water, power, coal, and sand. |
+| `vitrion-furnace` | GenericCrafter, 3 | copper 110, lead 120, graphite 60, metaglass 70, silicon 50, titanium 40 | 430 explicit / 1 explicit | 430 / 1 | Kiln | Applied: faster metaglass production is paid for through heavy sand, water, and power use rather than defensive durability. |
 
 ## Ultimate defensive walls — 3 blocks
 
@@ -116,7 +119,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Audit outcome
 
-- Blocks currently covered: **50**.
+- Blocks currently covered: **53**.
 - Largest proposed HP increase: `cosmic-photon-bore`, 790 → 1380 (+590). The 5×5 footprint drives this result.
 - Largest proposed HP decrease: `cosmic-viii-drill`, 960 → 230 (−730). This reflects the formula's refusal to multiply durability by total recipe quantity.
 - Largest armor decrease: `cosmic-drill-pro-max`, 1200 → 1 (−1199). The existing drill armor series is the dominant manual-review concern.

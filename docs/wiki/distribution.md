@@ -33,29 +33,29 @@ Only each block's default sprite is shown. Conveyor connection frames, bridge en
 
 | Picture | Name | Input | Output |
 | --- | --- | --- | --- |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/distribution/astral-departure-nexus.png" alt="Astral Departure Nexus" width="160"></div> | Astral Departure Nexus | Up to 200 mixed items; 720 power/s; 6 cryofluid/s. | Launches a full mixed cargo batch to a selected same-planet campaign sector every 10 seconds. |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/distribution/astral-arrival-nexus.png" alt="Astral Arrival Nexus" width="160"></div> | Astral Arrival Nexus | One selected campaign-import item; 6,000 water per landing. | Receives a 400-item import batch after a 3-second landing and 5-second cooldown; actual rate remains limited by campaign exports. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/effect/astral-departure-nexus.png" alt="Astral Departure Nexus" width="160"></div> | Astral Departure Nexus | Up to 200 mixed items; 720 power/s; 6 cryofluid/s. | Launches a full mixed cargo batch to a selected same-planet campaign sector every 10 seconds. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/effect/astral-arrival-nexus.png" alt="Astral Arrival Nexus" width="160"></div> | Astral Arrival Nexus | One selected campaign-import item; 6,000 water per landing. | Receives a 400-item import batch after a 3-second landing and 5-second cooldown; actual rate remains limited by campaign exports. |
 
 ## Liquid conduits
 
 | Picture | Name | Input | Output |
 | --- | --- | --- | --- |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquid/conduits/solar-conduit-top-0.png" alt="Solar Conduit default top frame" width="48"></div> | Solar Conduit | Any liquid from the previous conduit; no power. | Sends liquid forward; 30 liquid capacity; pressure 1.25. |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquid/conduits/supernova-conduit-top-0.png" alt="Supernova Conduit default top frame" width="48"></div> | Supernova Conduit | Any liquid from the previous conduit; no power. | Sends liquid forward; 60 liquid capacity; pressure 1.75. |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquid/conduits/void-conduit-top-0.png" alt="Void Conduit default top frame" width="48"></div> | Void Conduit | Any liquid from the previous conduit; no power. | Sends liquid forward; 100 liquid capacity; pressure 2.5. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquids/conduits/solar-conduit-top-0.png" alt="Solar Conduit default top frame" width="48"></div> | Solar Conduit | Any liquid from the previous conduit; no power. | Sends liquid forward; 30 liquid capacity; pressure 1.25. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquids/conduits/supernova-conduit-top-0.png" alt="Supernova Conduit default top frame" width="48"></div> | Supernova Conduit | Any liquid from the previous conduit; no power. | Sends liquid forward; 60 liquid capacity; pressure 1.75. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquids/conduits/void-conduit-top-0.png" alt="Void Conduit default top frame" width="48"></div> | Void Conduit | Any liquid from the previous conduit; no power. | Sends liquid forward; 100 liquid capacity; pressure 2.5. |
 
 ## Liquid routing and storage
 
 | Picture | Name | Input | Output |
 | --- | --- | --- | --- |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquid/cosmic-liquid-router.png" alt="Cosmic Liquid Router" width="48"></div> | Cosmic Liquid Router | Any connected liquid stream; no power. | Evenly distributes liquid among valid outputs; 300 liquid capacity. |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquid/cosmic-liquid-junction.png" alt="Cosmic Liquid Junction" width="48"></div> | Cosmic Liquid Junction | Two intersecting liquid streams; no power. | Passes streams across without interference. |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquid/celestial-reservoir.png" alt="Celestial Reservoir" width="160"></div> | Celestial Reservoir | Any connected liquid stream; no power. | Stores and routes up to 13,500 liquid. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquids/cosmic-liquid-router.png" alt="Cosmic Liquid Router" width="48"></div> | Cosmic Liquid Router | Any connected liquid stream; no power. | Evenly distributes liquid among valid outputs; 300 liquid capacity. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquids/cosmic-liquid-junction.png" alt="Cosmic Liquid Junction" width="48"></div> | Cosmic Liquid Junction | Two intersecting liquid streams; no power. | Passes streams across without interference. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquids/celestial-reservoir.png" alt="Celestial Reservoir" width="160"></div> | Celestial Reservoir | Any connected liquid stream; no power. | Stores and routes up to 13,500 liquid. |
 
 ## Liquid bridges
 
 | Picture | Name | Input | Output |
 | --- | --- | --- | --- |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquid/celestial-aqueduct.png" alt="Celestial Aqueduct" width="48"></div> | Celestial Aqueduct | Linked aqueduct; any liquid; no power. | Bridges liquid up to 25 tiles; 150 liquid capacity; pressure 1.1. |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquid/voidstream-hyperlane.png" alt="Voidstream Hyperlane" width="48"></div> | Voidstream Hyperlane | Linked hyperlane; any liquid; power 33/s. | Bridges liquid up to 50 tiles; 300 liquid capacity; pressure 1.2. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquids/celestial-aqueduct.png" alt="Celestial Aqueduct" width="48"></div> | Celestial Aqueduct | Linked aqueduct; any liquid; no power. | Bridges liquid up to 25 tiles; 150 liquid capacity; pressure 1.1. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquids/voidstream-hyperlane.png" alt="Voidstream Hyperlane" width="48"></div> | Voidstream Hyperlane | Linked hyperlane; any liquid; power 33/s. | Bridges liquid up to 50 tiles; 300 liquid capacity; pressure 1.2. |
 

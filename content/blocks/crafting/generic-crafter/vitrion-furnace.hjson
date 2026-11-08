@@ -1,0 +1,71 @@
+name: Vitrion Furnace
+description: Uses water-assisted high-energy vitrification to form metaglass from lead and silica-rich sand.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Lead, sand, and water are the three physical operating inputs.
+size: 3
+outputItem: metaglass/3
+# 3 metaglass per 60 ticks = 3/second = 180/minute.
+craftTime: 60
+itemCapacity: 60
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.077, MA 0.124, RH 1.10, RA 0.90.
+health: 430
+armor: 1
+
+requirements: [
+    copper/110
+    lead/120
+    graphite/60
+    metaglass/70
+    silicon/50
+    titanium/40
+]
+
+consumes: {
+    # 4.5 power/second ÷ 60 ticks/second.
+    power: 0.075
+    items: [
+        # 3 lead and 6 sand per 60-tick craft.
+        lead/3
+        sand/6
+    ]
+    # 0.125 water/tick = 7.5/second = 7.5 per craft.
+    liquid: {
+        liquid: water
+        amount: 0.125
+    }
+}
+
+research: ionforge
+researchCost: [
+    copper/550
+    lead/600
+    graphite/300
+    metaglass/350
+    silicon/250
+    titanium/200
+]

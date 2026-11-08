@@ -1,0 +1,75 @@
+name: Pulsar
+description: A compact cosmic turret that engages ground and air targets with copper, lead, scrap, or sand ammunition.
+type: ItemTurret
+category: turret
+shownPlanets: [serpulo, erekir]
+
+size: 1
+health: 220
+armor: 0
+range: 250
+reload: 25
+maxAmmo: 20
+rotateSpeed: 10
+inaccuracy: 3
+recoil: 0.5
+targetGround: true
+targetAir: true
+
+requirements: [
+    copper/35
+    lead/20
+    graphite/15
+]
+
+research: cosmic-i-drill
+researchCost: [
+    copper/175
+    lead/100
+    graphite/75
+]
+
+ammoTypes: {
+    copper: {
+        damage: 13
+        speed: 3
+        # 3 speed × 84 lifetime = 252 units; reaches the 250-unit turret range.
+        lifetime: 84
+        ammoMultiplier: 4
+    }
+
+    lead: {
+        damage: 17
+        speed: 2.7
+        # 2.7 speed × 93 lifetime = 251.1 units; reaches the 250-unit turret range.
+        lifetime: 93
+        ammoMultiplier: 3
+        armorMultiplier: 1.2
+    }
+
+    scrap: {
+        type: FlakBulletType
+        damage: 5
+        speed: 2.8
+        # 2.8 speed × 90 lifetime = 252 units; reaches the 250-unit turret range.
+        lifetime: 90
+        ammoMultiplier: 4
+        reloadMultiplier: 0.85
+        splashDamage: 10
+        splashDamageRadius: 16
+    }
+
+    sand: {
+        damage: 8
+        speed: 3
+        # 3 speed × 84 lifetime = 252 units; reaches the 250-unit turret range.
+        lifetime: 84
+        ammoMultiplier: 4
+        fragBullets: 2
+        fragBullet: {
+            damage: 4
+            speed: 2.6
+            lifetime: 15
+        }
+    }
+}
