@@ -111,16 +111,16 @@ Do not make an ordinary turret accept every resource. A large ammo map lets conv
 
 ## Pulsar reference implementation
 
-Pulsar is the compact 1×1 introductory `ItemTurret` reference. It targets ground and air units without power, coolant, or a booster. Its 150-unit range, 30-tick reload (2 shots/s), 220 health, and 20 internal-ammo capacity intentionally sit below vanilla Duo's 160 range, 20-tick reload (3 shots/s), and 250 health. The extra ammunition choices provide flexibility, not a higher baseline damage rate.
+Pulsar is the compact 1×1 introductory `ItemTurret` reference. It targets ground and air units without power, coolant, or a booster. Its 250-unit range, 25-tick reload (2.4 shots/s), 220 health, and 20 internal-ammo capacity give it a deliberate reach and convenience advantage over vanilla Duo's 160 range. Duo retains the faster 20-tick reload and 250 health. The extra ammunition choices provide flexibility, not an unrestricted damage increase.
 
 | Ammo | Bullet role | Damage and effect | Range from `speed × lifetime` | `ammoMultiplier` | Reload behavior | Base output at 2 shots/s |
 |---|---|---|---:|---:|---|---:|
-| Copper | Basic kinetic | 10 direct damage | 150 | 3 | Normal | 20 direct DPS |
-| Lead | Heavy kinetic | 15 direct damage; 1.2 armor multiplier | 135 | 2 | Normal | 30 direct DPS |
-| Scrap | Cheap flak | 4 direct plus 8 splash in a 16-unit radius | 140 | 4 | 0.85 reload multiplier; 1.7 shots/s | 6.8 direct DPS plus area damage |
-| Sand | Suppression | 6 direct; two 3-damage fragments | 150 | 4 | Normal | 12 direct DPS plus fragments |
+| Copper | Basic kinetic | 13 direct damage | 252 | 4 | Normal | 31.2 direct DPS |
+| Lead | Heavy kinetic | 17 direct damage; 1.2 armor multiplier | 251.1 | 3 | Normal | 40.8 direct DPS |
+| Scrap | Cheap flak | 5 direct plus 10 splash in a 16-unit radius | 252 | 4 | 0.85 reload multiplier; 2.04 shots/s | 10.2 direct DPS plus area damage |
+| Sand | Suppression | 8 direct; two 4-damage fragments | 252 | 4 | Normal | 19.2 direct DPS plus fragments |
 
-Common-ammo efficiency stays within the guide's 2–4 range. Lead earns its lower multiplier through stronger single-target damage; scrap and sand exchange raw damage for affordable area/suppression behavior. None combines high damage, high capacity, and a major firing-rate advantage. The sand fragments are a small positional bonus, not a reliable single-target DPS increase.
+Common-ammo efficiency stays within the guide's 2–4 range. Copper's 31.2 direct DPS is about 16% above Duo's 27 copper DPS, and Pulsar's 250-unit reach is its larger convenience advantage. Lead trades a small amount of projectile reach for stronger direct fire. Scrap and sand exchange raw single-target damage for affordable area/suppression behavior. None combines high damage, high capacity, and a major firing-rate advantage. The sand fragments deliberately retain their short 39-unit lifetime range as a local suppression effect, not an additional long-range projectile.
 
 Pulsar construction is 35 copper, 20 lead, and 15 graphite. Research is exactly five times each construction material (175/100/75), following the repository convention. It is visible and usable on both Serpulo and Erekir through `shownPlanets`, but it has only the existing single Cosmic research node under `cosmic-i-drill`. Copper and lead are not native Erekir progression materials; Erekir construction therefore still requires a supplied source of those items.
 

@@ -1,0 +1,71 @@
+name: Ionforge
+description: Uses water-cooled, ionized plasma refinement to synthesize silicon from coal and silica-rich sand.
+type: GenericCrafter
+category: crafting
+shownPlanets: [serpulo, erekir]
+
+# Coal, sand, and water are the three physical operating inputs.
+size: 3
+outputItem: silicon/3
+# 3 silicon per 60 ticks = 3/second = 180/minute.
+craftTime: 60
+itemCapacity: 60
+liquidCapacity: 60
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+hasItems: true
+hasLiquids: true
+hasPower: true
+flammabilityScale: 0.5
+explosivenessScale: 0.5
+
+# Crafting role: MH 1.076, MA 0.121, RH 1.10, RA 0.90.
+health: 430
+armor: 1
+
+requirements: [
+    copper/120
+    lead/100
+    graphite/60
+    metaglass/50
+    silicon/60
+    titanium/40
+]
+
+consumes: {
+    # 5 power/second ÷ 60 ticks/second.
+    power: 0.08333334
+    items: [
+        # 3 coal and 6 sand per 60-tick craft.
+        coal/3
+        sand/6
+    ]
+    # 0.15 water/tick = 9/second = 9 per craft.
+    liquid: {
+        liquid: water
+        amount: 0.15
+    }
+}
+
+research: graviton-press
+researchCost: [
+    copper/600
+    lead/500
+    graphite/300
+    metaglass/250
+    silicon/300
+    titanium/200
+]

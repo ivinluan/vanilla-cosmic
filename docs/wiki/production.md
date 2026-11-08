@@ -27,10 +27,15 @@ Images link to the actual main sprite expected by Mindustry. A broken image mean
 
 | Picture | Name | Input | Output |
 | --- | --- | --- | --- |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/production/graviton-press.png" alt="Graviton Press" width="96"></div> | Graviton Press | 4 copper and 8 sand / 60 ticks; water 6/s; power 4/s. | Graphite 3/s. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/production/ionforge.png" alt="Ionforge" width="96"></div> | Ionforge | 3 coal and 6 sand / 60 ticks; water 9/s; power 5/s. | Silicon 3/s. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/production/vitrion-furnace.png" alt="Vitrion Furnace" width="96"></div> | Vitrion Furnace | 3 lead and 6 sand / 60 ticks; water 7.5/s; power 4.5/s. | Metaglass 3/s. |
 | <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/production/stellar-spallation-chamber.png" alt="Stellar Spallation Chamber" width="64"></div> | Stellar Spallation Chamber | 3 titanium, 2 thorium, and 1 phase fabric / 60 ticks; power 2.5/s. | Beryllium 1/s. |
 | <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/production/magnetar-oxidation-reactor.png" alt="Magnetar Oxidation Reactor" width="64"></div> | Magnetar Oxidation Reactor | 2 beryllium / 60 ticks; ozone 6/s; power 3/s. | Oxide 1/s. |
 | <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/production/pulsar-nucleoforge.png" alt="Pulsar Nucleoforge" width="64"></div> | Pulsar Nucleoforge | 4 thorium, 1 surge alloy, and 1 phase fabric / 120 ticks; cryofluid 6/s; power 5/s. | Tungsten 0.5/s. |
 | <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/production/nebular-alchemy-reactor.png" alt="Nebular Alchemy Reactor" width="64"></div> | Nebular Alchemy Reactor | 2 beryllium / 300 ticks; slag 2.4/s; ozone 1.2/s; power 3/s. | Copper 1/s. |
 | <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/production/neutron-flux-forge.png" alt="Neutron Flux Forge" width="64"></div> | Neutron Flux Forge | 1 tungsten / 300 ticks; arkycite 2.4/s; nitrogen 1.6/s; power 4/s. | Lead 1/s. |
 | <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/production/quasar-plasma-crucible.png" alt="Quasar Plasma Crucible" width="64"></div> | Quasar Plasma Crucible | 2 tungsten and 1 oxide / 360 ticks; hydrogen 2/s; ozone 1/s; power 5/s. | Titanium 1/s. |
+
+Graviton Press, Ionforge, and Vitrion Furnace are visible on both planets. On Erekir, the existing Cosmic transmuters can eventually produce copper and lead, but Ionforge still needs a supplied coal source because Vanilla Cosmic does not currently produce coal there.
 

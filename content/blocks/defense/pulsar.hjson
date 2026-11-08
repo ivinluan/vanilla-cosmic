@@ -7,8 +7,8 @@ shownPlanets: [serpulo, erekir]
 size: 1
 health: 220
 armor: 0
-range: 150
-reload: 30
+range: 250
+reload: 25
 maxAmmo: 20
 rotateSpeed: 10
 inaccuracy: 3
@@ -31,39 +31,43 @@ researchCost: [
 
 ammoTypes: {
     copper: {
-        damage: 10
+        damage: 13
         speed: 3
-        lifetime: 50
-        ammoMultiplier: 3
+        # 3 speed × 84 lifetime = 252 units; reaches the 250-unit turret range.
+        lifetime: 84
+        ammoMultiplier: 4
     }
 
     lead: {
-        damage: 15
+        damage: 17
         speed: 2.7
-        lifetime: 50
-        ammoMultiplier: 2
+        # 2.7 speed × 93 lifetime = 251.1 units; reaches the 250-unit turret range.
+        lifetime: 93
+        ammoMultiplier: 3
         armorMultiplier: 1.2
     }
 
     scrap: {
         type: FlakBulletType
-        damage: 4
+        damage: 5
         speed: 2.8
-        lifetime: 50
+        # 2.8 speed × 90 lifetime = 252 units; reaches the 250-unit turret range.
+        lifetime: 90
         ammoMultiplier: 4
         reloadMultiplier: 0.85
-        splashDamage: 8
+        splashDamage: 10
         splashDamageRadius: 16
     }
 
     sand: {
-        damage: 6
+        damage: 8
         speed: 3
-        lifetime: 50
+        # 3 speed × 84 lifetime = 252 units; reaches the 250-unit turret range.
+        lifetime: 84
         ammoMultiplier: 4
         fragBullets: 2
         fragBullet: {
-            damage: 3
+            damage: 4
             speed: 2.6
             lifetime: 15
         }
