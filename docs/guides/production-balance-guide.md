@@ -300,7 +300,7 @@ All three use the production durability role. Their weighted construction recipe
 
 ### Sprite requirements
 
-Each machine uses a 3×3, 96×96 px main region in `sprites/blocks/production/`.
+Each machine uses a 3×3, 96×96 px main region in `sprites/blocks/crafting/generic-crafter/`.
 
 | Block | Required | Optional native overlay | Purpose |
 |---|---|---|---|

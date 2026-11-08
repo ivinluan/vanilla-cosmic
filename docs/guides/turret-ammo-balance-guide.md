@@ -126,7 +126,7 @@ Pulsar construction is 35 copper, 20 lead, and 15 graphite. Research is exactly 
 
 ### Pulsar sprite requirements
 
-Place art in `sprites/blocks/defense/`.
+Place art in `sprites/blocks/turret/`.
 
 | Filename | Required | Purpose | Expected dimensions |
 |---|---|---|---|

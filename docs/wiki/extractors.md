@@ -66,6 +66,6 @@ Pumps do not have a predetermined liquid output: they extract the valid liquid b
 
 | Picture | Name | Input | Output |
 | --- | --- | --- | --- |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquid/pulsar-liquid-pump.png" alt="Pulsar Liquid Pump" width="64"></div> | Pulsar Liquid Pump | No ongoing resource input; must cover valid liquid tiles. | Liquid under each valid tile, 25 liquid/s per tile. |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquid/quasar-liquid-pump.png" alt="Quasar Liquid Pump" width="128"></div> | Quasar Liquid Pump | No ongoing resource input; must cover valid liquid tiles. | Liquid under each valid tile, 100 liquid/s per tile. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquids/pulsar-liquid-pump.png" alt="Pulsar Liquid Pump" width="64"></div> | Pulsar Liquid Pump | No ongoing resource input; must cover valid liquid tiles. | Liquid under each valid tile, 25 liquid/s per tile. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/liquids/quasar-liquid-pump.png" alt="Quasar Liquid Pump" width="128"></div> | Quasar Liquid Pump | No ongoing resource input; must cover valid liquid tiles. | Liquid under each valid tile, 100 liquid/s per tile. |
 
