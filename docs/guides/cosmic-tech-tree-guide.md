@@ -13,6 +13,7 @@ Vanilla Cosmic — Cosmic I Drill
 ├─ Drill chain: Cosmic I → II → III → IV → V → VI → VII → VIII → Pro → Pro Max → Supernova
 │  └─ Mini chain: Cosmic I Mini → II Mini → III Mini → IV Mini → V Mini → VI Mini → VII Mini → VIII Mini
 ├─ Basic materials: Graviton Press → Ionforge → Vitrion Furnace
+├─ Power distribution: Synchrotron Node → Synchrotron Node II
 ├─ Defense: Pulsar
 ├─ Bores: Prism → Radiant → Spectral → Photon
 ├─ Rift extraction: Titanium → Thorium → Beryllium → Tungsten

@@ -1,0 +1,34 @@
+name: Synchrotron Node
+description: Distributes power through numerous wireless links using a compact electromagnetic system guided by magnetic fields.
+type: PowerNode
+category: power
+shownPlanets: [serpulo, erekir]
+
+size: 1
+laserRange: 30
+maxNodes: 25
+laserColor1: b4fff3ff
+laserColor2: 53e3dbff
+
+# Power-node role: MH 1.189, MA 0.419, RH 1.00, RA 0.80.
+health: 50
+armor: 1
+
+requirements: [
+    copper/75
+    lead/75
+    silicon/60
+    titanium/60
+    thorium/40
+    surge-alloy/25
+]
+
+research: cosmic-i-drill
+researchCost: [
+    copper/375
+    lead/375
+    silicon/300
+    titanium/300
+    thorium/200
+    surge-alloy/125
+]
