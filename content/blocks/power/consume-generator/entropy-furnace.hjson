@@ -1,0 +1,130 @@
+name: Entropy Furnace
+description: Converts a broad range of solid materials into electrical energy through entropy processing. Produces hazardous slag that must be removed to prevent catastrophic failure.
+type: ConsumeGenerator
+category: power
+shownPlanets: [serpulo, erekir]
+
+size: 2
+itemCapacity: 60
+liquidCapacity: 120
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            type: DrawRegion
+            # Shared 64x64 liquid-machine base.
+            name: vanilla-cosmic-cosmic-liquid-bottom
+        }
+        {
+            # Native tiled slag fill; no block-specific -liquid sprite.
+            type: DrawLiquidTile
+            drawLiquid: slag
+        }
+        { type: DrawDefault }
+        {
+            # Visible only while the furnace has active fuel-generation warmup.
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+# One item burns for a fuel-specific duration. The native generator freezes
+# that duration on consumption, so one item always completes its own cycle.
+itemDuration: 120
+# Fixed 5 power/tick = 300 power/second while a fuel cycle is active.
+powerProduction: 5
+
+# This is the safe HJSON-only per-fuel energy mapping. A multiplier changes
+# cycle duration, rather than instantaneous output, because the engine does
+# not retain an item-efficiency multiplier after its source item is removed.
+itemDurationMultipliers: {
+    scrap: 0.12
+    sand: 0.10
+    copper: 0.20
+    lead: 0.20
+    coal: 0.50
+    graphite: 0.60
+    silicon: 0.45
+    metaglass: 0.35
+    titanium: 0.65
+    thorium: 0.75
+    plastanium: 0.65
+    phase-fabric: 0.80
+    surge-alloy: 1.00
+    spore-pod: 0.50
+    pyratite: 0.80
+    blast-compound: 0.90
+    beryllium: 0.60
+    tungsten: 0.80
+    oxide: 0.75
+    carbide: 0.90
+}
+
+# Slag output is continuous while a fuel cycle is active: 4/s.
+outputLiquid: slag/0.06666667
+explodeOnFull: true
+
+# Full-buffer failure is dangerous locally without matching reactor-scale blasts.
+explosionRadius: 4
+explosionDamage: 300
+explosionIgnitionChance: 0.15
+explosionFireballs: 2
+explosionScorchSize: 3
+explosionShake: 2
+
+# Dedicated generator: MH 1.105, MA 0.223, RH 1.10, RA 0.90.
+health: 190
+armor: 1
+
+requirements: [
+    copper/120
+    lead/100
+    graphite/60
+    silicon/70
+    titanium/50
+    thorium/30
+]
+
+consumes: {
+    # ConsumeItemList accepts exactly one of these items per completed fuel cycle.
+    # The neutral multipliers keep output fixed; duration above defines energy/item.
+    itemList: {
+        itemMultipliers: {
+            scrap: 1
+            sand: 1
+            copper: 1
+            lead: 1
+            coal: 1
+            graphite: 1
+            silicon: 1
+            metaglass: 1
+            titanium: 1
+            thorium: 1
+            plastanium: 1
+            phase-fabric: 1
+            surge-alloy: 1
+            spore-pod: 1
+            pyratite: 1
+            blast-compound: 1
+            beryllium: 1
+            tungsten: 1
+            oxide: 1
+            carbide: 1
+        }
+    }
+}
+
+research: cosmic-i-drill
+researchCost: [
+    copper/600
+    lead/500
+    graphite/300
+    silicon/350
+    titanium/250
+    thorium/150
+]

@@ -2,9 +2,11 @@
 
 ## November 2026
 - Updated **Vanilla Cosmic** to **v3.11.9** for [Mindustry v160.7](https://github.com/Anuken/Mindustry/tree/v160.7).
-- Added Astral Departure Nexus and Astral Arrival Nexus, expanding campaign logistics with upgraded sector resource export and import capabilities.
+- Added launch and landing pads.
 - Added cosmic item productions.
+- Added power nodes.
 - Added turret.
+- Updated the wiki and guides.
 
 ## October 2026
 - Updated **Vanilla Cosmic** to **v3.10.28** for [Mindustry v160.7](https://github.com/Anuken/Mindustry/tree/v160.7).

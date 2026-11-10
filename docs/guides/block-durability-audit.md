@@ -50,10 +50,11 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | `supernova-conveyor` | Conveyor, 1 | titanium 20, thorium 20, silicon 10 | 60 explicit / 0 default | 40 / 1 | Conveyor | Decrease/review: one armor is a reasonable advanced-material distinction. |
 | `void-conveyor` | Conveyor, 1 | beryllium 30, tungsten 20, carbide 10 | 80 explicit / 0 default | 40 / 1 | Conveyor | Decrease/review: advanced material composition alone should not make a belt wall-like. |
 
-## Power distribution — 2 blocks
+## Power generation and distribution — 3 blocks
 
 | Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
+| `entropy-furnace` | ConsumeGenerator, 2 | copper 120, lead 100, graphite 60, silicon 70, titanium 50, thorium 30 | 190 explicit / 1 explicit | 190 / 1 | Steam Generator | Applied: versatile 2x2 solid-fuel generator uses the production role. Its pressure failure is a logistics hazard, not a reason for defensive-wall durability. |
 | `synchrotron-node` | PowerNode, 1 | copper 75, lead 75, silicon 60, titanium 60, thorium 40, surge alloy 25 | 50 explicit / 1 explicit | 50 / 1 | Power Node; Large Power Node | Applied: 30-tile range and 25 links are exceptional utility, balanced through advanced conductors while retaining a vulnerable 1×1 utility footprint. |
 | `synchrotron-node-ii` | PowerNode, 2 | copper 140, lead 120, silicon 120, titanium 100, thorium 80, plastanium 60, phase fabric 40, surge alloy 40 | 200 explicit / 2 explicit | 200 / 2 | Surge Tower | Applied: 60-tile reach earns a larger reinforced shell; the fixed five-link limit preserves a long-range-relay role rather than replacing the dense node. |
 
@@ -126,7 +127,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Audit outcome
 
-- Blocks currently covered: **55**.
+- Blocks currently covered: **56**.
 - Largest proposed HP increase: `cosmic-photon-bore`, 790 → 1380 (+590). The 5×5 footprint drives this result.
 - Largest proposed HP decrease: `cosmic-viii-drill`, 960 → 230 (−730). This reflects the formula's refusal to multiply durability by total recipe quantity.
 - Largest armor decrease: `cosmic-drill-pro-max`, 1200 → 1 (−1199). The existing drill armor series is the dominant manual-review concern.

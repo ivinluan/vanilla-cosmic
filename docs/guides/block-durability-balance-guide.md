@@ -64,6 +64,7 @@ All construction items currently used by Vanilla Cosmic have coefficients. No mi
 | Item bridges, stack transport | 0.95 | 0.70 |
 | Pumps and liquid transport | 1.00 | 0.80 |
 | Power nodes and transmission relays | 1.00 | 0.80 |
+| Power generators | 1.10 | 0.90 |
 | Liquid storage | 1.75 | 1.50 |
 | Item storage | 1.75 | 1.50 |
 | Production / GenericCrafter | 1.10 | 0.90 |
@@ -81,6 +82,10 @@ Use this role for stationary item-production machines whose primary function is 
 ### Power nodes and transmission relays
 
 Use this role for `PowerNode`-style blocks whose purpose is connecting existing power networks. It matches the pumps/liquid-transport multiplier: connection range and link count are utility capability, not defensive armor. A node may need protection because it can be strategically important, but it should remain much easier to destroy than a dedicated defensive block.
+
+### Power generators
+
+Use this role for stationary generators whose main role is converting fuel or an environmental source into electricity. It matches the production role so a generator can be reinforced for its processing and containment hardware without becoming a defensive structure. Explosion risk, output capacity, or fuel versatility do not independently increase health or armor.
 
 ## Ultimate Defensive Wall exception
 
