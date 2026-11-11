@@ -13,7 +13,7 @@ Vanilla Cosmic — Cosmic I Drill
 ├─ Drill chain: Cosmic I → II → III → IV → V → VI → VII → VIII → Pro → Pro Max → Supernova
 │  └─ Mini chain: Cosmic I Mini → II Mini → III Mini → IV Mini → V Mini → VI Mini → VII Mini → VIII Mini
 ├─ Basic materials: Graviton Press → Ionforge → Vitrion Furnace
-├─ Power: Entropy Furnace; Synchrotron Node → Synchrotron Node II
+├─ Power: Entropy Furnace → Pyroclast Dynamo; Synchrotron Node → Synchrotron Node II
 ├─ Defense: Pulsar
 ├─ Bores: Prism → Radiant → Spectral → Photon
 ├─ Rift extraction: Titanium → Thorium → Beryllium → Tungsten
@@ -31,7 +31,7 @@ Vanilla Cosmic — Cosmic I Drill
 │                         └→ Ionosphere Reactor → Protostar Extractor → Void Atmospheric Harvester
 │                                                             └→ Stellar Petroforge
 ├─ Serpulo coolant synthesis: Solar Conduit → Nebular Cryoforge
-├─ Advanced materials: Ionosphere Reactor → Magnetar Oxidation Reactor → Accretion Carbothermal Forge
+├─ Advanced materials: Ionosphere Reactor → Magnetar Oxidation Reactor → Exergonic Reactor; Magnetar → Accretion Carbothermal Forge
 └─ Liquids: Pulsar Liquid Pump → Quasar Liquid Pump
    └─ Solar Conduit → Supernova Conduit → Void Conduit → Voidstream Hyperlane
       ├─ Celestial Aqueduct

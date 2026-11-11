@@ -1,0 +1,62 @@
+name: Exergonic Reactor
+description: Channels controlled graphite-and-oxide reactions into electrical power through an advanced exergonic conversion core.
+type: ConsumeGenerator
+category: power
+shownPlanets: [serpulo, erekir]
+
+size: 2
+itemCapacity: 60
+
+# 7 power/tick = 420 power/second. Each paid cycle lasts 120 ticks (2 seconds).
+powerProduction: 7
+itemDuration: 120
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+# Power-generator role: MH 1.163, MA 0.342, RH 1.10, RA 0.90.
+health: 200
+armor: 2
+
+requirements: [
+    copper/140
+    lead/120
+    graphite/90
+    silicon/100
+    titanium/75
+    thorium/45
+    plastanium/30
+    surge-alloy/40
+]
+
+consumes: {
+    # Both are removed together only when a new 120-tick fuel cycle begins.
+    items: [
+        graphite/1
+        oxide/1
+    ]
+}
+
+# Magnetar Oxidation Reactor establishes the oxide supply route.
+research: magnetar-oxidation-reactor
+researchCost: [
+    copper/700
+    lead/600
+    graphite/450
+    silicon/500
+    titanium/375
+    thorium/225
+    plastanium/150
+    surge-alloy/200
+]

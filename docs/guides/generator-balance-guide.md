@@ -68,6 +68,31 @@ Every fuel produces the same 300 power/second and 4 slag/second **while active**
 
 The Entropy Furnace does not replace Steam: its active output is lower, it creates mandatory waste, and low-value materials need frequent delivery. Future specialized Cosmic generators should exceed it only through their intended fuel and infrastructure requirements.
 
+## Pyroclast Dynamo and Exergonic Reactor
+
+Both use native `ConsumeItems`, which requires every listed item before a new cycle can begin and removes all listed stacks together. Once paid, a `ConsumeGenerator` remains active until `itemDuration` elapses even if a later delivery runs out; it then stops until both inputs are available again.
+
+| Block | Required items per cycle | Cycle | Output | Fuel rate | Energy/cycle | Parent |
+|---|---|---:|---:|---:|---:|---|
+| Pyroclast Dynamo | 2 pyratite, 1 graphite | 90 ticks / 1.5 s | 6/tick = 360/s | 1.333 pyratite/s, 0.667 graphite/s; 80/40 per minute | 540 | `entropy-furnace` |
+| Exergonic Reactor | 1 graphite, 1 oxide | 120 ticks / 2 s | 7/tick = 420/s | 0.5 graphite/s and 0.5 oxide/s; 30/30 per minute | 840 | `magnetar-oxidation-reactor` |
+
+Pyroclast is the earlier solid-fuel workhorse: its processed pyratite requirement gives it 360/s, above Steam Generator’s 330/s, while its 1.5-second cycle creates ongoing delivery demand. Exergonic adds only 60/s, not a universal replacement; its longer, more efficient cycle depends on oxide, an advanced material. Both remain below vanilla Chemical Combustion Chamber’s 550/s and far below Differential Generator’s 1080/s.
+
+### Cross-planet fuel routes
+
+- **Pyroclast Dynamo:** Serpulo has vanilla pyratite and graphite. The current Cosmic content has graphite production on both planets, but no pyratite or coal-production route on Erekir; the existing production catalogue explicitly identifies this gap. The block is shown and can be constructed on both planets, but it is not self-sufficient on Erekir until a future pyratite supply route is added. This implementation does not add an unrelated factory.
+- **Exergonic Reactor:** Erekir has graphite and its normal oxide progression. On Serpulo, the existing `magnetar-oxidation-reactor` produces oxide from beryllium and ozone, and its prerequisite chain provides the needed infrastructure. Its research parent therefore establishes the intended oxide route without using oxide as an inaccessible research cost.
+
+### Construction and durability
+
+| Block | Construction | Research | MH / MA | Health / armor |
+|---|---|---|---:|---:|
+| Pyroclast Dynamo | copper 100, lead 80, graphite 55, silicon 50, titanium 40 | 5× every construction item | 1.078 / 0.165 | 190 / 1 |
+| Exergonic Reactor | copper 140, lead 120, graphite 90, silicon 100, titanium 75, thorium 45, plastanium 30, surge alloy 40 | 5× every construction item | 1.163 / 0.342 | 200 / 2 |
+
+Both apply the established **Power generators** role (`RH 1.10`, `RA 0.90`). The advanced reactor gains modest reinforcement from thorium, plastanium, and surge alloy rather than defensive-wall durability.
+
 ### Construction, research, and durability
 
 Construction: copper 120, lead 100, graphite 60, silicon 70, titanium 50, thorium 30. The recipe represents ordinary generator structure, conductive control, and heat containment without requiring the furnace’s advanced possible fuels. Research is exactly 5× each construction cost and is parented to `cosmic-i-drill`, so it remains payable in the Serpulo-rooted Cosmic tree despite being shown on both planets.
@@ -81,8 +106,12 @@ The documented **Power generators** durability role yields `MH = 1.105`, `MA = 0
 | `sprites/blocks/power/consume-generator/entropy-furnace.png` | Yes | 64×64 px | Native default main region for the 2×2 furnace. |
 | `sprites/blocks/power/consume-generator/entropy-furnace-glow.png` | Yes | 64×64 px | Active-only `DrawGlowRegion` overlay; it is visible while the furnace is generating power. |
 | `sprites/blocks/general/cosmic-liquid-bottom.png` | Existing shared asset | 64×64 px | Structural layer shared through the explicit `vanilla-cosmic-cosmic-liquid-bottom` atlas name. |
+| `sprites/blocks/power/consume-generator/pyroclast-dynamo.png` | Yes | 64×64 px | Native default main region for the 2×2 Pyroclast Dynamo. |
+| `sprites/blocks/power/consume-generator/pyroclast-dynamo-glow.png` | Yes | 64×64 px | Active-only glow overlay for the Pyroclast Dynamo. |
+| `sprites/blocks/power/consume-generator/exergonic-reactor.png` | Yes | 64×64 px | Native default main region for the 2×2 Exergonic Reactor. |
+| `sprites/blocks/power/consume-generator/exergonic-reactor-glow.png` | Yes | 64×64 px | Active-only glow overlay for the Exergonic Reactor. |
 
-The drawer order is shared bottom → native tiled slag fill → main region → active glow. `DrawLiquidTile` uses native liquid frames and needs no block-specific `-liquid` sprite.
+Entropy Furnace uses shared bottom → native tiled slag fill → main region → active glow. Pyroclast Dynamo and Exergonic Reactor use main region → active glow only: neither requires a `-bottom` or `-liquid` sprite.
 
 ## Sources and validation scope
 

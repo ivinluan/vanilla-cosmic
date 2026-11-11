@@ -1,0 +1,55 @@
+name: Pyroclast Dynamo
+description: Converts the contained combustion of pyratite and graphite into sustained electrical power through stellar-grade thermal conversion.
+type: ConsumeGenerator
+category: power
+shownPlanets: [serpulo, erekir]
+
+size: 2
+itemCapacity: 60
+
+# 6 power/tick = 360 power/second. Each paid cycle lasts 90 ticks (1.5 seconds).
+powerProduction: 6
+itemDuration: 90
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+# Power-generator role: MH 1.078, MA 0.165, RH 1.10, RA 0.90.
+health: 190
+armor: 1
+
+requirements: [
+    copper/100
+    lead/80
+    graphite/55
+    silicon/50
+    titanium/40
+]
+
+consumes: {
+    # Both are removed together only when a new 90-tick fuel cycle begins.
+    items: [
+        pyratite/2
+        graphite/1
+    ]
+}
+
+research: entropy-furnace
+researchCost: [
+    copper/500
+    lead/400
+    graphite/275
+    silicon/250
+    titanium/200
+]
