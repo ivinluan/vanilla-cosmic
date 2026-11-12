@@ -63,6 +63,9 @@ All construction items currently used by Vanilla Cosmic have coefficients. No mi
 | Conveyors, routers, junctions | 0.85 | 0.50 |
 | Item bridges, stack transport | 0.95 | 0.70 |
 | Pumps and liquid transport | 1.00 | 0.80 |
+| Power nodes and transmission relays | 1.00 | 0.80 |
+| Power generators | 1.10 | 0.90 |
+| High-output reactors | 1.20 | 1.00 |
 | Liquid storage | 1.75 | 1.50 |
 | Item storage | 1.75 | 1.50 |
 | Production / GenericCrafter | 1.10 | 0.90 |
@@ -76,6 +79,18 @@ The current audit applies the documented Ultimate Defensive Wall exception only 
 ### Production / GenericCrafter role
 
 Use this role for stationary item-production machines whose primary function is transforming delivered inputs into a fixed output, including the Stellar Spallation Chamber (`stellar-spallation-chamber`) and Pulsar Nucleoforge (`pulsar-nucleoforge`). It sits below extraction machinery because it has no exposed mining head or wall-facing operating position, but above ordinary logistics because it represents a compact advanced processing structure. Do not apply it to pumps, drills, bores, WallCrafters, or storage blocks merely because they produce or hold a resource.
+
+### Power nodes and transmission relays
+
+Use this role for `PowerNode`-style blocks whose purpose is connecting existing power networks. It matches the pumps/liquid-transport multiplier: connection range and link count are utility capability, not defensive armor. A node may need protection because it can be strategically important, but it should remain much easier to destroy than a dedicated defensive block.
+
+### Power generators
+
+Use this role for stationary generators whose main role is converting fuel or an environmental source into electricity. It matches the production role so a generator can be reinforced for its processing and containment hardware without becoming a defensive structure. Explosion risk, output capacity, or fuel versatility do not independently increase health or armor.
+
+### High-output reactors
+
+Use this role only for large, input-intensive reactor blocks with continuous containment infrastructure and a serious native failure consequence, such as `ImpactReactor`-class generation. It is a modest step above ordinary generators for the larger containment shell, not a defensive-wall category. Do not apply it merely because a normal generator has an advanced fuel or a high advertised output.
 
 ## Ultimate Defensive Wall exception
 

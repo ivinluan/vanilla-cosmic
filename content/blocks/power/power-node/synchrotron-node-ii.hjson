@@ -1,0 +1,38 @@
+name: Synchrotron Node II
+description: Channels concentrated electromagnetic energy across exceptional distances through a limited number of high-range links.
+type: PowerNode
+category: power
+shownPlanets: [serpulo, erekir]
+
+size: 2
+laserRange: 60
+maxNodes: 5
+laserColor1: b8d8ffff
+laserColor2: 4e83f1ff
+
+# Power-node role: MH 1.219, MA 0.437, RH 1.00, RA 0.80.
+health: 200
+armor: 2
+
+requirements: [
+    copper/140
+    lead/120
+    silicon/120
+    titanium/100
+    thorium/80
+    plastanium/60
+    phase-fabric/40
+    surge-alloy/40
+]
+
+research: synchrotron-node
+researchCost: [
+    copper/700
+    lead/600
+    silicon/600
+    titanium/500
+    thorium/400
+    plastanium/300
+    phase-fabric/200
+    surge-alloy/200
+]

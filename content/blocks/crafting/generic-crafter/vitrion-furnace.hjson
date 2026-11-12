@@ -1,5 +1,5 @@
 name: Vitrion Furnace
-description: Uses water-assisted high-energy vitrification to form metaglass from lead and silica-rich sand.
+description: Uses stellar-temperature vitrification and water-regulated cooling to fuse lead and silica-rich sand into metaglass.
 type: GenericCrafter
 category: crafting
 shownPlanets: [serpulo, erekir]

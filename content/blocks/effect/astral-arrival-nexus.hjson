@@ -1,5 +1,5 @@
 name: Astral Arrival Nexus
-description: Receives assigned imported items from sectors on the same planet. Requires water for each landing.
+description: Uses synchronized orbital guidance to receive assigned item imports from sectors on the same planet. Requires water for each landing.
 type: LandingPad
 category: effect
 shownPlanets: [serpulo, erekir]
