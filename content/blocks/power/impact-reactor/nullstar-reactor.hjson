@@ -1,0 +1,88 @@
+name: Nullstar Reactor
+description: Employs a nullstar-inspired compression chamber to confine a thorium and blast compound plasma. Cryofluid and nitrogen regulate the reaction boundary, converting controlled impact energy into high-density electrical output.
+type: ImpactReactor
+category: power
+shownPlanets: [serpulo, erekir]
+
+size: 4
+itemCapacity: 60
+liquidCapacity: 600
+
+# 390 power/tick = 23,400 power/second gross. The 100/tick input is 6,000/s,
+# leaving 17,400/s net at full warmup.
+powerProduction: 390
+warmupSpeed: 0.002
+itemDuration: 180
+
+lightColor: a0c449ff
+coolColor: 52632bff
+hotColor: e5f7a0ff
+
+drawer: {
+    type: DrawMulti
+    drawers: [
+        {
+            # Shared 128x128 containment base.
+            type: DrawRegion
+            name: vanilla-cosmic-cosmic-liquid-bottom-xlarge
+        }
+        {
+            type: DrawPlasma
+            plasma1: 8753b5ff
+            plasma2: d5a7f2ff
+        }
+        { type: DrawDefault }
+        {
+            type: DrawGlowRegion
+            suffix: "-glow"
+            color: ffffffff
+            alpha: 1
+            glowIntensity: 1
+        }
+    ]
+}
+
+# High-output reactor role: MH 1.196, MA 0.386, RH 1.20, RA 1.00.
+health: 920
+armor: 3
+
+requirements: [
+    copper/500
+    lead/450
+    graphite/300
+    silicon/400
+    titanium/300
+    thorium/250
+    plastanium/180
+    phase-fabric/125
+    surge-alloy/150
+]
+
+consumes: {
+    # Continuous 6,000 power/second startup and operating draw.
+    power: 100
+    # Both fuel stacks are required at each 180-tick reactor cycle.
+    items: [
+        thorium/2
+        blast-compound/2
+    ]
+    # Mandatory containment inputs: 30 cryofluid/s and 18 nitrogen/s.
+    liquids: [
+        cryofluid/0.5
+        nitrogen/0.3
+    ]
+}
+
+# Void Atmospheric Harvester establishes the native nitrogen supply route.
+research: void-atmospheric-harvester
+researchCost: [
+    copper/2500
+    lead/2250
+    graphite/1500
+    silicon/2000
+    titanium/1500
+    thorium/1250
+    plastanium/900
+    phase-fabric/625
+    surge-alloy/750
+]

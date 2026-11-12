@@ -93,6 +93,28 @@ Pyroclast is the earlier solid-fuel workhorse: its processed pyratite requiremen
 
 Both apply the established **Power generators** role (`RH 1.10`, `RA 0.90`). The advanced reactor gains modest reinforcement from thorium, plastanium, and surge alloy rather than defensive-wall durability.
 
+## Nullstar Reactor
+
+**Role:** a 4×4 `ImpactReactor` for late-game, high-output generation. It is intentionally a demanding network component, not a universal replacement for ordinary fuel generators: it needs an already powered grid, two solid fuel items, and two continuous containment liquids.
+
+| Block | Required items per cycle | Continuous inputs | Startup / warmup | Gross output | Continuous power draw | Net output at full warmup | Parent |
+|---|---|---|---:|---:|---:|---:|---|
+| Nullstar Reactor | 2 thorium + 2 blast compound every 180 ticks / 3 seconds | cryofluid 30/s; nitrogen 18/s | 100% supplied external power; `warmupSpeed: 0.002` | 390/tick = 23,400/s | 100/tick = 6,000/s | 17,400/s | `void-atmospheric-harvester` |
+
+Vanilla Impact Reactor produces 130/tick = 7,800/s gross and consumes 25/tick = 1,500/s. Nullstar's 390/tick gross production is exactly **3×** vanilla Impact Reactor (the specified 200% advantage), while its 6,000/s power requirement is 4× the native operating draw. This leaves 17,400/s net at full warmup, compared with vanilla's 6,300/s net.
+
+Native `ImpactReactor` behavior requires consumer efficiency and at least 99% powered status before warmup rises. With the configured `0.002` warmup speed, it reaches power break-even at approximately 12 seconds, 90% warmup in about 19 seconds, and 99% warmup in about 38 seconds. Losing sufficient incoming power or any mandatory item/liquid input makes it cool down; the block does not operate on a partial fuel recipe. Its native reactor explosion behavior remains unchanged rather than being multiplied with output.
+
+### Cross-planet supply constraint
+
+`shownPlanets` makes the block discoverable on both Serpulo and Erekir. Cryofluid and nitrogen have existing Cosmic production routes on both worlds, but blast compound has no native Erekir source and Vanilla Cosmic does not currently produce it. Therefore Erekir players cannot self-supply Nullstar without a future blast-compound route, another mod, or a sandbox supply. This guide records the gap instead of adding an unrelated factory.
+
+### Construction, research, and durability
+
+Construction: copper 500, lead 450, graphite 300, silicon 400, titanium 300, thorium 250, plastanium 180, phase fabric 125, surge alloy 150. The added titanium, phase fabric, and surge alloy represent cryogenic containment, field control, and high-current infrastructure. Research is exactly 5× every construction quantity, preserving the project's standard research convention and using materials available through the Serpulo-rooted Cosmic tree.
+
+Nullstar uses the **High-output reactors** durability role (`RH 1.20`, `RA 1.00`). Its material values yield `MH = 1.196` and `MA = 0.386`; the 4×4 calculation is `health = 40 × 16 × 1.196 × 1.20 = 919`, rounded to **920**, and `armor = (2 + 1.5 × 4) × 0.386 × 1.00 = 3.1`, rounded to **3**. This is reinforced processing containment, not defensive-wall protection.
+
 ### Construction, research, and durability
 
 Construction: copper 120, lead 100, graphite 60, silicon 70, titanium 50, thorium 30. The recipe represents ordinary generator structure, conductive control, and heat containment without requiring the furnace’s advanced possible fuels. Research is exactly 5× each construction cost and is parented to `cosmic-i-drill`, so it remains payable in the Serpulo-rooted Cosmic tree despite being shown on both planets.
@@ -110,14 +132,26 @@ The documented **Power generators** durability role yields `MH = 1.105`, `MA = 0
 | `sprites/blocks/power/consume-generator/pyroclast-dynamo-glow.png` | Yes | 64×64 px | Active-only glow overlay for the Pyroclast Dynamo. |
 | `sprites/blocks/power/consume-generator/exergonic-reactor.png` | Yes | 64×64 px | Native default main region for the 2×2 Exergonic Reactor. |
 | `sprites/blocks/power/consume-generator/exergonic-reactor-glow.png` | Yes | 64×64 px | Active-only glow overlay for the Exergonic Reactor. |
+| `sprites/blocks/general/cosmic-liquid-bottom-xlarge.png` | Yes, shared | 128×128 px | Explicit atlas region `vanilla-cosmic-cosmic-liquid-bottom-xlarge` used as Nullstar's containment base. |
+| `sprites/blocks/power/impact-reactor/nullstar-reactor.png` | Yes | 128×128 px | Default 4×4 reactor body. |
+| `sprites/blocks/power/impact-reactor/nullstar-reactor-plasma-0.png` | Yes | 128×128 px | First native `DrawPlasma` layer. |
+| `sprites/blocks/power/impact-reactor/nullstar-reactor-plasma-1.png` | Yes | 128×128 px | Second native `DrawPlasma` layer. |
+| `sprites/blocks/power/impact-reactor/nullstar-reactor-plasma-2.png` | Yes | 128×128 px | Third native `DrawPlasma` layer. |
+| `sprites/blocks/power/impact-reactor/nullstar-reactor-plasma-3.png` | Yes | 128×128 px | Fourth native `DrawPlasma` layer. |
+| `sprites/blocks/power/impact-reactor/nullstar-reactor-glow.png` | Yes | 128×128 px | Warmup-driven glow overlay. |
 
-Entropy Furnace uses shared bottom → native tiled slag fill → main region → active glow. Pyroclast Dynamo and Exergonic Reactor use main region → active glow only: neither requires a `-bottom` or `-liquid` sprite.
+Entropy Furnace uses shared bottom → native tiled slag fill → main region → active glow. Pyroclast Dynamo and Exergonic Reactor use main region → active glow only: neither requires a `-bottom` or `-liquid` sprite. Nullstar uses the shared xlarge containment base → four native plasma layers → main body → warmup glow; it does **not** use `nullstar-reactor-bottom.png` or `nullstar-reactor-liquid.png`.
 
 ## Sources and validation scope
 
 - [ConsumeGenerator.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/power/ConsumeGenerator.java)
 - [ConsumeItemList.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/consumers/ConsumeItemList.java)
 - [ConsumeItemFilter.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/consumers/ConsumeItemFilter.java)
+- [ImpactReactor.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/power/ImpactReactor.java)
+- [ConsumeItems.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/consumers/ConsumeItems.java)
+- [ConsumeLiquids.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/consumers/ConsumeLiquids.java)
+- [DrawPlasma.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/draw/DrawPlasma.java)
+- [DrawGlowRegion.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/draw/DrawGlowRegion.java)
 - [ContentParser.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/mod/ContentParser.java)
 - [PowerGenerator.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/world/blocks/power/PowerGenerator.java)
 - [Blocks.java](https://github.com/Anuken/Mindustry/blob/v160.7/core/src/mindustry/content/Blocks.java)
