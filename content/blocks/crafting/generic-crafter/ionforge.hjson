@@ -1,5 +1,5 @@
 name: Ionforge
-description: Uses water-cooled, ionized plasma refinement to synthesize silicon from coal and silica-rich sand.
+description: Uses ionized plasma confined by electromagnetic fields to refine coal and silica-rich sand into silicon.
 type: GenericCrafter
 category: crafting
 shownPlanets: [serpulo, erekir]

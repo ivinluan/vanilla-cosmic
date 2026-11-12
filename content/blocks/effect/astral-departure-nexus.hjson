@@ -1,5 +1,5 @@
 name: Astral Departure Nexus
-description: Launches mixed-item cargo batches to selected sectors on the same planet.
+description: Uses calibrated astral launch trajectories to send mixed cargo batches to selected sectors on the same planet.
 type: LaunchPad
 category: effect
 shownPlanets: [serpulo, erekir]
