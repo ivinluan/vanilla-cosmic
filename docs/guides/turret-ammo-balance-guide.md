@@ -126,17 +126,19 @@ Pulsar construction is 35 copper, 20 lead, and 15 graphite. Research is exactly 
 
 ### Pulsar sprite requirements
 
-Place art in `sprites/blocks/turret/`.
+Place Pulsar art in `sprites/blocks/turret/pulsar/`.
 
 | Filename | Required | Purpose | Expected dimensions |
 |---|---|---|---|
 | `pulsar.png` | Yes | The rotating turret body and primary block icon. | 32×32 px for a 1×1 block |
+| `pulsar-barrel-r.png` | Yes | Right barrel overlay. It recoils on the first alternating muzzle shot. | 32×32 px |
+| `pulsar-barrel-l.png` | Yes | Left barrel overlay. It recoils on the second alternating muzzle shot. | 32×32 px |
 | `pulsar-base.png` | Optional | A dedicated stationary base. If absent, v160.7 `DrawTurret` falls back to `vanilla-cosmic-block-1`. | 32×32 px |
 | `pulsar-preview.png` | Optional | The placement-preview body; if absent, the main `pulsar.png` is used. | 32×32 px |
 | `pulsar-top.png` | Optional | A rotating layer rendered above the main turret body. | 32×32 px |
 | `pulsar-heat.png` | Optional | Additive firing-heat overlay, visible only while the turret has heat. | 32×32 px |
 
-`pulsar-outline.png` is only needed if future draw parts are added; the current simple turret has none. No liquid, rotator, bottom, or glow region is used by the current definition.
+`pulsar-outline.png` remains optional. Pulsar alternates one projectile between its 7-unit-spaced barrel overlays while retaining its existing 25-tick reload, damage, and ammo use. It also uses native `ShapePart` and `HaloPart` warmup visuals, which are procedural and need no sprite regions. No liquid, rotator, bottom, or glow region is used by the current definition.
 
 ## Required balance checks for every future turret
 
