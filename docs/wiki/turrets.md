@@ -2,8 +2,14 @@
 
 This page lists ammunition-driven Cosmic Vanilla defenses. `Input` describes ammunition and ongoing operating resources; it does not include construction or research costs.
 
-| Picture | Name | Input | Output |
-| --- | --- | --- | --- |
-| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/turret/pulsar/pulsar-preview.png" alt="Pulsar" width="48"></div> | Pulsar | Copper, lead, scrap, or sand ammunition; no power, coolant, or booster. | Targets ground and air units at 250 range with a 25-tick reload. Copper and lead use direct shots; scrap uses small flak splash; sand uses light fragments. |
+| Picture                                                                                                                                                                                       | Name | Input | Output |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- | --- | --- |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/turret/pulsar/pulsar-preview.png" alt="Pulsar" width="48"></div>                | Pulsar | Copper, lead, scrap, or sand ammunition; no power, coolant, or booster. | Targets ground and air units at 250 range with a 25-tick reload. Copper and lead use direct shots; scrap uses small flak splash; sand uses light fragments. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/turret/shatterstar/shatterstar-preview.png" alt="Shatterstar" width="48"></div> | Shatterstar | Titanium, thorium, tungsten, or carbide ammunition; no power, coolant, or booster. | Targets ground and air units at 175 range with a five-trace shrapnel volley every 70 ticks. Ammunition determines damage, penetration, and armor interaction. |
+| <div align="center"><img src="https://raw.githubusercontent.com/ivinluan/vanilla-cosmic/master/sprites/blocks/turret/aperture/aperture-preview.png" alt="Aperture" width="48"></div> | Aperture | Graphite, titanium, thorium, or tungsten ammunition; no power, coolant, or booster. | Targets ground and air units at 350 range with a charged precision rail shot every 100 ticks. Ammunition changes direct damage, finite penetration, and armor interaction. |
 
 Pulsar is a 1×1 introductory turret. It is available on Serpulo and Erekir after its single Cosmic-tree research node is unlocked. Its copper-and-lead construction recipe still needs a supplied source of those materials on Erekir.
+
+Shatterstar is Pulsar's 1×1 defense-branch sibling under Cosmic I Drill. It remains visible on both planets after its single Cosmic-tree node is unlocked. Its basic construction recipe has the same Erekir copper-and-lead supply consideration, while its Erekir-only tungsten and carbide ammunition is intentionally a later option.
+
+Aperture is another 1×1 sibling under Cosmic I Drill. It is visible on both planets after unlock. Its graphite and titanium rounds provide the practical early route; thorium and Erekir-only tungsten intentionally extend its role later. Construction has the same supplied copper-and-lead consideration on Erekir.
