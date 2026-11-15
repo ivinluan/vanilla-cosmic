@@ -13,8 +13,71 @@ maxAmmo: 20
 rotateSpeed: 10
 inaccuracy: 3
 recoil: 0.5
+# Two recoil channels let the left and right barrel overlays recoil independently.
+recoils: 2
+recoilTime: 6
 targetGround: true
 targetAir: true
+
+# One projectile per reload cycle, alternating between the two 7-unit-spaced muzzles.
+# This preserves Pulsar's existing DPS and ammo use.
+shoot: {
+    type: ShootAlternate
+    barrels: 2
+    spread: 7
+}
+
+# Visual-only charge-up sample: a small cosmic ring and rotating three-spike halo.
+# It uses native DrawTurret parts and requires no additional sprite.
+shootWarmupSpeed: 0.08
+warmupMaintainTime: 30
+drawer: {
+    type: DrawTurret
+    parts: [
+        {
+            # The first native ShootAlternate muzzle is the right-side barrel.
+            type: RegionPart
+            suffix: "-barrel-r"
+            recoilIndex: 0
+            moves: [
+                { progress: recoil, y: -1.25 }
+            ]
+        }
+        {
+            # The second muzzle is the left-side barrel.
+            type: RegionPart
+            suffix: "-barrel-l"
+            recoilIndex: 1
+            moves: [
+                { progress: recoil, y: -1.25 }
+            ]
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            color: d5a17aff
+            circle: true
+            hollow: true
+            stroke: 0
+            strokeTo: 0.75
+            radius: 3
+            y: -1
+        }
+        {
+            type: HaloPart
+            progress: warmup
+            color: d5a17aff
+            tri: true
+            shapes: 3
+            triLength: 0
+            triLengthTo: 3
+            radius: 1.5
+            haloRadius: 3
+            haloRotateSpeed: 1.2
+            y: -1
+        }
+    ]
+}
 
 requirements: [
     copper/35

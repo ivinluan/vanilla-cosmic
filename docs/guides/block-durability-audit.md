@@ -27,6 +27,14 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | `ionforge` | GenericCrafter, 3 | copper 120, lead 100, graphite 60, metaglass 50, silicon 60, titanium 40 | 430 explicit / 1 explicit | 430 / 1 | Silicon Smelter / Silicon Crucible | Applied: 3×3 high-throughput silicon processing remains below Silicon Crucible output and requires water, power, coal, and sand. |
 | `vitrion-furnace` | GenericCrafter, 3 | copper 110, lead 120, graphite 60, metaglass 70, silicon 50, titanium 40 | 430 explicit / 1 explicit | 430 / 1 | Kiln | Applied: faster metaglass production is paid for through heavy sand, water, and power use rather than defensive durability. |
 
+## Defensive turrets — 2 blocks
+
+| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+|---|---|---|---|---|---|---|
+| `pulsar` | ItemTurret, 1 | copper 35, lead 20, graphite 15 | 220 explicit / 0 explicit | 220 / 0 | Duo | Existing first-generation turret matches the new Defensive turrets role; it remains unarmored. |
+| `shatterstar` | ItemTurret, 1 | copper 45, lead 25, graphite 20 | 220 explicit / 0 explicit | 220 / 0 | Duo; Pulsar | Applied: exposed 1×1 shotgun turret retains Pulsar-level health but has no armor or wall-like protection. |
+| `aperture` | ItemTurret, 1 | copper 50, lead 30, graphite 35, silicon 15 | 220 explicit / 0 explicit | 220 / 0 | Duo; Pulsar | Applied: long range improves placement options, not static durability; Aperture retains the first-generation unarmored turret baseline. |
+
 ## Ultimate defensive walls — 3 blocks
 
 | Block ID | Type, size | Requirements | Standard formula HP / armor | Ultimate result HP / armor | Vanilla comparison | Recommendation and reason |
@@ -130,7 +138,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Audit outcome
 
-- Blocks currently covered: **59**.
+- Blocks currently covered: **61**.
 - Largest proposed HP increase: `cosmic-photon-bore`, 790 → 1380 (+590). The 5×5 footprint drives this result.
 - Largest proposed HP decrease: `cosmic-viii-drill`, 960 → 230 (−730). This reflects the formula's refusal to multiply durability by total recipe quantity.
 - Largest armor decrease: `cosmic-drill-pro-max`, 1200 → 1 (−1199). The existing drill armor series is the dominant manual-review concern.

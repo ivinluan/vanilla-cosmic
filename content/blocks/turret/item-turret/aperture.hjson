@@ -1,0 +1,153 @@
+name: Aperture
+description: Uses electromagnetic acceleration to fire precise rail slugs through aligned ground and air targets.
+type: ItemTurret
+category: turret
+shownPlanets: [serpulo, erekir]
+
+size: 1
+health: 220
+armor: 0
+range: 350
+reload: 100
+maxAmmo: 12
+rotateSpeed: 5
+inaccuracy: 0
+shootCone: 2
+recoil: 2.5
+recoilTime: 14
+shake: 1.5
+targetGround: true
+targetAir: true
+
+# One precise rail shot per cycle. The delay is real firing charge time, not only visual warmup.
+shoot: {
+    type: ShootPattern
+    shots: 1
+    firstShotDelay: 18
+}
+
+# Visual-only charge and firing heat; neither requires an Erekir heat network.
+shootWarmupSpeed: 0.08
+warmupMaintainTime: 24
+heatColor: ffabe5ff
+drawer: {
+    type: DrawTurret
+    parts: [
+        # Rotating mid-layer; it follows the main turret body's native recoil offset.
+        {
+            type: RegionPart
+            suffix: "-mid"
+        }
+        # Pulsar-style first-generation Cosmic ring and halo, recolored for Aperture.
+        {
+            type: ShapePart
+            progress: warmup
+            color: ffabe5ff
+            circle: true
+            hollow: true
+            stroke: 0
+            strokeTo: 0.75
+            radius: 3
+            y: -3
+        }
+        {
+            type: HaloPart
+            progress: warmup
+            color: ffabe5ff
+            tri: true
+            shapes: 3
+            triLength: 0
+            triLengthTo: 3
+            radius: 1.5
+            haloRadius: 3
+            haloRotateSpeed: 1.2
+            y: -3
+        }
+    ]
+}
+
+requirements: [
+    copper/50
+    lead/30
+    graphite/35
+    silicon/15
+]
+
+# Sibling of Pulsar and Shatterstar beneath the first Cosmic prerequisite.
+research: cosmic-i-drill
+researchCost: [
+    copper/250
+    lead/150
+    graphite/175
+    silicon/75
+]
+
+ammoTypes: {
+    graphite: {
+        type: RailBulletType
+        # The 1x1 default muzzle is 4 units forward: 346 + 4 = 350 units from the turret centre.
+        length: 346
+        damage: 80
+        pierceCap: 2
+        pierceDamageFactor: 0.20
+        buildingDamageMultiplier: 0.7
+        ammoMultiplier: 3
+        shootEffect: instShoot
+        pierceEffect: railHit
+        pointEffect: instTrail
+        # Rail effects are point particles, not a configurable beam width. Fewer trail points keep the line restrained.
+        pointEffectSpace: 32
+        hitColor: 9ba0aaff
+        trailColor: 9ba0aaff
+    }
+
+    titanium: {
+        type: RailBulletType
+        length: 346
+        damage: 110
+        pierceCap: 3
+        pierceDamageFactor: 0.12
+        buildingDamageMultiplier: 0.7
+        ammoMultiplier: 2
+        shootEffect: instShoot
+        pierceEffect: railHit
+        pointEffect: instTrail
+        pointEffectSpace: 32
+        hitColor: 8fd3ffff
+        trailColor: 8fd3ffff
+    }
+
+    thorium: {
+        type: RailBulletType
+        length: 346
+        damage: 150
+        pierceCap: 2
+        pierceDamageFactor: 0.08
+        armorMultiplier: 0.65
+        buildingDamageMultiplier: 0.8
+        ammoMultiplier: 1
+        shootEffect: instShoot
+        pierceEffect: railHit
+        pointEffect: instTrail
+        pointEffectSpace: 32
+        hitColor: f9a3ffff
+        trailColor: f9a3ffff
+    }
+
+    tungsten: {
+        type: RailBulletType
+        length: 346
+        damage: 125
+        pierceCap: 4
+        pierceDamageFactor: 0.05
+        pierceArmor: true
+        buildingDamageMultiplier: 0.7
+        ammoMultiplier: 1
+        shootEffect: instShoot
+        pierceEffect: railHit
+        pointEffect: instTrail
+        pointEffectSpace: 32
+        hitColor: c0c8d0ff
+        trailColor: c0c8d0ff
+    }
+}

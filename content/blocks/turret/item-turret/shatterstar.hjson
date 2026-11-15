@@ -1,0 +1,140 @@
+name: Shatterstar
+description: Fires penetrating shrapnel volleys in a stellar spread against armored ground and air targets.
+type: ItemTurret
+category: turret
+shownPlanets: [serpulo, erekir]
+
+size: 1
+health: 220
+armor: 0
+range: 175
+reload: 70
+maxAmmo: 20
+rotateSpeed: 8
+inaccuracy: 0
+recoil: 2.5
+recoilTime: 12
+shake: 1.5
+targetGround: true
+targetAir: true
+
+# Five immediate traces at -14, -7, 0, 7, and 14 degrees.
+# Ammo is consumed once per complete five-trace volley.
+shoot: {
+    type: ShootSpread
+    shots: 5
+    spread: 7
+}
+
+# Visual-only firing charge. These do not require Erekir heat infrastructure.
+shootWarmupSpeed: 0.10
+warmupMaintainTime: 18
+heatColor: ffd28aff
+drawer: {
+    type: DrawTurret
+    parts: [
+        # Static rotating mid-layer; it follows the turret body's native recoil offset.
+        {
+            type: RegionPart
+            suffix: "-mid"
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            color: ffd28aff
+            circle: true
+            hollow: true
+            stroke: 0
+            strokeTo: 0.60
+            radius: 2.5
+            y: -1
+        }
+        {
+            type: HaloPart
+            progress: warmup
+            color: ffd28aff
+            tri: true
+            shapes: 3
+            triLength: 0
+            triLengthTo: 2.5
+            radius: 1
+            haloRadius: 2.5
+            haloRotateSpeed: -1.2
+            y: -1
+        }
+    ]
+}
+
+requirements: [
+    copper/45
+    lead/25
+    graphite/20
+]
+
+# Sibling of Pulsar beneath the existing first Cosmic prerequisite.
+research: cosmic-i-drill
+researchCost: [
+    copper/225
+    lead/125
+    graphite/100
+]
+
+ammoTypes: {
+    titanium: {
+        type: ShrapnelBulletType
+        # A 1x1 turret muzzle is 4 units forward; 171 + 4 = the 175-unit target reach.
+        length: 171
+        # Visual-only: retain the 171-unit reach while using a thinner shrapnel beam and serrations.
+        width: 8
+        serrationWidth: 2.5
+        damage: 16
+        pierce: true
+        pierceCap: 2
+        ammoMultiplier: 4
+        fromColor: ffd28aff
+        toColor: 8fd3ffff
+    }
+
+    thorium: {
+        type: ShrapnelBulletType
+        length: 171
+        width: 8
+        serrationWidth: 2.5
+        damage: 24
+        pierce: true
+        pierceCap: 3
+        # Reduces direct-hit armor effectiveness by 40%; it does not fully bypass it.
+        armorMultiplier: 0.6
+        ammoMultiplier: 2
+        fromColor: ffd28aff
+        toColor: f9a3ffff
+    }
+
+    tungsten: {
+        type: ShrapnelBulletType
+        length: 171
+        width: 7
+        serrationWidth: 2.25
+        damage: 20
+        pierce: true
+        pierceCap: 4
+        # Direct hits bypass ordinary unit and building armor in v160.7.
+        pierceArmor: true
+        ammoMultiplier: 2
+        fromColor: ffd28aff
+        toColor: b3bdc7ff
+    }
+
+    carbide: {
+        type: ShrapnelBulletType
+        length: 171
+        width: 9
+        serrationWidth: 2.75
+        damage: 28
+        pierce: true
+        pierceCap: 5
+        ammoMultiplier: 1
+        fromColor: ffd28aff
+        toColor: 8ff0c8ff
+    }
+}

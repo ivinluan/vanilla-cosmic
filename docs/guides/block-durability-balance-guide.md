@@ -71,6 +71,7 @@ All construction items currently used by Vanilla Cosmic have coefficients. No mi
 | Production / GenericCrafter | 1.10 | 0.90 |
 | Drills, beam bores, BurstDrills, WallCrafters | 1.20 | 1.00 |
 | Mass drivers | 1.25 | 1.20 |
+| Defensive turrets | 5.25 | 1.00 |
 | Defensive walls | 1.50 | 2.00 |
 | Ultimate Defensive Walls | 13.50 | Fixed 40 armor |
 
@@ -83,6 +84,10 @@ Use this role for stationary item-production machines whose primary function is 
 ### Power nodes and transmission relays
 
 Use this role for `PowerNode`-style blocks whose purpose is connecting existing power networks. It matches the pumps/liquid-transport multiplier: connection range and link count are utility capability, not defensive armor. A node may need protection because it can be strategically important, but it should remain much easier to destroy than a dedicated defensive block.
+
+### Defensive turrets
+
+Use this role for combat turrets that are expected to operate on the frontline. The 1×1 structural base in this guide (40 HP before multipliers) is not comparable to native combat-turret baselines such as vanilla Duo's 250 HP or Vanilla Cosmic Pulsar's 220 HP. `RH = 5.25` restores that practical small-turret baseline without using a wall role or granting armor. `RA = 1.00` deliberately remains low: a basic-material 1×1 turret rounds to 0 armor, and stronger armor requires a recipe whose weighted material score justifies it. This role is for ordinary direct-fire defenses, not walls, shields, or reactors.
 
 ### Power generators
 
