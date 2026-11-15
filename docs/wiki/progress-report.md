@@ -1,13 +1,13 @@
 # Progress Report
 
 ## November 2026
-- Updated **Vanilla Cosmic** to **v3.11.12** for [Mindustry v160.7](https://github.com/Anuken/Mindustry/tree/v160.7).
+- Updated **Vanilla Cosmic** to **v3.11.16** for [Mindustry v160.7](https://github.com/Anuken/Mindustry/tree/v160.7).
 - Added cosmic launch and landing pads.
 - Added cosmic item productions.
 - Added cosmic power nodes.
 - Added cosmic consume generators.
 - Added cosmic impact reactor.
-- Added cosmic turret.
+- Added cosmic turrets.
 - Updated the **Vanilla Cosmic** tech tree
 - Maintained English and Filipino localization.
 - Updated the project wiki and guides.
