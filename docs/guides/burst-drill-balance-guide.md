@@ -19,7 +19,7 @@ Blast Drill's full-coverage rate is `60 / 280 × 4² = 3.43` items/second. The S
 | `drillTime` | 280 | 187 | Six times the actual full-coverage output after the 8×8 footprint is included. |
 | Power | 3 | 18 | Six times the vanilla demand, matching the output target. |
 | Coolant | water 0.10 | cryofluid 0.60 + slag 0.60 | Existing two-liquid identity retained at a proportional sustained cost. Neither liquid is a speed booster. |
-| Health / armor | engine default / 0 | 3200 / 240 | Size-appropriate endgame durability without the former excessive armor. |
+| Health / armor | engine default / 0 | 3430 / 2 | Shared BurstDrill durability formula; size raises structural health, not armor into wall-like territory. |
 | Item capacity | 20 | 640 | Ten full 8×8 production bursts. |
 | Liquid capacity | default | 720 | Ten seconds of the combined mandatory coolant demand. |
 | Build multiplier | default | 1.0 | Normal construction speed. |

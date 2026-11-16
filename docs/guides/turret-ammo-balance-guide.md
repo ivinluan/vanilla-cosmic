@@ -148,12 +148,15 @@ Shatterstar is a 1×1 `ItemTurret` with exactly 175 world-unit (21.875-tile) tar
 
 | Ammo | Tactical role | Damage per trace | Theoretical five-trace volley | Nominal direct DPS ceiling | Penetration / armor interaction | `ammoMultiplier` | Item use at sustained fire |
 |---|---|---:|---:|---:|---|---:|---:|
+| Graphite | Economical entry buckshot | 12 | 60 | 51.4 | Up to 2 eligible targets per trace; ordinary armor rules. | 4 | 0.214 graphite/s (12.86/min) |
 | Titanium | Efficient standard buckshot | 16 | 80 | 68.6 | Up to 2 eligible targets per trace; ordinary armor rules. | 4 | 0.214 titanium/s (12.86/min) |
 | Thorium | Heavy kinetic burst | 24 | 120 | 102.9 | Up to 3 targets; direct-hit armor is multiplied by 0.6, so 40% is bypassed. | 2 | 0.429 thorium/s (25.71/min) |
 | Tungsten | Armor-breaking flechettes | 20 | 100 | 85.7 | Up to 4 targets; `pierceArmor: true` bypasses ordinary direct-hit unit and building armor. | 2 | 0.429 tungsten/s (25.71/min) |
 | Carbide | Premium hyperdense shrapnel | 28 | 140 | 120.0 | Up to 5 targets per trace; ordinary armor rules keep it from also being an unconditional armor-bypass round. | 1 | 0.857 carbide/s (51.43/min) |
 
-One firing cycle consumes one internal ammo unit, not five: v160.7's default `consumeAmmoOnce: true` consumes once after the `ShootSpread` pattern produces its five traces. Consequently, `ammoMultiplier` is volleys per supplied item for this turret. Titanium supplies the best endurance; Thorium pays endurance for damage; Tungsten trades raw damage for the only full armor bypass; Carbide has the best burst and line penetration but consumes one carbide per volley. None uses a reload modifier, so every ammunition type keeps the 70-tick base cadence.
+One firing cycle consumes one internal ammo unit, not five: v160.7's default `consumeAmmoOnce: true` consumes once after the `ShootSpread` pattern produces its five traces. Consequently, `ammoMultiplier` is volleys per supplied item for this turret. Graphite is the inexpensive entry round; Titanium supplies the practical baseline damage upgrade at the same endurance; Thorium pays endurance for damage; Tungsten trades raw damage for the only full armor bypass; Carbide has the best burst and line penetration but consumes one carbide per volley. None uses a reload modifier, so every ammunition type keeps the 70-tick base cadence.
+
+Shatterstar now has five accepted rounds, a documented narrow exception to the usual three-to-four early-turret choices. Graphite adds an accessible version of the same shrapnel mechanic rather than a fifth special effect, and its lower 60-damage theoretical volley prevents it from replacing Titanium.
 
 ### Shatterstar balance comparison
 

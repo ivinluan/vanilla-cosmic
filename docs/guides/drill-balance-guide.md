@@ -4,11 +4,10 @@ This archive contains proposed balanced replacements for the 16 original HJSON d
 
 ## Rules used
 
-- Standard drill health: 400 at tier I, then +80 per tier.
-- Standard drill armor: 120 per tier; mini armor is exactly 50%.
+- Health and armor follow the shared [Block Durability Balance Guide](block-durability-balance-guide.md), rather than a separate tier-by-tier extraction multiplier.
 - Standard item capacity: 60 at tier I, then +20 per tier; mini capacity is exactly 50%.
 - Standard liquid capacity: 20 at tier I, then +10 per tier; mini capacity is exactly 50%.
-- Mini health, armor, item/liquid capacity, build requirements, and research costs are exactly half of the matching standard drill.
+- Mini item/liquid capacity, build requirements, and research costs are exactly half of the matching standard drill. Durability follows the shared role-and-recipe formula instead.
 - Water consumption and liquid boost intensity are identical for matching standard/mini tiers, per the requested rule. Water use increases gently by tier.
 - `researchCost` is 5 times the corresponding construction `requirements`, per material; this gives a repeatable cost formula.
 - `buildCostMultiplier` is standardized to `1.0` (normal construction speed) instead of `0.25` / `0.23`. In Mindustry this is a build-speed multiplier, separate from the item counts in `requirements`; the previous values made construction slower than normal.
@@ -20,16 +19,16 @@ This archive contains proposed balanced replacements for the 16 original HJSON d
 
 | Tier | Standard drillTime | Mini drillTime | Standard health | Mini health | Standard armor | Mini armor | Standard item cap | Mini item cap | Standard liquid cap | Mini liquid cap | Water amount (both) | Boost intensity (both) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| I | 300 | 220 | 400 | 200 | 120 | 60 | 60 | 30 | 20 | 10 | 0.08 | 1.65 |
-| II | 240 | 175 | 480 | 240 | 240 | 120 | 80 | 40 | 30 | 15 | 0.1 | 1.75 |
-| III | 190 | 140 | 560 | 280 | 360 | 180 | 100 | 50 | 40 | 20 | 0.12 | 1.85 |
-| IV | 150 | 110 | 640 | 320 | 480 | 240 | 120 | 60 | 50 | 25 | 0.14 | 1.95 |
-| V | 120 | 90 | 720 | 360 | 600 | 300 | 140 | 70 | 60 | 30 | 0.16 | 2.05 |
-| VI | 100 | 75 | 800 | 400 | 720 | 360 | 160 | 80 | 70 | 35 | 0.18 | 2.15 |
-| VII | 80 | 60 | 880 | 440 | 840 | 420 | 180 | 90 | 80 | 40 | 0.2 | 2.25 |
-| VIII | 65 | 50 | 960 | 480 | 960 | 480 | 200 | 100 | 90 | 45 | 0.22 | 2.35 |
-| IX — Cosmic Drill Pro | 52 | — | 1040 | — | 1080 | — | 220 | — | 100 | — | 0.24 cryofluid | 2.45 |
-| X — Cosmic Drill Pro Max | 42 | — | 1120 | — | 1200 | — | 240 | — | 110 | — | 0.26 cryofluid | 2.55 |
+| I | 300 | 220 | 220 | 50 | 1 | 1 | 60 | 30 | 20 | 10 | 0.08 | 1.65 |
+| II | 240 | 175 | 210 | 50 | 1 | 0 | 80 | 40 | 30 | 15 | 0.1 | 1.75 |
+| III | 190 | 140 | 230 | 60 | 2 | 2 | 100 | 50 | 40 | 20 | 0.12 | 1.85 |
+| IV | 150 | 110 | 220 | 60 | 1 | 1 | 120 | 60 | 50 | 25 | 0.14 | 1.95 |
+| V | 120 | 90 | 230 | 60 | 2 | 2 | 140 | 70 | 60 | 30 | 0.16 | 2.05 |
+| VI | 100 | 75 | 230 | 60 | 2 | 2 | 160 | 80 | 70 | 35 | 0.18 | 2.15 |
+| VII | 80 | 60 | 230 | 60 | 3 | 2 | 180 | 90 | 80 | 40 | 0.2 | 2.25 |
+| VIII | 65 | 50 | 230 | 60 | 2 | 2 | 200 | 100 | 90 | 45 | 0.22 | 2.35 |
+| IX — Cosmic Drill Pro | 52 | — | 500 | — | 3 | — | 220 | — | 100 | — | 0.24 cryofluid | 2.45 |
+| X — Cosmic Drill Pro Max | 42 | — | 840 | — | 1 | — | 240 | — | 110 | — | 0.26 cryofluid | 2.55 |
 
 ## Cost formula
 
@@ -66,7 +65,7 @@ The official Mindustry `Blocks.java` definition sets the Pneumatic Drill to size
 ## Validation notes
 
 - HJSON files were updated by scripted field replacement and consistency checks.
-- Every mini health/armor/itemCapacity/liquidCapacity/build requirement/research cost was checked against exactly half of its standard counterpart.
+- Every mini itemCapacity/liquidCapacity/build requirement/research cost was checked against exactly half of its standard counterpart; health and armor were checked against the shared durability formula.
 - Each standard/mini pair has the same water amount and boost intensity.
 - Cosmic Drill Pro and Cosmic Drill Pro Max are documented as tiers IX and X. They have no mini variants; their cryofluid amounts and boost intensities continue the standard-tier progression.
 - Pro and Pro Max retain their material lists and established progressively larger construction requirements. Every one of their research-cost entries is 5× its own requirement.

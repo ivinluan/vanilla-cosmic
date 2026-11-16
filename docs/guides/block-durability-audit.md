@@ -6,7 +6,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Production / GenericCrafter — 18 blocks
 
-| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+| Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | `stellar-spallation-chamber` | GenericCrafter, 2 | copper 120, lead 100, titanium 80, thorium 50, silicon 50, phase fabric 15 | 200 explicit / 2 explicit | 200 / 2 | Phase Weaver | Applied: production role with advanced Serpulo synthesis materials; close to the vanilla 2x2 Phase Weaver's durability without claiming drill-tier protection. |
 | `pulsar-nucleoforge` | GenericCrafter, 3 | copper 220, lead 180, titanium 150, thorium 120, silicon 120, plastanium 60, phase fabric 40, surge alloy 30 | 470 explicit / 2 explicit | 470 / 2 | Surge Smelter | Applied: larger, reinforced late-Serpulo production machine. Its modest armor is not a substitute for its required coolant and power infrastructure. |
@@ -27,9 +27,9 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | `ionforge` | GenericCrafter, 3 | copper 120, lead 100, graphite 60, metaglass 50, silicon 60, titanium 40 | 430 explicit / 1 explicit | 430 / 1 | Silicon Smelter / Silicon Crucible | Applied: 3×3 high-throughput silicon processing remains below Silicon Crucible output and requires water, power, coal, and sand. |
 | `vitrion-furnace` | GenericCrafter, 3 | copper 110, lead 120, graphite 60, metaglass 70, silicon 50, titanium 40 | 430 explicit / 1 explicit | 430 / 1 | Kiln | Applied: faster metaglass production is paid for through heavy sand, water, and power use rather than defensive durability. |
 
-## Defensive turrets — 2 blocks
+## Defensive turrets — 3 blocks
 
-| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+| Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | `pulsar` | ItemTurret, 1 | copper 35, lead 20, graphite 15 | 220 explicit / 0 explicit | 220 / 0 | Duo | Existing first-generation turret matches the new Defensive turrets role; it remains unarmored. |
 | `shatterstar` | ItemTurret, 1 | copper 45, lead 25, graphite 20 | 220 explicit / 0 explicit | 220 / 0 | Duo; Pulsar | Applied: exposed 1×1 shotgun turret retains Pulsar-level health but has no armor or wall-like protection. |
@@ -45,13 +45,13 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Distribution — 10 blocks
 
-| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+| Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | `celestial-bridge` | BufferedItemBridge, 1 | titanium 30, thorium 30, silicon 15, graphite 10 | 80 explicit / 0 default | 50 / 2 | Bridge | Decrease/review: formula keeps a small logistics footprint fragile. |
 | `cosmic-junction` | Junction, 1 | beryllium 40, tungsten 30, carbide 15 | 110 explicit / 0 default | 50 / 1 | Junction | Decrease/review: present HP is high for a 1×1 junction. |
 | `cosmic-router` | Router, 1 | beryllium 35, tungsten 25, carbide 12 | 100 explicit / 0 default | 40 / 1 | Router | Decrease/review: present HP is high for a 1×1 router. |
 | `interstellar-hyperlane` | ItemBridge, 1 | beryllium 50, tungsten 40, carbide 25, phase-fabric 30, silicon 40 | 110 explicit / 0 default | 50 / 1 | Bridge | Decrease/review: formula gives advanced transport modest armor, not wall durability. |
-| `quasar-mass-driver` | MassDriver, 4 | titanium 300, silicon 200, lead 300, thorium 150, plastanium 100, phase-fabric 80, surge-alloy 50 | 1296 explicit / 0 default | 1010 / 5 | Mass Driver | Review: existing 1296 HP was deliberately set to 3× vanilla Mass Driver; decide whether that prior target overrides the formula. |
+| `quasar-mass-driver` | MassDriver, 4 | titanium 300, silicon 200, lead 300, thorium 150, plastanium 100, phase-fabric 80, surge-alloy 50 | 1296 explicit / 0 default | 1010 / 5 | Mass Driver | Applied: the current 1010 health and 5 armor are the formula-derived Mass Driver values. |
 | `solar-conveyor` | Conveyor, 1 | copper 20, lead 20, graphite 10 | 40 explicit / 0 default | 40 / 0 | Conveyor | Keep: health matches formula; zero armor rounds from a very small material score. |
 | `stellar-stack-conveyor` | StackConveyor, 1 | beryllium 100, tungsten 80, carbide 40, surge-alloy 40 | 150 explicit / 0 default | 50 / 2 | Stack | Decrease/review: high throughput does not itself warrant high static durability. |
 | `stellar-stack-router` | StackRouter, 1 | beryllium 110, tungsten 90, carbide 45, surge-alloy 50 | 160 explicit / 0 default | 50 / 2 | Stack | Decrease/review: same 1×1 logistics principle. |
@@ -60,7 +60,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Power generation and distribution — 6 blocks
 
-| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+| Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | `nullstar-reactor` | ImpactReactor, 4 | copper 500, lead 450, graphite 300, silicon 400, titanium 300, thorium 250, plastanium 180, phase fabric 125, surge alloy 150 | 920 explicit / 3 explicit | 920 / 3 | Impact Reactor | Applied: exact 3× gross Impact Reactor output is balanced by 6,000/s continuous startup draw plus mandatory thorium, blast compound, cryofluid, and nitrogen. The high-output-reactor role reinforces containment without wall-level armor. |
 | `entropy-furnace` | ConsumeGenerator, 2 | copper 120, lead 100, graphite 60, silicon 70, titanium 50, thorium 30 | 190 explicit / 1 explicit | 190 / 1 | Steam Generator | Applied: versatile 2x2 solid-fuel generator uses the production role. Its pressure failure is a logistics hazard, not a reason for defensive-wall durability. |
@@ -71,7 +71,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Drills, bores, and WallCrafters — 27 blocks
 
-| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+| Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | `beryllium-rift-fracturer` | WallCrafter, 4 | beryllium 240, graphite 120, silicon 80 | 820 explicit / 80 explicit | 860 / 2 | WallCrafter | Review: HP aligns; armor 80 is far beyond formula and should be manually justified. |
 | `cosmic-drill-pro-max` | Drill, 4 | copper 780, lead 780, graphite 330, silicon 250, phase-fabric 200, surge-alloy 40 | 1120 explicit / 1200 explicit | 840 / 1 | Drill | Review: armor 1200 nearly negates ordinary direct hits; formula flags it as an exceptional override. |
@@ -103,14 +103,14 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Liquid pumps — 2 blocks
 
-| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+| Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | `pulsar-liquid-pump` | Pump, 1 | copper 60, metaglass 50, titanium 35, silicon 25 | 40 Native / 0 Default | 40 / 0 | Pump | Keep: native HP already matches formula. |
 | `quasar-liquid-pump` | Pump, 2 | copper 150, metaglass 180, titanium 150, silicon 120, thorium 100, plastanium 60 | 210 Native / 0 Default | 190 / 1 | Pump | Review: formula is a modest HP decrease and adds one armor. |
 
 ## Conduits — 3 blocks
 
-| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+| Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | solar-conduit | Conduit, 1 | copper 2, lead 2, metaglass 2 | New block | 40 / 0 | Conduit | Applied: entry liquid transport stays inexpensive and unarmored. |
 | supernova-conduit | Conduit, 1 | lead 2, metaglass 3, titanium 2, silicon 2 | New block | 50 / 1 | Pulse Conduit | Applied: modest tier increase without wall-level durability. |
@@ -118,38 +118,29 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Liquid routing — 2 blocks
 
-| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+| Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | cosmic-liquid-router | LiquidRouter, 1 | beryllium 35, tungsten 25, carbide 12, metaglass 20 | New block | 50 / 2 | Liquid Router | Applied: high capacity supports routing without making the block wall-like. |
 | cosmic-liquid-junction | LiquidJunction, 1 | beryllium 40, tungsten 30, carbide 15, metaglass 20 | New block | 50 / 2 | Liquid Junction | Applied: direct crossing has no stored liquid, but retains advanced utility-block durability. |
 
 ## Liquid storage — 1 block
 
-| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+| Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | celestial-reservoir | LiquidRouter, 4 | metaglass 150, beryllium 250, tungsten 200, carbide 25 | New block | 1390 / 7 | Reinforced Liquid Tank | Applied: dedicated 4×4 storage uses the Liquid storage role, not the ordinary liquid-router role. Capacity does not add a separate durability multiplier. |
 
 ## Liquid bridges — 2 blocks
 
-| Block ID | Type, size | Requirements | Current HP / armor | Formula HP / armor | Vanilla comparison | Recommendation and reason |
+| Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
 | celestial-aqueduct | LiquidBridge, 1 | titanium 30, thorium 30, silicon 15, graphite 10, metaglass 30 | New block | 50 / 1 | Bridge Conduit | Applied: advanced unpowered range and buffer without wall-level durability. |
 | voidstream-hyperlane | LiquidBridge, 1 | beryllium 50, tungsten 40, carbide 25, phase fabric 30, silicon 40, metaglass 40 | New block | 50 / 1 | Phase Conduit | Applied: power, range, and buffer define the higher tier instead of extreme durability. |
 
-## Audit outcome
+## Applied outcome
 
-- Blocks currently covered: **61**.
-- Largest proposed HP increase: `cosmic-photon-bore`, 790 → 1380 (+590). The 5×5 footprint drives this result.
-- Largest proposed HP decrease: `cosmic-viii-drill`, 960 → 230 (−730). This reflects the formula's refusal to multiply durability by total recipe quantity.
-- Largest armor decrease: `cosmic-drill-pro-max`, 1200 → 1 (−1199). The existing drill armor series is the dominant manual-review concern.
-- Largest armor increase: `quasar-mass-driver`, 0 → 5. This is still moderate and affects direct non-piercing bullet hits only.
+- Blocks currently covered: **77**.
+- Formula-derived health and armor values are now present in every audited HJSON block.
+- The pre-approval column is retained as a historical record; the Formula column is the current HJSON value for ordinary blocks. Event Horizon walls are the documented ultimate-wall exception.
 - All current construction materials are covered by coefficients. There are no missing coefficients.
 
-### Approval decisions needed
-
-1. Decide whether the existing high armor values on the Cosmic drill/bore series are intentional. Under v160.7, they dramatically reduce ordinary direct bullet damage, although not all splash damage.
-2. Decide whether Quasar Mass Driver's approved 3× vanilla health target (1296) should remain an explicit exception instead of using formula HP 1010.
-3. Review logistics decreases before any implementation: the formula keeps 1×1 transport easy to destroy even when expensive.
-4. Review the formula-driven HP increases for Photon Bore, Supernova Drill, and the three Rift Fracturers.
-
-The formula values are now the implemented HJSON durability values. Re-audit when a block's size, requirements, or role changes.
+Re-audit when a block's size, requirements, or role changes.

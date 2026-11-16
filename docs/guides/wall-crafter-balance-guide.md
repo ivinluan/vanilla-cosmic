@@ -23,7 +23,7 @@ Cliff Crusher's unboosted, full-frontage rate is `60 / 110 × 2 = 1.09` items/se
 | Optional water boost | none | 0.24 liquid/tick, 1.6× speed | Uses the stock `WallCrafter` liquid-booster behavior; water is optional, not a required operating input. |
 | Item / liquid capacity | default / none | 50 / 60 | A practical output buffer and water reserve for the size 4 block. |
 | Fog radius | 2 | 4 | Larger footprint and upgraded visibility. |
-| Health / armor | engine default / 0 | 700 / 60 | Custom Cosmic durability without the former excessive values. |
+| Health / armor | engine default / 0 | 870 / 2 | Shared WallCrafter durability formula; the former excessive armor is removed. |
 | Build multiplier | default | 1.0 | Normal construction speed. |
 
 ## Construction and research costs
@@ -36,10 +36,10 @@ All four Fracturers remain size 4 and use the stock `WallCrafter` water-booster 
 
 | Block | Output | `drillTime` | Full-frontage rate | Power | Water / boost | Health / armor | Research parent |
 |---|---|---:|---:|---:|---|---|---|
-| Titanium Rift Fracturer | titanium | 55 | 4.36/s | 0.75 | 0.24/tick, 1.6× | 700 / 60 | `cliff-crusher` |
-| Thorium Rift Fracturer | thorium | 60 | 4.00/s | 0.85 | 0.24/tick, 1.6× | 760 / 70 | `blast-drill` |
-| Beryllium Rift Fracturer | beryllium | 55 | 4.36/s | 0.90 | 0.26/tick, 1.6× | 820 / 80 | `cliff-crusher` |
-| Tungsten Rift Fracturer | tungsten | 50 | 4.80/s | 1.10 | 0.28/tick, 1.6× | 900 / 100 | `large-cliff-crusher` |
+| Titanium Rift Fracturer | titanium | 55 | 4.36/s | 0.75 | 0.24/tick, 1.6× | 870 / 2 | `cliff-crusher` |
+| Thorium Rift Fracturer | thorium | 60 | 4.00/s | 0.85 | 0.24/tick, 1.6× | 900 / 3 | `blast-drill` |
+| Beryllium Rift Fracturer | beryllium | 55 | 4.36/s | 0.90 | 0.26/tick, 1.6× | 860 / 2 | `cliff-crusher` |
+| Tungsten Rift Fracturer | tungsten | 50 | 4.80/s | 1.10 | 0.28/tick, 1.6× | 960 / 4 | `large-cliff-crusher` |
 
 Thorium branches from the Serpulo `blast-drill`, which already requires access to thorium mining. Beryllium branches from the Erekir `cliff-crusher`, keeping its recipe to early Erekir beryllium, graphite, and silicon. Tungsten branches from the later Erekir `large-cliff-crusher`, so its tungsten and advanced processing requirements are obtainable before it can be researched. Every new Fracturer uses the universal 5× research-cost rule.
 

@@ -10,7 +10,7 @@ Vanilla's Large Plasma Bore is the predecessor and research parent of Cosmic Pri
 
 - Prism starts at a 25% drilling-throughput improvement over Large Plasma Bore: `drillTime` is 80 frames instead of 100.
 - Each subsequent Cosmic bore is 25% faster than its predecessor. Because a lower `drillTime` is faster, calculate it as `previous drillTime / 1.25`, then round to a whole frame.
-- Health, armor, item capacity, liquid capacity, power consumption, neoplasm boost consumption, boost intensity, range, fog radius, and laser width each increase by approximately 25% per bore. Values are rounded to useful whole units or two decimal places.
+- Item capacity, liquid capacity, power consumption, neoplasm boost consumption, boost intensity, range, fog radius, and laser width each increase by approximately 25% per bore. Health and armor follow the shared [Block Durability Balance Guide](block-durability-balance-guide.md). Values are rounded to useful whole units or two decimal places.
 - `tier: 5` is preserved across the line so every bore matches the Large Plasma Bore's maximum ore hardness.
 - `buildCostMultiplier` is `1.0` for normal construction speed.
 - The existing requirement material lists are preserved. For every material retained by the next bore, construction requirements increase by 25%, rounded to a practical multiple of 5. This applies to the shared copper, lead, graphite, silicon, titanium, and thorium entries.
@@ -23,10 +23,10 @@ Vanilla's Large Plasma Bore is the predecessor and research parent of Cosmic Pri
 | Bore | Size | Drill time | Health | Armor | Item cap | Liquid cap | Power | Neoplasm boost | Boost | Range | Fog | Laser width |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Large Plasma Bore (vanilla baseline) | 3 | 100 | — | — | 20 | — | 0.8 | 0.05 nitrogen | default | 6 | 4 | 0.7 |
-| Cosmic Prism Bore | 2 | 80 | 400 | 120 | 70 | 30 | 0.8 | 0.13 | 1.50 | 6 | 5 | 0.75 |
-| Cosmic Radiant Bore | 3 | 64 | 500 | 150 | 90 | 40 | 1.00 | 0.16 | 1.88 | 8 | 6 | 0.95 |
-| Cosmic Spectral Bore | 4 | 51 | 630 | 190 | 110 | 50 | 1.25 | 0.20 | 2.35 | 10 | 8 | 1.20 |
-| Cosmic Photon Bore | 5 | 41 | 790 | 240 | 140 | 60 | 1.56 | 0.25 | 2.94 | 13 | 10 | 1.50 |
+| Cosmic Prism Bore | 2 | 80 | 210 | 1 | 70 | 30 | 0.8 | 0.13 | 1.50 | 6 | 5 | 0.75 |
+| Cosmic Radiant Bore | 3 | 64 | 480 | 1 | 90 | 40 | 1.00 | 0.16 | 1.88 | 8 | 6 | 0.95 |
+| Cosmic Spectral Bore | 4 | 51 | 880 | 3 | 110 | 50 | 1.25 | 0.20 | 2.35 | 10 | 8 | 1.20 |
+| Cosmic Photon Bore | 5 | 41 | 1380 | 3 | 140 | 60 | 1.56 | 0.25 | 2.94 | 13 | 10 | 1.50 |
 
 `drillTime` is the key throughput value. Wall ore availability, hardness, range, and active liquid boosting still affect practical output, so validate the sequence in-game on the same wall ore before finalizing release balance.
 

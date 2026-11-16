@@ -80,6 +80,20 @@ researchCost: [
 ]
 
 ammoTypes: {
+    graphite: {
+        type: ShrapnelBulletType
+        # Economical entry shrapnel: lower per-trace damage than Titanium, with the same finite line penetration.
+        length: 171
+        width: 7
+        serrationWidth: 2.25
+        damage: 12
+        pierce: true
+        pierceCap: 2
+        ammoMultiplier: 4
+        fromColor: ffd28aff
+        toColor: 9ba0aaff
+    }
+
     titanium: {
         type: ShrapnelBulletType
         # A 1x1 turret muzzle is 4 units forward; 171 + 4 = the 175-unit target reach.
