@@ -236,6 +236,46 @@ Place sprite assets in `sprites/blocks/turret/aperture/`.
 
 The `ShapePart` and `HaloPart` are copied from Pulsar's first-generation Cosmic style and recolored to `#FFABE5`; they require no sprite. Do not create liquid, bottom, glow, barrel, or rotator assets for the current configuration.
 
+## Nebulance reference implementation
+
+Nebulance is a 1×1 `ItemTurret` guided-missile suppressor with exactly 200 world units (25 tiles) of targeting range. Its native `ShootBarrel` configuration cycles through four compact launcher points: `(-3,-1)`, `(3,-1)`, `(-3,1)`, and `(3,1)`. One missile launches at each point, staggered by 4 ticks, so a full salvo finishes 12 ticks after it begins. Its 72-tick reload gives 0.833 salvos or 3.333 missiles per second before any target losses.
+
+`consumeAmmoOnce` is left at the native default of `true`. The four missiles therefore consume **one internal ammo unit per full salvo**, not four units. `ammoMultiplier` consequently expresses complete salvos per supplied item. All rounds use `MissileBulletType`, have 4 speed and 60 lifetime (240 units of straight-line travel), and include a finite 80–110-unit homing search radius. They are aimed at the turret's target first; homing improves late-flight correction but does not make them unavoidable or allow indefinite retargeting.
+
+| Ammo | Tactical role | Direct + splash per missile | Maximum four-missile salvo | Maximum sustained damage | Homing configuration | `ammoMultiplier` | Sustained item use |
+|---|---|---:|---:|---:|---|---:|---:|
+| Graphite | Economical guided missile | 9 + 6 | 60 | 50.0/s | 0.075 power; 80 range; 5-tick delay | 4 | 0.208/s (12.5/min) |
+| Silicon | Guidance-focused missile | 8 + 6 | 56 | 46.7/s | 0.12 power; 110 range; 3-tick delay | 3 | 0.278/s (16.7/min) |
+| Titanium | Reinforced strike missile | 12 + 8 | 80 | 66.7/s | 0.09 power; 90 range; 4-tick delay | 2 | 0.417/s (25/min) |
+| Tungsten | Armor-focused warhead | 13 + 9 | 88 | 73.3/s | 0.10 power; 100 range; 4-tick delay; direct hit bypasses armor | 1 | 0.833/s (50/min) |
+
+Direct and splash values are a theoretical upper bound when all four missiles hit one target and each splash also reaches it. Homing missiles can miss, collide with different targets, or have their splash affect nearby units instead; the definition does not promise target distribution.
+
+### Nebulance balance and construction
+
+Vanilla Swarmer is a 2×2 missile turret with 240 range and four staggered missiles every 34.29 ticks—about 7 missiles per second—with `consumeAmmoOnce: false`. Nebulance is deliberately smaller and cheaper, but fires only 3.333 missiles per second at 200 range. Its guided missiles provide reliable suppression, while its lower cadence, compact splash, finite ammo efficiency, and lack of coolant prevent it from replacing Swarmer or dedicated late-game defenses.
+
+Construction is copper 40, lead 30, graphite 20, and silicon 15. Research is exactly 5× those requirements: copper 200, lead 150, graphite 100, and silicon 75. This keeps the block beside the other first-edition siblings under `cosmic-i-drill`, without requiring titanium or tungsten merely because they are optional ammunition.
+
+The Defensive turrets formula gives `MH = 1.044` and `MA = 0.076`. The result is `roundNearest10(40 × 1² × 1.044 × 5.25) = 220 HP` and `roundNearestWhole(3.5 × 0.076 × 1.00) = 0 armor`. Nebulance therefore has Pulsar-level structural health but no armor.
+
+### Nebulance sprite requirements
+
+Place sprite assets in `sprites/blocks/turret/nebulance/`.
+
+| Filename | Required by the game | Purpose | Expected dimensions |
+|---|---|---|---|
+| `nebulance.png` | Yes | Main rotating turret body and block icon. | 32×32 px |
+| `nebulance-barrel-l.png` | Yes | Left launcher overlay; recoils on the first and third missiles in each four-missile salvo. | 32×32 px |
+| `nebulance-barrel-r.png` | Yes | Right launcher overlay; recoils on the second and fourth missiles in each four-missile salvo. | 32×32 px |
+| `nebulance-heat.png` | Yes for the requested firing-heat design | Additive heat overlay drawn by native `DrawTurret` while firing heat remains. | 32×32 px |
+| `nebulance-preview.png` | No in-game; needed for the wiki preview convention | Placement-preview override used by the wiki image. | 32×32 px |
+| `nebulance-base.png` | No | Dedicated stationary base; otherwise the native `vanilla-cosmic-block-1` fallback is used. | 32×32 px |
+| `nebulance-top.png` | No | Optional rotating body overlay. | 32×32 px |
+| `nebulance-outline.png` | No | Optional underlay for procedural parts. | 32×32 px |
+
+`ShootBarrel` controls projectile origins independently of sprite layers. The two barrel overlays provide paired left/right recoil for the four native launcher positions; four separate barrel regions are unnecessary unless a future visual revision needs every individual launcher to move independently. The `ShapePart` and `HaloPart` are native procedural effects copied from Pulsar and recolored to `#E0F58B`, so they need no image file.
+
 ## Required balance checks for every future turret
 
 1. Declare the native class first: `ItemTurret`, `LiquidTurret`, or `ContinuousLiquidTurret`.

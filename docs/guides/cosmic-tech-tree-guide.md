@@ -14,7 +14,7 @@ Vanilla Cosmic — Cosmic I Drill
 │  └─ Mini chain: Cosmic I Mini → II Mini → III Mini → IV Mini → V Mini → VI Mini → VII Mini → VIII Mini
 ├─ Basic materials: Graviton Press → Ionforge → Vitrion Furnace
 ├─ Power: Entropy Furnace → Pyroclast Dynamo; Synchrotron Node → Synchrotron Node II; Void Atmospheric Harvester → Nullstar Reactor
-├─ Defense: Pulsar; Shatterstar; Aperture
+├─ Defense: Pulsar; Shatterstar; Aperture; Nebulance
 ├─ Bores: Prism → Radiant → Spectral → Photon
 ├─ Rift extraction: Titanium → Thorium → Beryllium → Tungsten
 │  ├─ Stellar Spallation Chamber → Pulsar Nucleoforge → Nebular Alchemy Reactor → Neutron Flux Forge → Quasar Plasma Crucible

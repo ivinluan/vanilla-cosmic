@@ -1,0 +1,159 @@
+name: Nebulance
+description: Launches guided missile salvos from a compact multi-launcher to suppress ground and air targets.
+type: ItemTurret
+category: turret
+shownPlanets: [serpulo, erekir]
+
+size: 1
+health: 220
+armor: 0
+range: 200
+reload: 72
+maxAmmo: 16
+rotateSpeed: 6
+inaccuracy: 0
+recoil: 1.5
+recoilTime: 10
+# The four ShootBarrel positions alternate left, right, left, right; two recoil channels match the two barrel overlays.
+recoils: 2
+shake: 1
+targetGround: true
+targetAir: true
+
+# Four launcher positions fire one missile each at 0, 4, 8, and 12 ticks.
+# Default consumeAmmoOnce: true consumes one internal ammo unit per complete four-missile salvo.
+shoot: {
+    type: ShootBarrel
+    barrels: [
+        -3, -1, 0
+        3, -1, 0
+        -3, 1, 0
+        3, 1, 0
+    ]
+    shots: 4
+    shotDelay: 4
+}
+
+# Native DrawTurret loads nebulance-heat.png while firing; no Erekir heat network is required.
+shootWarmupSpeed: 0.08
+warmupMaintainTime: 30
+heatColor: e0f58bff
+drawer: {
+    type: DrawTurret
+    parts: [
+        {
+            # Launch positions 1 and 3 use the left barrel overlay.
+            type: RegionPart
+            suffix: "-barrel-l"
+            recoilIndex: 0
+            moves: [
+                { progress: recoil, y: -1.25 }
+            ]
+        }
+        {
+            # Launch positions 2 and 4 use the right barrel overlay.
+            type: RegionPart
+            suffix: "-barrel-r"
+            recoilIndex: 1
+            moves: [
+                { progress: recoil, y: -1.25 }
+            ]
+        }
+        {
+            type: ShapePart
+            progress: warmup
+            color: e0f58bff
+            circle: true
+            hollow: true
+            stroke: 0
+            strokeTo: 0.75
+            radius: 3
+            y: -1
+        }
+        {
+            type: HaloPart
+            progress: warmup
+            color: e0f58bff
+            tri: true
+            shapes: 3
+            triLength: 0
+            triLengthTo: 3
+            radius: 1.5
+            haloRadius: 3
+            haloRotateSpeed: 1.2
+            y: -1
+        }
+    ]
+}
+
+requirements: [
+    copper/40
+    lead/30
+    graphite/20
+    silicon/15
+]
+
+# First-edition defense sibling beneath the existing Cosmic root.
+research: cosmic-i-drill
+researchCost: [
+    copper/200
+    lead/150
+    graphite/100
+    silicon/75
+]
+
+ammoTypes: {
+    graphite: {
+        type: MissileBulletType
+        # 4 speed x 60 lifetime = 240 units, leaving travel margin beyond the 200-unit targeting range.
+        speed: 4
+        lifetime: 60
+        damage: 9
+        splashDamage: 6
+        splashDamageRadius: 12
+        homingPower: 0.075
+        homingRange: 80
+        homingDelay: 5
+        ammoMultiplier: 4
+    }
+
+    silicon: {
+        type: MissileBulletType
+        speed: 4
+        lifetime: 60
+        damage: 8
+        splashDamage: 6
+        splashDamageRadius: 12
+        homingPower: 0.12
+        homingRange: 110
+        homingDelay: 3
+        ammoMultiplier: 3
+    }
+
+    titanium: {
+        type: MissileBulletType
+        speed: 4
+        lifetime: 60
+        damage: 12
+        splashDamage: 8
+        splashDamageRadius: 14
+        homingPower: 0.09
+        homingRange: 90
+        homingDelay: 4
+        ammoMultiplier: 2
+    }
+
+    tungsten: {
+        type: MissileBulletType
+        speed: 4
+        lifetime: 60
+        damage: 13
+        splashDamage: 9
+        splashDamageRadius: 14
+        homingPower: 0.10
+        homingRange: 100
+        homingDelay: 4
+        pierceArmor: true
+        ammoMultiplier: 1
+    }
+}
