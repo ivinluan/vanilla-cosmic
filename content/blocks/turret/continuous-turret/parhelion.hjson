@@ -1,0 +1,93 @@
+name: Parhelion
+description: Projects a sustained photonic beam to suppress aligned ground and air targets at close-to-medium range.
+type: ContinuousTurret
+category: turret
+shownPlanets: [serpulo, erekir]
+
+size: 1
+health: 220
+armor: 0
+range: 175
+rotateSpeed: 7
+recoil: 0.5
+recoilTime: 8
+shake: 0.4
+scaleDamageEfficiency: true
+targetGround: true
+targetAir: true
+
+# Visual-only warmup: minWarmup remains 0, so the beam has no artificial charge delay.
+shootWarmupSpeed: 0.08
+warmupMaintainTime: 30
+heatColor: ffd0b3ff
+
+# ContinuousTurret consumes this only while actively firing: 2.5/tick = 150 power/second.
+consumes: {
+    power: 2.5
+}
+
+shootType: {
+    type: ContinuousLaserBulletType
+    # A 1x1 turret's default muzzle is 4 units forward: 171 + 4 = the 175-unit targeting edge.
+    length: 171
+    width: 3.5
+    damage: 5
+    damageInterval: 5 # 5 damage every 5 ticks = 60 single-target DPS.
+    pierceCap: 3
+    buildingDamageMultiplier: 0.35
+    laserAbsorb: true
+    # Remove ContinuousLaserBulletType's default incendiary effect; Parhelion is photonic, not a fire turret.
+    incendChance: 0
+    incendAmount: 0
+    incendSpread: 0
+    colors: [79a0a366, 79a0a3aa, 79a0a3ff, 79a0a3ff]
+    hitColor: 79a0a3ff
+    lightColor: 79a0a3ff
+}
+
+# Native DrawTurret loads parhelion-heat.png only while turret heat is positive.
+drawer: {
+    type: DrawTurret
+    parts: [
+        {
+            type: ShapePart
+            progress: warmup
+            color: ffd0b3ff
+            circle: true
+            hollow: true
+            stroke: 0
+            strokeTo: 0.75
+            radius: 3
+            y: -1
+        }
+        {
+            type: HaloPart
+            progress: warmup
+            color: ffd0b3ff
+            tri: true
+            shapes: 3
+            triLength: 0
+            triLengthTo: 3
+            radius: 1.5
+            haloRadius: 3
+            haloRotateSpeed: 1.2
+            y: -1
+        }
+    ]
+}
+
+requirements: [
+    copper/45
+    lead/35
+    graphite/30
+    silicon/25
+]
+
+# First-edition defense sibling beneath the existing Cosmic root.
+research: cosmic-i-drill
+researchCost: [
+    copper/225
+    lead/175
+    graphite/150
+    silicon/125
+]

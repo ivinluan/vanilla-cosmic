@@ -276,6 +276,33 @@ Place sprite assets in `sprites/blocks/turret/nebulance/`.
 
 `ShootBarrel` controls projectile origins independently of sprite layers. The two barrel overlays provide paired left/right recoil for the four native launcher positions; four separate barrel regions are unnecessary unless a future visual revision needs every individual launcher to move independently. The `ShapePart` and `HaloPart` are native procedural effects copied from Pulsar and recolored to `#E0F58B`, so they need no image file.
 
+## Parhelion reference implementation
+
+Parhelion is a 1×1, power-only `ContinuousTurret` using one `ContinuousLaserBulletType`. It targets ground and air units at exactly 175 world units (21.875 tiles). `ContinuousTurret` has no conventional reload: once it has a valid target, nonzero power coverage, and its normal zero `minWarmup`, it maintains the same beam until firing conditions end. By default, partial power does not scale its beam damage; it only affects native efficiency-dependent behavior such as turn rate. Its 0.08 visual warmup speed and 30-tick retention only control the native heat and procedural visuals; they do not add a charge delay.
+
+The beam begins at the default 1×1 muzzle, 4 units forward of the turret centre. Its `length: 171` therefore ends at the 175-unit targeting edge. `damage: 5` and `damageInterval: 5` apply 5 damage every 5 ticks, for a calculated **60 single-target DPS**. `pierceCap: 3` permits up to three eligible aligned collisions; this is a line-suppression advantage, not guaranteed multi-target damage. Laser-absorbing walls can stop the beam, and its 0.35 building-damage multiplier limits it to 21 building DPS per struck building before armor or other modifiers.
+
+Parhelion consumes 2.5 power/tick, or **150 power/second**, only while actively firing. It has no item, liquid, gas, coolant, ammunition, or heat-network consumer. Compared with vanilla Lancer, its calculated 60 DPS is lower than Lancer's 105 direct DPS, but it is continuous, can target air, and can pressure aligned targets. Compared with vanilla Meltdown, it is vastly smaller and cheaper: Meltdown's 78 damage per 5 ticks is 936 single-target DPS before modifiers and consumes 1,020 power/second plus coolant.
+
+Construction is copper 45, lead 35, graphite 30, and silicon 25. Research is exactly 5× those requirements: copper 225, lead 175, graphite 150, and silicon 125. This makes Parhelion more electronics-intensive than Pulsar without adding titanium, tungsten, coolant, or other later-stage gating materials.
+
+For the Defensive turrets role, this recipe gives `MH = 1.049` and `MA = 0.074`. The calculated result is `roundNearest10(40 × 1² × 1.049 × 5.25) = 220 HP` and `roundNearestWhole(3.5 × 0.074 × 1.00) = 0 armor`. Continuous operation does not justify wall-like durability.
+
+### Parhelion sprite requirements
+
+Place sprite assets in `sprites/blocks/turret/parhelion/`.
+
+| Filename | Required by the game | Purpose | Expected dimensions |
+|---|---|---|---|
+| `parhelion.png` | Yes | Main rotating continuous-laser turret body and block icon. | 32×32 px |
+| `parhelion-heat.png` | Yes for the requested firing-heat design | Additive firing heat overlay, drawn by native `DrawTurret` only while beam heat remains. | 32×32 px |
+| `parhelion-preview.png` | No | Optional in-game placement-preview override; the wiki uses `parhelion.png`. | 32×32 px |
+| `parhelion-base.png` | No | Dedicated stationary base; otherwise the native `vanilla-cosmic-block-1` fallback is used. | 32×32 px |
+| `parhelion-top.png` | No | Optional rotating body overlay. | 32×32 px |
+| `parhelion-outline.png` | No | Optional underlay for procedural parts. | 32×32 px |
+
+The beam is native `ContinuousLaserBulletType` rendering; it does not need a user-created beam texture. Its four rendering layers use the requested `#79A0A3` base color at different alpha levels. The native `ShapePart` and `HaloPart` are copied from Pulsar and recolored to `#FFD0B3`, so they require no sprite.
+
 ## Required balance checks for every future turret
 
 1. Declare the native class first: `ItemTurret`, `LiquidTurret`, or `ContinuousLiquidTurret`.

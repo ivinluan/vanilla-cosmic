@@ -27,7 +27,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | `ionforge` | GenericCrafter, 3 | copper 120, lead 100, graphite 60, metaglass 50, silicon 60, titanium 40 | 430 explicit / 1 explicit | 430 / 1 | Silicon Smelter / Silicon Crucible | Applied: 3×3 high-throughput silicon processing remains below Silicon Crucible output and requires water, power, coal, and sand. |
 | `vitrion-furnace` | GenericCrafter, 3 | copper 110, lead 120, graphite 60, metaglass 70, silicon 50, titanium 40 | 430 explicit / 1 explicit | 430 / 1 | Kiln | Applied: faster metaglass production is paid for through heavy sand, water, and power use rather than defensive durability. |
 
-## Defensive turrets — 4 blocks
+## Defensive turrets — 5 blocks
 
 | Block ID | Type, size | Requirements | Pre-approval HP / armor | Applied HP / armor | Vanilla comparison | Recommendation and reason |
 |---|---|---|---|---|---|---|
@@ -35,6 +35,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 | `shatterstar` | ItemTurret, 1 | copper 45, lead 25, graphite 20 | 220 explicit / 0 explicit | 220 / 0 | Duo; Pulsar | Applied: exposed 1×1 shotgun turret retains Pulsar-level health but has no armor or wall-like protection. |
 | `aperture` | ItemTurret, 1 | copper 50, lead 30, graphite 35, silicon 15 | 220 explicit / 0 explicit | 220 / 0 | Duo; Pulsar | Applied: long range improves placement options, not static durability; Aperture retains the first-generation unarmored turret baseline. |
 | `nebulance` | ItemTurret, 1 | copper 40, lead 30, graphite 20, silicon 15 | New block | 220 / 0 | Duo; Pulsar; Swarmer | Applied: the compact four-missile launcher uses Pulsar-level health and no armor; guided ammunition is balanced through its slower salvo cadence and finite ammunition efficiency. |
+| `parhelion` | ContinuousTurret, 1 | copper 45, lead 35, graphite 30, silicon 25 | New block | 220 / 0 | Lancer; Lustre | Applied: power-only sustained fire and limited line piercing do not add defensive durability; the compact beam turret retains the First Edition 220-HP, unarmored baseline. |
 
 ## Ultimate defensive walls — 3 blocks
 
@@ -139,7 +140,7 @@ Vanilla comparison shorthand: `Conveyor` = titanium/plastanium conveyor; `Router
 
 ## Applied outcome
 
-- Blocks currently covered: **78**.
+- Blocks currently covered: **79**.
 - Formula-derived health and armor values are now present in every audited HJSON block.
 - The pre-approval column is retained as a historical record; the Formula column is the current HJSON value for ordinary blocks. Event Horizon walls are the documented ultimate-wall exception.
 - All current construction materials are covered by coefficients. There are no missing coefficients.
